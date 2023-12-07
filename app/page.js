@@ -1,95 +1,323 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+"use client";
+
+import React, { useEffect, useRef } from "react";
+import styles from "@/styles/modules/home.module.css";
+import Navbar from "./components/units/navbar";
+import { FeaturedWorkList } from "@/data/FeaturedWork";
+import { FreelancerWorkList } from "@/data/FreelancerWork";
+import Link from "next/link";
+import { ResizeImgurImages } from "@/functions/Utilities";
+import { motion } from "framer-motion";
+import Footer from "./components/units/footer";
+import { useGlobal } from "@/contexts/GlobalContext";
 
 export default function Home() {
+  const { setIsHydrated } = useGlobal();
+
+  useEffect(() => {
+    // Function to execute before rendering
+    function executeBeforeRender() {
+      setTimeout(() => {
+        setIsHydrated(false);
+      }, 500);
+    }
+
+    // Check if the document is already loaded
+    if (document.readyState === "complete") {
+      executeBeforeRender();
+    } else {
+      // Use the 'load' event to execute the code once the page is loaded
+      window.addEventListener("load", executeBeforeRender);
+    }
+
+    return () => {
+      window.removeEventListener("load", executeBeforeRender);
+      setIsHydrated(true);
+    };
+  }, []);
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="wrapper">
+      <Navbar />
+
+      <motion.div
+        className="page_title"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{
+          delay: 0.125,
+          duration: 0.275,
+          ease: "easeInOut",
+        }}
+      >
+        <span>FRANCO ESPINOSA</span>
+        <h1>WEB DEVELOPER</h1>
+      </motion.div>
+
+      <section className={styles.featured_work}>
+        <motion.div
+          className={styles.featured_work_text}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{
+            delay: 0.125,
+            duration: 0.275,
+            ease: "easeInOut",
+          }}
+        >
+          <div className={styles.featured_work_title}>
+            <span>CHECK OUT MY</span>
+            <h2>FEATURED WORK</h2>
+          </div>
+          <Link href="#">LOOK ALL MY WORK</Link>
+        </motion.div>
+        <div className={styles.featured_work_content}>
+          {FeaturedWorkList.map((work, index) => {
+            return (
+              <motion.a
+                href={work.project_url}
+                target="_blank"
+                className={styles.featured_work_card}
+                key={index}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{
+                  delay: 0.125,
+                  duration: 0.275,
+                  ease: "easeInOut",
+                }}
+              >
+                <div className={styles.featured_work_card_inner}>
+                  <div
+                    className={styles.featured_work_card_front}
+                    style={{
+                      backgroundImage: `url(${ResizeImgurImages(
+                        work.image_url
+                      )})`,
+                    }}
+                  >
+                    <img
+                      src={work.image_url}
+                      alt={`${work.title} banner image`}
+                    />
+                  </div>
+                  <div className={styles.featured_work_card_back}>
+                    <p>{work.title.toUpperCase()}</p>
+                  </div>
+                </div>
+              </motion.a>
+            );
+          })}
         </div>
-      </div>
+      </section>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
+      <section className={styles.freelancer_work}>
+        <motion.div
+          className={styles.freelancer_work_title}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{
+            delay: 0.125,
+            duration: 0.275,
+            ease: "easeInOut",
+          }}
         >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+          <span>MY WORK AS A</span>
+          <h3>FREELANCER</h3>
+        </motion.div>
+        <div className={styles.freelancer_work_content}>
+          {FreelancerWorkList.map((work, index) => {
+            return (
+              <div className={styles.freelancer_work_content_item} key={index}>
+                <div className={styles.freelancer_work_content_item_text}>
+                  <motion.span
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{
+                      delay: 0.125,
+                      duration: 0.275,
+                      ease: "easeInOut",
+                    }}
+                  >
+                    {work.title}
+                  </motion.span>
+                  <motion.p
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{
+                      delay: 0.125,
+                      duration: 0.275,
+                      ease: "easeInOut",
+                    }}
+                  >
+                    {work.first_text}
+                  </motion.p>
+                  <motion.p
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{
+                      delay: 0.125,
+                      duration: 0.275,
+                      ease: "easeInOut",
+                    }}
+                  >
+                    {work.second_text}
+                  </motion.p>
+                  <motion.p
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{
+                      delay: 0.125,
+                      duration: 0.275,
+                      ease: "easeInOut",
+                    }}
+                  >
+                    {work.third_text}
+                  </motion.p>
+                </div>
+                <motion.a
+                  href={work.website_url}
+                  target="_blank"
+                  className={styles.freelance_work_card}
+                  key={index}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{
+                    delay: 0.125,
+                    duration: 0.275,
+                    ease: "easeInOut",
+                  }}
+                >
+                  <div className={styles.freelance_work_card_inner}>
+                    <div
+                      className={styles.featured_work_card_front}
+                      style={{
+                        backgroundImage: `url(${ResizeImgurImages(
+                          work.image_url
+                        )})`,
+                      }}
+                    >
+                      <img
+                        src={work.image_url}
+                        alt={`${work.title} banner image`}
+                      />
+                    </div>
+                    <div className={styles.featured_work_card_back}>
+                      <p>{work.title.toUpperCase()}</p>
+                    </div>
+                  </div>
+                </motion.a>
+              </div>
+            );
+          })}
+        </div>
+      </section>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
+      <section className={styles.about_me}>
+        <motion.div
+          className={styles.about_me_title}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{
+            delay: 0.125,
+            duration: 0.275,
+            ease: "easeInOut",
+          }}
         >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
+          <span>A LITTLE BIT</span>
+          <h4>ABOUT ME</h4>
+        </motion.div>
+        <div className={styles.about_me_content}>
+          <div className={styles.about_me_content_text}>
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{
+                delay: 0.125,
+                duration: 0.275,
+                ease: "easeInOut",
+              }}
+            >
+              I'm Franco Espinosa, from Mar del Plata, Argentina. I started my
+              programming journey in December 2021 under the tutelage of my
+              cousin Marcos Espinosa, a Backend developer.
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{
+                delay: 0.125,
+                duration: 0.275,
+                ease: "easeInOut",
+              }}
+            >
+              Throughout these years I have developed various projects, as well
+              as doing some work as a Freelancer.
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{
+                delay: 0.125,
+                duration: 0.275,
+                ease: "easeInOut",
+              }}
+            >
+              I began under his guidance studying C with the text editor known
+              as VIM. Then I completed various courses from FreeCodeCamp, Udemy,
+              Platzi and others.
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{
+                delay: 0.125,
+                duration: 0.275,
+                ease: "easeInOut",
+              }}
+            >
+              To this date, I have studied a wide range of languages, databases,
+              query languages, frameworks, design patterns and other concepts
+              related to the field.
+            </motion.p>
+            <motion.a
+              href="#"
+              role="button"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{
+                delay: 0.125,
+                duration: 0.275,
+                ease: "easeInOut",
+              }}
+            >
+              MY TECH STACK
+            </motion.a>
+          </div>
+          <motion.div
+            className={styles.about_me_content_image}
+            style={{
+              backgroundImage: `url(${ResizeImgurImages(
+                "https://i.imgur.com/U3TyRY4.png"
+              )})`,
+            }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{
+              delay: 0.125,
+              duration: 0.275,
+              ease: "easeInOut",
+            }}
+          >
+            <img
+              src="https://i.imgur.com/U3TyRY4.png"
+              alt="Mar del Plata image"
+            />
+          </motion.div>
+        </div>
+      </section>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      <Footer />
     </main>
-  )
+  );
 }
