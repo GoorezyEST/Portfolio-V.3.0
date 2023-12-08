@@ -11,7 +11,7 @@ import styles from "@/styles/modules/project.module.css";
 import { ResizeImgurImages } from "@/functions/Utilities";
 
 function ProjectPage({ params }) {
-  const { setIsHydrated } = useGlobal();
+  const { setIsHydrated, smallDevice } = useGlobal();
 
   const [project, setProject] = useState(null);
 
@@ -51,8 +51,8 @@ function ProjectPage({ params }) {
     }
 
     return () => {
-      window.removeEventListener("load", executeBeforeRender);
       setIsHydrated(true);
+      window.removeEventListener("load", executeBeforeRender);
     };
   }, []);
 
@@ -76,22 +76,39 @@ function ProjectPage({ params }) {
             <span>KNOW MORE ABOUT</span>
             <h1>{project.title.toUpperCase()}</h1>
           </motion.div>
-          <motion.div
-            className={styles.page_image}
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{
-              delay: 0.125,
-              duration: 0.275,
-              ease: "easeInOut",
-            }}
-          >
-            <img src={project.extra_img} />
-          </motion.div>
+          {smallDevice ? (
+            <div className={styles.page_mobile}>
+              <div className={styles.page_mobile_image}>
+                <img
+                  src={project.image_url}
+                  alt={`${project.title} banner image`}
+                />
+              </div>
+              <div className={styles.page_mobile_info}>
+                <h2>{project.title}</h2>
+                <p>{project.first_text}</p>
+                <p>{project.second_text}</p>
+              </div>
+            </div>
+          ) : (
+            <motion.div
+              className={styles.page_image}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{
+                delay: 0.125,
+                duration: 0.275,
+                ease: "easeInOut",
+              }}
+            >
+              <img src={project.extra_img} />
+            </motion.div>
+          )}
+
           <motion.div
             className={styles.buttons}
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+            initial={{ opacity: 0, x: "16px" }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{
               delay: 0.125,
               duration: 0.275,
