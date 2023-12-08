@@ -6,7 +6,7 @@ export const FreelancerWorkList = [
     second_text: "Developed together with a partner under the name Trilipluz.",
     third_text:
       "The main objective was to achieve an aesthetic and visually engaging website to show the work of Cardo Audiovisual. The end result was a gothic aesthetic, with some 3D touches, and extensive use of animations throughout the website.",
-    image_url: "https://i.imgur.com/7oUYD2h.png",
+    image_url: "https://i.imgur.com/b1LV2xZ.png",
     website_url: "https://cardoaudiovisual.com/",
   },
 ];
