@@ -9,9 +9,13 @@ function LoadingScreen({ children }) {
   const { isHydrated } = useGlobal();
 
   useEffect(() => {
-    if (!isHydrated) {
-      document.body.style.height = "100%";
-      document.body.style.overflow = "auto";
+    if (isHydrated) {
+      document.body.style.overflowY = "hidden";
+    } else {
+      // If isHydrated is false, enable scrolling
+      setTimeout(() => {
+        document.body.style.overflowY = "scroll";
+      }, 515);
     }
   }, [isHydrated]);
 

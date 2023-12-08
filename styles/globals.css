@@ -12,10 +12,16 @@
 
 body {
   overflow-x: hidden;
+  overflow-y: hidden;
+  background-color: var(--black);
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 .transition {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   height: 100vh;
