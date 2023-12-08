@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "@/styles/modules/home.module.css";
 import Navbar from "./components/units/navbar";
 import { FeaturedWorkList } from "@/data/FeaturedWork";
@@ -19,7 +19,7 @@ export default function Home() {
     function executeBeforeRender() {
       setTimeout(() => {
         setIsHydrated(false);
-      }, 500);
+      }, 1000);
     }
 
     // Check if the document is already loaded
@@ -35,6 +35,53 @@ export default function Home() {
       setIsHydrated(true);
     };
   }, []);
+
+  const [textReveal, setTextReveal] = useState(null);
+  const [revealInterval, setRevealInterval] = useState(null);
+
+  const randomTextRevealEnter = (text) => {
+    setTimeout(() => {
+      const symbols = "!-@+#=$X%&?";
+
+      let placeholder = "";
+
+      for (let i = 0; i < text.length; i++) {
+        placeholder += symbols[Math.floor(Math.random() * symbols.length)];
+      }
+
+      setTextReveal(placeholder);
+
+      let currentIndex = 0;
+
+      const revealInterval = setInterval(() => {
+        if (currentIndex < text.length) {
+          placeholder =
+            placeholder.substring(0, currentIndex) +
+            text[currentIndex].toUpperCase() +
+            placeholder.substring(currentIndex + 1);
+
+          setTextReveal(placeholder);
+          currentIndex++;
+        } else {
+          clearInterval(revealInterval);
+        }
+      }, 40);
+
+      setRevealInterval(revealInterval);
+    }, 300);
+  };
+
+  const handleMouseLeave = () => {
+    clearInterval(revealInterval);
+    setTextReveal(null);
+  };
+
+  useEffect(() => {
+    return () => {
+      clearInterval(revealInterval);
+      setTextReveal(null);
+    };
+  }, [revealInterval]);
 
   return (
     <main className="wrapper">
@@ -57,8 +104,8 @@ export default function Home() {
       <section className={styles.featured_work}>
         <motion.div
           className={styles.featured_work_text}
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0, x: "16px" }}
+          whileInView={{ opacity: 1, x: 0 }}
           transition={{
             delay: 0.125,
             duration: 0.275,
@@ -87,7 +134,15 @@ export default function Home() {
                   ease: "easeInOut",
                 }}
               >
-                <div className={styles.featured_work_card_inner}>
+                <div
+                  className={styles.featured_work_card_inner}
+                  onMouseEnter={() => {
+                    randomTextRevealEnter(work.title);
+                  }}
+                  onMouseLeave={() => {
+                    handleMouseLeave();
+                  }}
+                >
                   <div
                     className={styles.featured_work_card_front}
                     style={{
@@ -102,7 +157,7 @@ export default function Home() {
                     />
                   </div>
                   <div className={styles.featured_work_card_back}>
-                    <p>{work.title.toUpperCase()}</p>
+                    <p>{textReveal}</p>
                   </div>
                 </div>
               </motion.a>
@@ -114,8 +169,8 @@ export default function Home() {
       <section className={styles.freelancer_work}>
         <motion.div
           className={styles.freelancer_work_title}
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0, x: "16px" }}
+          whileInView={{ opacity: 1, x: 0 }}
           transition={{
             delay: 0.125,
             duration: 0.275,
@@ -131,8 +186,8 @@ export default function Home() {
               <div className={styles.freelancer_work_content_item} key={index}>
                 <div className={styles.freelancer_work_content_item_text}>
                   <motion.span
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
+                    initial={{ opacity: 0, x: "16px" }}
+                    whileInView={{ opacity: 1, x: 0 }}
                     transition={{
                       delay: 0.125,
                       duration: 0.275,
@@ -142,8 +197,8 @@ export default function Home() {
                     {work.title}
                   </motion.span>
                   <motion.p
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
+                    initial={{ opacity: 0, x: "16px" }}
+                    whileInView={{ opacity: 1, x: 0 }}
                     transition={{
                       delay: 0.125,
                       duration: 0.275,
@@ -153,8 +208,8 @@ export default function Home() {
                     {work.first_text}
                   </motion.p>
                   <motion.p
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
+                    initial={{ opacity: 0, x: "16px" }}
+                    whileInView={{ opacity: 1, x: 0 }}
                     transition={{
                       delay: 0.125,
                       duration: 0.275,
@@ -164,8 +219,8 @@ export default function Home() {
                     {work.second_text}
                   </motion.p>
                   <motion.p
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
+                    initial={{ opacity: 0, x: "16px" }}
+                    whileInView={{ opacity: 1, x: 0 }}
                     transition={{
                       delay: 0.125,
                       duration: 0.275,
@@ -180,15 +235,23 @@ export default function Home() {
                   target="_blank"
                   className={styles.freelance_work_card}
                   key={index}
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
+                  initial={{ opacity: 0, x: "-16px" }}
+                  whileInView={{ opacity: 1, x: 0 }}
                   transition={{
                     delay: 0.125,
                     duration: 0.275,
                     ease: "easeInOut",
                   }}
                 >
-                  <div className={styles.freelance_work_card_inner}>
+                  <div
+                    className={styles.freelance_work_card_inner}
+                    onMouseEnter={() => {
+                      randomTextRevealEnter(work.title);
+                    }}
+                    onMouseLeave={() => {
+                      handleMouseLeave();
+                    }}
+                  >
                     <div
                       className={styles.featured_work_card_front}
                       style={{
@@ -203,7 +266,7 @@ export default function Home() {
                       />
                     </div>
                     <div className={styles.featured_work_card_back}>
-                      <p>{work.title.toUpperCase()}</p>
+                      <p>{textReveal}</p>
                     </div>
                   </div>
                 </motion.a>
@@ -216,8 +279,8 @@ export default function Home() {
       <section className={styles.about_me}>
         <motion.div
           className={styles.about_me_title}
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0, x: "16px" }}
+          whileInView={{ opacity: 1, x: 0 }}
           transition={{
             delay: 0.125,
             duration: 0.275,
@@ -230,8 +293,8 @@ export default function Home() {
         <div className={styles.about_me_content}>
           <div className={styles.about_me_content_text}>
             <motion.p
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
+              initial={{ opacity: 0, x: "16px" }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{
                 delay: 0.125,
                 duration: 0.275,
@@ -243,8 +306,8 @@ export default function Home() {
               cousin Marcos Espinosa, a Backend developer.
             </motion.p>
             <motion.p
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
+              initial={{ opacity: 0, x: "16px" }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{
                 delay: 0.125,
                 duration: 0.275,
@@ -255,8 +318,8 @@ export default function Home() {
               as doing some work as a Freelancer.
             </motion.p>
             <motion.p
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
+              initial={{ opacity: 0, x: "16px" }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{
                 delay: 0.125,
                 duration: 0.275,
@@ -268,8 +331,8 @@ export default function Home() {
               Platzi and others.
             </motion.p>
             <motion.p
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
+              initial={{ opacity: 0, x: "16px" }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{
                 delay: 0.125,
                 duration: 0.275,
@@ -283,8 +346,8 @@ export default function Home() {
             <motion.a
               href="#"
               role="button"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
+              initial={{ opacity: 0, x: "16px" }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{
                 delay: 0.125,
                 duration: 0.275,
@@ -298,11 +361,11 @@ export default function Home() {
             className={styles.about_me_content_image}
             style={{
               backgroundImage: `url(${ResizeImgurImages(
-                "https://i.imgur.com/U3TyRY4.png"
+                "https://i.imgur.com/UueGXXr.png"
               )})`,
             }}
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+            initial={{ opacity: 0, x: "-16px" }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{
               delay: 0.125,
               duration: 0.275,
@@ -310,7 +373,7 @@ export default function Home() {
             }}
           >
             <img
-              src="https://i.imgur.com/U3TyRY4.png"
+              src="https://i.imgur.com/UueGXXr.png"
               alt="Mar del Plata image"
             />
           </motion.div>
