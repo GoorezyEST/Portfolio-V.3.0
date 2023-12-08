@@ -34,6 +34,53 @@ function WorkPage() {
     };
   }, []);
 
+  const [textReveal, setTextReveal] = useState(null);
+  const [revealInterval, setRevealInterval] = useState(null);
+
+  const randomTextRevealEnter = (text) => {
+    setTimeout(() => {
+      const symbols = "!-@+#=$X%&?";
+
+      let placeholder = "";
+
+      for (let i = 0; i < text.length; i++) {
+        placeholder += symbols[Math.floor(Math.random() * symbols.length)];
+      }
+
+      setTextReveal(placeholder);
+
+      let currentIndex = 0;
+
+      const revealInterval = setInterval(() => {
+        if (currentIndex < text.length) {
+          placeholder =
+            placeholder.substring(0, currentIndex) +
+            text[currentIndex].toUpperCase() +
+            placeholder.substring(currentIndex + 1);
+
+          setTextReveal(placeholder);
+          currentIndex++;
+        } else {
+          clearInterval(revealInterval);
+        }
+      }, 40);
+
+      setRevealInterval(revealInterval);
+    }, 300);
+  };
+
+  const handleMouseLeave = () => {
+    clearInterval(revealInterval);
+    setTextReveal(null);
+  };
+
+  useEffect(() => {
+    return () => {
+      clearInterval(revealInterval);
+      setTextReveal(null);
+    };
+  }, [revealInterval]);
+
   return (
     <main className="wrapper">
       <Navbar />
@@ -53,11 +100,11 @@ function WorkPage() {
 
       {AllWorkList.map((item, index) => {
         return (
-          <div className={styles.work_list} key={index}>
+          <div className={styles.featured_work} key={index}>
             <motion.div
-              className={styles.work_list_title}
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
+              className={styles.featured_work_title}
+              initial={{ opacity: 0, x: "16px" }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{
                 delay: 0.125,
                 duration: 0.275,
@@ -67,52 +114,54 @@ function WorkPage() {
               <span>YEAR</span>
               <h2>{item.year.toString().toUpperCase()}</h2>
             </motion.div>
-            {item.projects.map((work, i) => {
-              return (
-                <motion.div
-                  className={styles.work_list_item}
-                  key={i}
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  transition={{
-                    delay: 0.125,
-                    duration: 0.275,
-                    ease: "easeInOut",
-                  }}
-                >
-                  <div className={styles.work_list_item_text}>
-                    <span>{work.title}</span>
-                    <p>{work.first_text}</p>
-                    <p>{work.second_text}</p>
-                    <div className={styles.work_list_item_text_buttons}>
-                      <a href={work.proyect_url} target="_blank">
-                        <button className={styles.cta_primary}>See demo</button>
-                      </a>
-                      {work.extra && (
-                        <a href={`work/${work.extra_url}`}>
-                          <button className={styles.cta_secondary}>
-                            More info
-                          </button>
-                        </a>
-                      )}
-                    </div>
-                  </div>
-                  <div
-                    className={styles.work_list_item_image}
-                    style={{
-                      backgroundImage: `url(${ResizeImgurImages(
-                        work.image_url
-                      )})`,
+            <div className={styles.featured_work_bento}>
+              {item.projects.map((work, i) => {
+                return (
+                  <motion.a
+                    className={styles.fatured_work_bento_card}
+                    key={i}
+                    href={
+                      work.extra ? `work/${work.extra_url}` : work.proyect_url
+                    }
+                    target={work.extra ? "_self" : "_blank"}
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{
+                      delay: 0.125,
+                      duration: 0.275,
+                      ease: "easeInOut",
                     }}
                   >
-                    <img
-                      src={work.image_url}
-                      alt={`${work.title} banner image`}
-                    />
-                  </div>
-                </motion.div>
-              );
-            })}
+                    <div
+                      className={styles.featured_bento_card_inner}
+                      onMouseEnter={() => {
+                        randomTextRevealEnter(work.title);
+                      }}
+                      onMouseLeave={() => {
+                        handleMouseLeave();
+                      }}
+                    >
+                      <div
+                        className={styles.featured_bento_card_front}
+                        style={{
+                          backgroundImage: `url(${ResizeImgurImages(
+                            work.image_url
+                          )})`,
+                        }}
+                      >
+                        <img
+                          src={work.image_url}
+                          alt={`${work.title} banner image`}
+                        />
+                      </div>
+                      <div className={styles.featured_bento_card_back}>
+                        <p>{textReveal}</p>
+                      </div>
+                    </div>
+                  </motion.a>
+                );
+              })}
+            </div>
           </div>
         );
       })}
