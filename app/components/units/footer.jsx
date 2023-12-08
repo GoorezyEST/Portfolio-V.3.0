@@ -8,8 +8,8 @@ function Footer() {
     <section className={styles.contact}>
       <motion.div
         className={styles.contact_title}
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
+        initial={{ opacity: 0, x: "16px" }}
+        whileInView={{ opacity: 1, x: 0 }}
         transition={{
           delay: 0.125,
           duration: 0.275,
@@ -22,8 +22,8 @@ function Footer() {
       <div className={styles.contact_list}>
         <motion.div
           className={styles.contact_list_item}
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0, x: "16px" }}
+          whileInView={{ opacity: 1, x: 0 }}
           transition={{
             delay: 0.125,
             duration: 0.275,
@@ -40,8 +40,8 @@ function Footer() {
         </motion.div>
         <motion.div
           className={styles.contact_list_item}
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0, x: "16px" }}
+          whileInView={{ opacity: 1, x: 0 }}
           transition={{
             delay: 0.125,
             duration: 0.275,
@@ -55,8 +55,8 @@ function Footer() {
         </motion.div>
         <motion.div
           className={styles.contact_list_item}
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0, x: "16px" }}
+          whileInView={{ opacity: 1, x: 0 }}
           transition={{
             delay: 0.125,
             duration: 0.275,
@@ -71,8 +71,8 @@ function Footer() {
       </div>
       <motion.p
         className={styles.contact_mention}
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 0.5 }}
+        initial={{ opacity: 0, x: "16px" }}
+        whileInView={{ opacity: 0.5, x: 0 }}
         transition={{
           delay: 0.125,
           duration: 0.275,
