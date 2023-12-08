@@ -90,11 +90,6 @@
   border-radius: 4px;
 }
 
-.featured_work_card:hover .featured_work_card_inner,
-.freelance_work_card:hover .freelance_work_card_inner {
-  transform: rotateX(-180deg);
-}
-
 .featured_work_card_front {
   position: absolute;
   width: 100%;
@@ -231,6 +226,11 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .featured_work_card:hover .featured_work_card_inner,
+  .freelance_work_card:hover .freelance_work_card_inner {
+    transform: rotateX(-180deg);
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -246,12 +246,12 @@
 
   .freelancer_work_content_item_text,
   .about_me_content_text {
-    width: 60%;
+    width: 67%;
   }
 
   .freelance_work_card,
   .about_me_content_image {
-    width: 40%;
+    width: 33%;
     height: auto;
   }
 }
