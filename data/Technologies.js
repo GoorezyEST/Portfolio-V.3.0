@@ -1,126 +1,195 @@
 export const TechnologiesList = [
   {
-    stack: "frontend",
+    stack_es: "frontend",
+    stack_en: "frontend",
     list: [
       {
         title: "Next.js",
-        text: "Next.js is an open source React web development framework that makes it easy to build modern web applications with server-side rendering, intuitive routing, and easy deployment.",
-        icon: "",
+        text_en:
+          "React framework for web application development, Next.js offers server-side rendering and intuitive routing for faster and scalable experiences.",
+        text_es:
+          "Framework de React que simplifica el desarrollo de aplicaciones web, Next.js ofrece renderización del lado del servidor y enrutamiento intuitivo.",
+        icon: "NextJSIcon",
       },
       {
         title: "Angular",
-        text: "Angular is an open source web development framework. It offers a robust framework for building dynamic and scalable web applications using TypeScript.",
-        icon: "",
+        text_en:
+          "Google's front-end development framework, Angular streamlines the creation of robust and dynamic web applications through component architecture.",
+        text_es:
+          "Framework de desarrollo front-end de Google, Angular facilita la creación de aplicaciones web robustas y dinámicas mediante la arquitectura de componentes.",
+        icon: "AngularIcon",
       },
       {
         title: "React.js",
-        text: "React.js, developed by Facebook, is a JavaScript library for building interactive user interfaces. Its focus on reusable components and efficient DOM updating makes it ideal for building modern and efficient web applications.",
-        icon: "",
+        text_en:
+          "JavaScript library for building interactive and reusable user interfaces, React.js simplifies efficient and dynamic web application development.",
+        text_es:
+          "Biblioteca de JavaScript para construir interfaces de usuario interactivas y reutilizables, simplifica el desarrollo web mediante componentes modulares.",
+        icon: "ReactJSIcon",
       },
       {
         title: "JavaScript",
-        text: "JavaScript is a versatile programming language widely used in web development. Executed in the browser, it allows you to create interactivity on pages, manipulate the DOM and develop applications on both the client and server side.",
-        icon: "",
+        text_en:
+          "JavaScript is a versatile programming language crucial in web development, JavaScript enables the creation of dynamic interactivity in browsers.",
+        text_es:
+          "Es un lenguaje de programación versátil y fundamental en desarrollo web, JavaScript permite la creación de interactividad dinámica en navegadores.",
+        icon: "JavaScriptIcon",
       },
       {
         title: "TypeScript",
-        text: "TypeScript is a JavaScript superset developed by Microsoft. Adds optional static typing, which improves code robustness and eases maintenance in large projects.",
-        icon: "",
+        text_en:
+          "Microsoft's superset of JavaScript, TypeScript adds optional static types and other features, enhancing code robustness and maintainability.",
+        text_es:
+          "Superset de JavaScript desarrollado por Microsoft, agrega tipos estáticos opcionales y otras características, mejorando la robustez y mantenibilidad del código.",
+        icon: "TypeScriptIcon",
       },
       {
         title: "SASS",
-        text: "Sass (Syntactically Awesome Stylesheets) is a CSS preprocessor that adds features such as variables, nesting, and mixins to make it easier to develop and maintain styles on websites.",
-        icon: "",
+        text_en:
+          "CSS extension adding features like variables, nesting, and mixins, facilitating the development and maintenance of styles in web pages.",
+        text_es:
+          "Es una extensión de CSS que agrega características como variables, anidación y mixins, facilitando el desarrollo y mantenimiento de estilos en páginas web.",
+        icon: "SassIcon",
       },
       {
         title: "CSS",
-        text: "CSS (Cascading Style Sheets) is a design language used to stylize the presentation of HTML documents. Defines the visual appearance of a web page, allowing control of colors, fonts, margins and other aspects.",
-        icon: "",
+        text_en:
+          "Style language for designing and presenting web pages, CSS controls formatting and appearance, enhancing the user's visual experience.",
+        text_es:
+          "CSS es un lenguaje de estilo para diseñar y presentar páginas web, CSS controla el formato y la apariencia, mejorando la experiencia visual del usuario.",
+        icon: "CssIcon",
       },
       {
         title: "HTML",
-        text: "HTML (HyperText Markup Language) is the standard markup language for creating and structuring content on the web. Used together with CSS and JavaScript, it allows the construction of interactive and aesthetic web pages.",
-        icon: "",
+        text_en:
+          "HTML is a fundamental markup language for building web pages, HTML structures and presents content on the World Wide Web.",
+        text_es:
+          "HTML (HyperText Markup Language) es un lenguaje de marcado fundamental para construir páginas web, HTML estructura y presenta contenido en la World Wide Web.",
+        icon: "HTMLIcon",
       },
       {
         title: "Framer Motion",
-        text: "Framer Motion is a declarative animation library for React. It makes it easy to create fluid and sophisticated animations using simple components and properties, improving the user experience in web applications.",
-        icon: "",
+        text_en:
+          "Declarative animation library in React, Framer Motion simplifies creating interactive interfaces with smooth and customizable transitions.",
+        text_es:
+          "Biblioteca de animación declarativa en React, Framer Motion simplifica la creación de interfaces interactivas con transiciones suaves y personalizables.",
+        icon: "FramerMotionIcon",
       },
       {
         title: "GSAP",
-        text: "GSAP is a powerful JavaScript animation library that makes it easy to create advanced animations on the web. It offers a robust set of tools to control the sequence, duration, and properties of animations.",
-        icon: "",
+        text_en:
+          "Advanced JavaScript animation library, GreenSock Animation Platform allows for smooth and highly customizable visual effects on web pages.",
+        text_es:
+          "Librería de animación avanzada en JavaScript, GreenSock Animation Platform permite crear efectos visuales fluidos y altamente personalizables en páginas web.",
+        icon: "GSAPIcon",
       },
     ],
   },
   {
-    stack: "backend",
+    stack_es: "backend",
+    stack_en: "backend",
     list: [
       {
         title: ".NET CORE",
-        text: ".NET Core is an open source, cross-platform software development framework developed by Microsoft. It allows you to create modern, scalable, high-performance applications for various platforms.",
-        icon: "",
+        text_en:
+          "Open-source development platform by Microsoft for building modern, scalable apps on various platforms, including Windows, Linux, and macOS.",
+        text_es:
+          "Plataforma de desarrollo de código abierto de Microsoft para construir aplicaciones modernas y escalables en diversas plataformas, incluyendo Windows, Linux y macOS.",
+        icon: "NETCoreIcon",
       },
       {
         title: "C#",
-        text: "C# (C Sharp) is a modern, object-oriented programming language developed by Microsoft. Widely used in software development for Windows, web and mobile applications.",
-        icon: "",
+        text_en:
+          "Microsoft's general-purpose object-oriented programming language designed for building robust applications on the .NET platform.",
+        text_es:
+          "Lenguaje de programación multiparadigma desarrollado por Microsoft, orientado a objetos y diseñado para crear aplicaciones robustas en la plataforma .NET.",
+        icon: "CSharpIcon",
       },
       {
         title: "Node.js",
-        text: "Node.js is a server-side JavaScript runtime environment, allowing you to build scalable and efficient applications. Its ecosystem of modules facilitates the development of web servers, APIs and real-time applications.",
-        icon: "",
+        text_en:
+          "Server-side JavaScript runtime environment, based on Google's V8 engine, promoting scalable and efficient application development.",
+        text_es:
+          "Node.js es un entorno de ejecución de JavaScript del lado del servidor, basado en el motor V8 de Google, favorece aplicaciones escalables y eficientes.",
+        icon: "NodeJSIcon",
       },
       {
-        title: "Express",
-        text: "Express.js is a web framework for Node.js that simplifies the development of web applications and APIs. With a flexible architecture, powerful middleware, and focus on simplicity, Express makes it easy to build applications in Node.js.",
-        icon: "",
+        title: "Express.js",
+        text_en:
+          "Lightweight framework for building web applications in Node.js, enabling fast and flexible development with a minimalist structure.",
+        text_es:
+          "Express.js es un framework ligero para construir aplicaciones web en Node.js, facilita el desarrollo rápido y flexible con una estructura minimalista.",
+        icon: "ExpressIcon",
       },
       {
         title: "Microsoft SQL Server",
-        text: "Microsoft SQL Server is a relational database management system, developed by the Microsoft company.",
-        icon: "",
+        text_en:
+          "Leading database management platform ensuring security and optimal performance in enterprise environments.",
+        text_es:
+          "Microsoft SQL Server es un sistema de gestión de bases de datos, desarrollado por Microsoft, el cual ofrece seguridad y rendimiento para entornos empresariales.",
+        icon: "MicrosoftSQLServerIcon",
       },
       {
         title: "PostgreSQL",
-        text: "PostgreSQL is an open source, object-oriented relational database management system.",
-        icon: "",
+        text_en:
+          "Open-source relational database management system known for its extensibility, and support for complex queries.",
+        text_es:
+          "PostgreSQL es un sistema de gestión de bases de datos relacionales y orientado a objetos, es de código abierto y tiene un alto rendimiento.",
+        icon: "PostgreSQLIcon",
       },
       {
         title: "MongoDB",
-        text: "MongoDB is an open source, document-oriented, NoSQL database system.",
-        icon: "",
+        text_en:
+          "NoSQL database renowned for its flexibility, scalability, and document-oriented approach.",
+        text_es:
+          "MongoDB destaca como un sistema de gestión de bases de datos NoSQL de código abierto, diseñado con una orientación hacia documentos.",
+        icon: "MongoDBIcon",
       },
       {
         title: "MariaDB",
-        text: "MariaDB is a GPL-licensed MySQL-derived database management system.",
-        icon: "",
+        text_en:
+          "Open-source relational database derived from MySQL, MariaDB emphasizes performance, security, and compatibility.",
+        text_es:
+          "MariaDB es un sistema de gestión de bases de datos. Una alternativa que hereda la confiabilidad de MySQL y promueve la filosofía del software libre.",
+        icon: "MariaDBIcon",
       },
     ],
   },
   {
-    stack: "tools",
+    stack_es: "miscelaneo",
+    stack_en: "miscellaneous",
     list: [
       {
         title: "GIT",
-        text: "A version control system that facilitates collaboration, version history, and branch management, improving the efficiency and integrity of software development.",
-        icon: "",
+        text_en:
+          "Distributed version control system, Git facilitates tracking changes in source code, enhancing collaboration and project management.",
+        text_es:
+          "Sistema de control de versiones distribuido, Git facilita el seguimiento de cambios en el código fuente, mejorando la colaboración y la gestión de proyectos.",
+        icon: "GITIcon",
       },
       {
         title: "Firebase",
-        text: "Firebase is a platform for developing web applications and mobile applications launched in 2011 and acquired by Google in 2014.",
-        icon: "",
+        text_en:
+          "Google's development platform simplifying web and mobile app creation. Provides cloud services, real-time database, and authentication.",
+        text_es:
+          "Plataforma de desarrollo de Google que simplifica la creación de aplicaciones web y móviles, proporciona servicios en la nube, base de datos, autenticación, y demás.",
+        icon: "FirebaseIcon",
       },
       {
         title: "Figma",
-        text: "Figma is a design platform that allows teams to create, share, and collaborate on design projects. It offers tools for prototyping, user interface design and real-time collaboration.",
-        icon: "",
+        text_en:
+          "Cloud-based collaborative design tool, Figma allows teams to efficiently create and prototype user interfaces in real-time.",
+        text_es:
+          "Herramienta de diseño colaborativo basada en la nube, Figma permite a equipos crear y prototipar interfaces de usuario de manera eficiente y en tiempo real.",
+        icon: "FigmaIcon",
       },
       {
         title: "Photoshop CS6",
-        text: "Offers advanced photo and graphics manipulation tools, layers, filters and effects. Widely used in graphic design and photography.",
-        icon: "",
+        text_en:
+          "Industry-leading image editing software, Photoshop offers advanced tools for digital graphics manipulation, design, and enhancement.",
+        text_es:
+          "Software de edición de imágenes líder en la industria, Photoshop ofrece herramientas avanzadas para manipulación, diseño y mejora de gráficos digitales.",
+        icon: "PhotoshopIcon",
       },
     ],
   },
