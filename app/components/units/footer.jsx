@@ -2,8 +2,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import styles from "@/styles/modules/footer.module.css";
+import { useGlobal } from "@/contexts/GlobalContext";
 
 function Footer() {
+  const { lang } = useGlobal();
+
   return (
     <section className={styles.contact}>
       <motion.div
@@ -16,8 +19,10 @@ function Footer() {
           ease: "easeInOut",
         }}
       >
-        <span>FIND ME THROUGH MY</span>
-        <h5>SOCIAL MEDIA</h5>
+        <span>
+          {lang === "es" ? "ENCUENTRAME A TRAVÉS DE" : "FIND ME THROUGH MY"}
+        </span>
+        <h5>{lang === "es" ? "MIS REDES SOCIALES" : "SOCIAL MEDIA"}</h5>
       </motion.div>
       <div className={styles.contact_list}>
         <motion.div
@@ -79,7 +84,9 @@ function Footer() {
           ease: "easeInOut",
         }}
       >
-        Designed and developed by Franco Espinosa, 2023.
+        {lang === "es"
+          ? "Diseñado y desarrollado por Franco Espinosa, 2023."
+          : "Designed and developed by Franco Espinosa, 2023."}
       </motion.p>
     </section>
   );
