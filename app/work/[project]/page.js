@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useGlobal } from "@/contexts/GlobalContext";
 import { AllWorkList } from "@/data/AllWork";
 import { useRouter } from "next/navigation";
@@ -10,8 +10,13 @@ import { motion } from "framer-motion";
 import styles from "@/styles/modules/project.module.css";
 import { ResizeImgurImages } from "@/functions/Utilities";
 
+const variants = {
+  visible: { y: 0 },
+  hide: { y: -100 },
+};
+
 function ProjectPage({ params }) {
-  const { setIsHydrated, smallDevice } = useGlobal();
+  const { setIsHydrated, smallDevice, lang } = useGlobal();
 
   const [project, setProject] = useState(null);
 
@@ -56,9 +61,41 @@ function ProjectPage({ params }) {
     };
   }, []);
 
+  const [showNav, setShowNav] = useState(true);
+  const lastScrollPosition = useRef(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPosition = window.scrollY;
+      if (currentScrollPosition > lastScrollPosition.current) {
+        if (showNav) {
+          setShowNav(false);
+        }
+      } else {
+        if (!showNav) {
+          setShowNav(true);
+        }
+      }
+      lastScrollPosition.current = currentScrollPosition;
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [showNav]);
+
   return (
     <main className="wrapper">
-      <Navbar />
+      <motion.div
+        className="navbar_wrapper"
+        animate={showNav ? "visible" : "hide"}
+        variants={variants}
+        transition={{
+          duration: 0.35,
+        }}
+      >
+        <Navbar />
+      </motion.div>
       {project === null ? (
         <section className={styles.loading}></section>
       ) : (
@@ -73,7 +110,9 @@ function ProjectPage({ params }) {
               ease: "easeInOut",
             }}
           >
-            <span>KNOW MORE ABOUT</span>
+            <span>
+              {lang === "es" ? "CONOCE MÁS SOBRE" : "KNOW MORE ABOUT"}
+            </span>
             <h1>{project.title.toUpperCase()}</h1>
           </motion.div>
           {smallDevice ? (
@@ -101,7 +140,11 @@ function ProjectPage({ params }) {
                 ease: "easeInOut",
               }}
             >
-              <img src={project.extra_img} />
+              <img
+                src={
+                  lang === "es" ? project.extra_img_es : project.extra_img_en
+                }
+              />
             </motion.div>
           )}
 
@@ -116,10 +159,14 @@ function ProjectPage({ params }) {
             }}
           >
             <a href={project.proyect_url} target="_blank">
-              <button className={styles.primary_cta}>See demo</button>
+              <button className={styles.primary_cta}>
+                {lang === "es" ? "Ver demo" : "See demo"}
+              </button>
             </a>
             <a href="/work">
-              <button className={styles.secondary_cta}>Go back</button>
+              <button className={styles.secondary_cta}>
+                {lang === "es" ? "Regresar" : "Go back"}
+              </button>
             </a>
           </motion.div>
         </section>

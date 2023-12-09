@@ -9,8 +9,13 @@ import { AllWorkList } from "@/data/AllWork";
 import { ResizeImgurImages } from "@/functions/Utilities";
 import { useGlobal } from "@/contexts/GlobalContext";
 
+const variants = {
+  visible: { y: 0 },
+  hide: { y: -100 },
+};
+
 function WorkPage() {
-  const { setIsHydrated } = useGlobal();
+  const { setIsHydrated, lang } = useGlobal();
 
   useEffect(() => {
     // Function to execute before rendering
@@ -81,9 +86,41 @@ function WorkPage() {
     };
   }, [revealInterval]);
 
+  const [showNav, setShowNav] = useState(true);
+  const lastScrollPosition = useRef(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPosition = window.scrollY;
+      if (currentScrollPosition > lastScrollPosition.current) {
+        if (showNav) {
+          setShowNav(false);
+        }
+      } else {
+        if (!showNav) {
+          setShowNav(true);
+        }
+      }
+      lastScrollPosition.current = currentScrollPosition;
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [showNav]);
+
   return (
     <main className="wrapper">
-      <Navbar />
+      <motion.div
+        className="navbar_wrapper"
+        animate={showNav ? "visible" : "hide"}
+        variants={variants}
+        transition={{
+          duration: 0.35,
+        }}
+      >
+        <Navbar />
+      </motion.div>
       <motion.div
         className="page_title"
         initial={{ opacity: 0 }}
@@ -94,8 +131,8 @@ function WorkPage() {
           ease: "easeInOut",
         }}
       >
-        <span>START EXPLORING ALL</span>
-        <h1>MY WORK</h1>
+        <span>{lang === "es" ? "EXPLORA TODO" : "EXPLORE ALL"}</span>
+        <h1>{lang === "es" ? "MI TRABAJO" : "MY WORK"}</h1>
       </motion.div>
 
       {AllWorkList.map((item, index) => {
@@ -111,7 +148,7 @@ function WorkPage() {
                 ease: "easeInOut",
               }}
             >
-              <span>YEAR</span>
+              <span>{lang === "es" ? "AÑO" : "YEAR"}</span>
               <h2>{item.year.toString().toUpperCase()}</h2>
             </motion.div>
             <div className={styles.featured_work_bento}>
