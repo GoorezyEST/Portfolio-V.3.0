@@ -15,7 +15,7 @@ const variants = {
 };
 
 export default function Home() {
-  const { setIsHydrated, lang } = useGlobal();
+  const { setIsHydrated, lang, setMobileMenuOpen } = useGlobal();
 
   useEffect(() => {
     // Function to execute before rendering
@@ -48,6 +48,7 @@ export default function Home() {
       if (currentScrollPosition > lastScrollPosition.current) {
         if (showNav) {
           setShowNav(false);
+          setMobileMenuOpen(false);
         }
       } else {
         if (!showNav) {

@@ -16,7 +16,7 @@ const variants = {
 };
 
 function ProjectPage({ params }) {
-  const { setIsHydrated, smallDevice, lang } = useGlobal();
+  const { setIsHydrated, smallDevice, lang, setMobileMenuOpen } = useGlobal();
 
   const [project, setProject] = useState(null);
 
@@ -70,6 +70,7 @@ function ProjectPage({ params }) {
       if (currentScrollPosition > lastScrollPosition.current) {
         if (showNav) {
           setShowNav(false);
+          setMobileMenuOpen(false);
         }
       } else {
         if (!showNav) {

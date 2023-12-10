@@ -15,7 +15,7 @@ const variants = {
 };
 
 function WorkPage() {
-  const { setIsHydrated, lang } = useGlobal();
+  const { setIsHydrated, lang, setMobileMenuOpen } = useGlobal();
 
   useEffect(() => {
     // Function to execute before rendering
@@ -95,6 +95,7 @@ function WorkPage() {
       if (currentScrollPosition > lastScrollPosition.current) {
         if (showNav) {
           setShowNav(false);
+          setMobileMenuOpen(false);
         }
       } else {
         if (!showNav) {
