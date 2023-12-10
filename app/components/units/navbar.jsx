@@ -62,7 +62,12 @@ function Navbar() {
         <Link href="/">{lang === "es" ? "INICIO" : "HOME"}</Link>
         <Link href="/work">{lang === "es" ? "TRABAJO" : "WORK"}</Link>
         <Link href="/techs">{lang === "es" ? "TECNOS" : "TECHS"}</Link>
-        <div className={styles.navigator_language_desktop}>
+        <div
+          className={styles.navigator_language_desktop}
+          onClick={() => {
+            toggleLang();
+          }}
+        >
           <div className={styles.navigator_language_desktop_flag}>
             {lang === "es" ? <EnglishFlag /> : <SpanishFlag />}
           </div>
