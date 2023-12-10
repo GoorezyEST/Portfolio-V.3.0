@@ -5,7 +5,9 @@ const GlobalContext = createContext();
 export function GlobalProvider({ children }) {
   const [isHydrated, setIsHydrated] = useState(true);
   const [smallDevice, setSmallDevice] = useState(false);
-  const [lang, setLang] = useState("en");
+  const [lang, setLang] = useState("es");
+
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const mediaQueryList = window.matchMedia("(max-width: 700px)");
@@ -15,11 +17,14 @@ export function GlobalProvider({ children }) {
   }, []);
 
   const toggleLang = () => {
+    console.log("Hey");
     if (lang === "es") {
       setLang("en");
+      return;
     }
     if (lang === "en") {
       setLang("es");
+      return;
     }
     setLang("es");
   };
@@ -32,6 +37,8 @@ export function GlobalProvider({ children }) {
         smallDevice,
         toggleLang,
         lang,
+        mobileMenuOpen,
+        setMobileMenuOpen,
       }}
     >
       {children}
