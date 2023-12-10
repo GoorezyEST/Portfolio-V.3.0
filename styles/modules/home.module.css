@@ -183,6 +183,10 @@
   line-height: calc(16px * 1.5);
 }
 
+.freelancer_work_content_item_text > p:last-child {
+  margin-bottom: 8px;
+}
+
 .about_me_content_text > a {
   border: 1px solid var(--white);
   outline: none;
