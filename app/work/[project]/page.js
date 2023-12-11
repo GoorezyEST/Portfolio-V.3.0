@@ -85,6 +85,50 @@ function ProjectPage({ params }) {
     };
   }, [showNav]);
 
+  const [desktopImageLoaded, setDesktopImageLoaded] = useState(false);
+
+  useEffect(() => {
+    const image = new Image();
+
+    const loadImage = () => {
+      setDesktopImageLoaded(false);
+
+      image.onload = () => {
+        setDesktopImageLoaded(true);
+      };
+
+      if (lang === "es" && project !== null) {
+        image.src = project.extra_img_es;
+      }
+
+      if (lang === "en" && project !== null) {
+        image.src = project.extra_img_en;
+      }
+    };
+
+    loadImage();
+  }, [lang, project]);
+
+  const [mobileImageLoaded, setMobileImageLoaded] = useState(false);
+
+  useEffect(() => {
+    const image = new Image();
+
+    const loadImage = () => {
+      setMobileImageLoaded(false);
+
+      image.onload = () => {
+        setMobileImageLoaded(true);
+      };
+
+      if (project !== null) {
+        image.src = project.image_url;
+      }
+    };
+
+    loadImage();
+  }, [lang, project]);
+
   return (
     <main className="wrapper">
       <motion.div
@@ -119,6 +163,11 @@ function ProjectPage({ params }) {
           {smallDevice ? (
             <div className={styles.page_mobile}>
               <div className={styles.page_mobile_image}>
+                {!mobileImageLoaded && (
+                  <div className={styles.mobile_loading_image}>
+                    <span class="loader"></span>
+                  </div>
+                )}
                 <img
                   src={project.image_url}
                   alt={`${project.title} banner image`}
@@ -141,6 +190,11 @@ function ProjectPage({ params }) {
                 ease: "easeInOut",
               }}
             >
+              {!desktopImageLoaded && (
+                <div className={styles.loading_image}>
+                  <span class="loader"></span>
+                </div>
+              )}
               <img
                 src={
                   lang === "es" ? project.extra_img_es : project.extra_img_en

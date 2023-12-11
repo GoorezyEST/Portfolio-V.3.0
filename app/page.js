@@ -115,6 +115,101 @@ export default function Home() {
     };
   }, [showNav]);
 
+  const [imageStates, setImageStates] = useState([]);
+
+  useEffect(() => {
+    const loadImages = () => {
+      const newImageStates = [];
+
+      FeaturedWorkList.forEach((project, index) => {
+        const image = new Image();
+
+        image.onload = () => {
+          newImageStates[index] = true;
+          setImageStates([...newImageStates]);
+        };
+
+        image.onerror = () => {
+          newImageStates[index] = false;
+          setImageStates([...newImageStates]);
+        };
+
+        image.src = project.image_url;
+      });
+
+      setImageStates([...newImageStates]);
+    };
+
+    loadImages();
+  }, [lang]);
+
+  const [freelancerImagesState, setFreelancerImagesState] = useState([]);
+
+  useEffect(() => {
+    const loadImages = () => {
+      const newImageStates = [];
+
+      if (lang === "es") {
+        FreelancerWorkListES.forEach((project, index) => {
+          const image = new Image();
+
+          image.onload = () => {
+            newImageStates[index] = true;
+            setFreelancerImagesState([...newImageStates]);
+          };
+
+          image.onerror = () => {
+            newImageStates[index] = false;
+            setFreelancerImagesState([...newImageStates]);
+          };
+
+          image.src = project.image_url;
+        });
+
+        setFreelancerImagesState([...newImageStates]);
+      }
+
+      if (lang === "en") {
+        FreelancerWorkListEN.forEach((project, index) => {
+          const image = new Image();
+
+          image.onload = () => {
+            newImageStates[index] = true;
+            setFreelancerImagesState([...newImageStates]);
+          };
+
+          image.onerror = () => {
+            newImageStates[index] = false;
+            setFreelancerImagesState([...newImageStates]);
+          };
+
+          image.src = project.image_url;
+        });
+
+        setFreelancerImagesState([...newImageStates]);
+      }
+    };
+    loadImages();
+  }, [lang]);
+
+  const [aboutImage, setAboutImage] = useState(false);
+
+  useEffect(() => {
+    const image = new Image();
+
+    const loadImage = () => {
+      setAboutImage(false);
+
+      image.onload = () => {
+        setAboutImage(true);
+      };
+
+      image.src = "https://i.imgur.com/UueGXXr.png";
+    };
+
+    loadImage();
+  }, []);
+
   return (
     <main className="wrapper">
       <motion.div
@@ -193,14 +288,12 @@ export default function Home() {
                     handleMouseLeave();
                   }}
                 >
-                  <div
-                    className={styles.featured_work_card_front}
-                    style={{
-                      backgroundImage: `url(${ResizeImgurImages(
-                        work.image_url
-                      )})`,
-                    }}
-                  >
+                  <div className={styles.featured_work_card_front}>
+                    {!imageStates && (
+                      <div className={styles.loading_front_card}>
+                        <span className="loader"></span>
+                      </div>
+                    )}
                     <img
                       src={work.image_url}
                       alt={`${work.title} banner image`}
@@ -315,14 +408,12 @@ export default function Home() {
                         handleMouseLeave();
                       }}
                     >
-                      <div
-                        className={styles.featured_work_card_front}
-                        style={{
-                          backgroundImage: `url(${ResizeImgurImages(
-                            work.image_url
-                          )})`,
-                        }}
-                      >
+                      <div className={styles.featured_work_card_front}>
+                        {!freelancerImagesState && (
+                          <div className={styles.loading_front_card}>
+                            <span className="loader"></span>
+                          </div>
+                        )}
                         <img
                           src={work.image_url}
                           alt={`${work.title} banner image`}
@@ -433,11 +524,6 @@ export default function Home() {
           </div>
           <motion.div
             className={styles.about_me_content_image}
-            style={{
-              backgroundImage: `url(${ResizeImgurImages(
-                "https://i.imgur.com/UueGXXr.png"
-              )})`,
-            }}
             initial={{ opacity: 0, x: "-16px" }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{
@@ -446,6 +532,11 @@ export default function Home() {
               ease: "easeInOut",
             }}
           >
+            {!aboutImage && (
+              <div className={styles.loading_about}>
+                <span className="loader"></span>
+              </div>
+            )}
             <img
               src="https://i.imgur.com/UueGXXr.png"
               alt="Mar del Plata image"

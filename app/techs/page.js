@@ -63,8 +63,6 @@ export default function Home() {
     };
   }, [showNav]);
 
-  const MyIcon = getTechIcon("JavaScriptIcon");
-
   return (
     <main className="wrapper">
       <motion.div

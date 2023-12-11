@@ -110,6 +110,36 @@ function WorkPage() {
     };
   }, [showNav]);
 
+  const [imageStates, setImageStates] = useState([]);
+
+  useEffect(() => {
+    const loadImages = () => {
+      const newImageStates = [];
+
+      AllWorkList.forEach((yearObj) => {
+        yearObj.projects.forEach((project, index) => {
+          const image = new Image();
+
+          image.onload = () => {
+            newImageStates[index] = true;
+            setImageStates([...newImageStates]);
+          };
+
+          image.onerror = () => {
+            newImageStates[index] = false;
+            setImageStates([...newImageStates]);
+          };
+
+          image.src = project.image_url;
+        });
+      });
+
+      setImageStates([...newImageStates]);
+    };
+
+    loadImages();
+  }, [lang]);
+
   return (
     <main className="wrapper">
       <motion.div
@@ -179,14 +209,12 @@ function WorkPage() {
                         handleMouseLeave();
                       }}
                     >
-                      <div
-                        className={styles.featured_bento_card_front}
-                        style={{
-                          backgroundImage: `url(${ResizeImgurImages(
-                            work.image_url
-                          )})`,
-                        }}
-                      >
+                      <div className={styles.featured_bento_card_front}>
+                        {!imageStates[i] && (
+                          <div className={styles.front_card_loader}>
+                            <span className="loader"></span>
+                          </div>
+                        )}
                         <img
                           src={work.image_url}
                           alt={`${work.title} banner image`}
