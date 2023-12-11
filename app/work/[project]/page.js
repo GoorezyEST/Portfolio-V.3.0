@@ -175,8 +175,16 @@ function ProjectPage({ params }) {
               </div>
               <div className={styles.page_mobile_info}>
                 <h2>{project.title}</h2>
-                <p>{project.first_text}</p>
-                <p>{project.second_text}</p>
+                <p>
+                  {lang === "es"
+                    ? project.first_text_es
+                    : project.first_text_en}
+                </p>
+                <p>
+                  {lang === "es"
+                    ? project.second_text_es
+                    : project.second_text_en}
+                </p>
               </div>
             </div>
           ) : (
