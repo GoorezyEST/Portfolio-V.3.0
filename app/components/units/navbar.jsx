@@ -12,6 +12,26 @@ import HamburgerIcon from "../icons/HamburgerIcon";
 function Navbar() {
   const { lang, toggleLang, mobileMenuOpen, setMobileMenuOpen } = useGlobal();
 
+  const mobileMenuRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        mobileMenuOpen &&
+        mobileMenuRef.current &&
+        !mobileMenuRef.current.contains(event.target)
+      ) {
+        setMobileMenuOpen(false);
+      }
+    };
+
+    window.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      window.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [mobileMenuOpen]);
+
   return (
     <nav className={styles.navigator}>
       <div className={styles.navigator_logo}>
@@ -28,6 +48,7 @@ function Navbar() {
         </div>
         <div
           className={styles.mobile_menu}
+          ref={mobileMenuRef}
           style={{ transform: mobileMenuOpen ? "scale(1)" : "scale(0)" }}
         >
           <ul>
