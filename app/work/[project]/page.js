@@ -33,6 +33,7 @@ function ProjectPage({ params }) {
           setProject(isA2023Project[0]);
         }
         setTimeout(() => {
+          window.scrollTo({ top: 0 });
           setIsHydrated(false);
         }, 1000);
       } else {

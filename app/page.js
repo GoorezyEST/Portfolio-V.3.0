@@ -26,6 +26,7 @@ export default function Home() {
     // Function to execute before rendering
     function executeBeforeRender() {
       setTimeout(() => {
+        window.scrollTo({ top: 0 });
         setIsHydrated(false);
       }, 1000);
     }
@@ -466,7 +467,7 @@ export default function Home() {
               }}
             >
               {lang === "es"
-                ? "Soy Franco Espinosa, de Mar del Plata, Argentina. Comencé mi programación en diciembre de 2021 bajo la tutela de mi primo Marcos primo Marcos Espinosa, desarrollador Backend."
+                ? "Soy Franco Espinosa, de Mar del Plata, Argentina. Comencé mi programación en diciembre de 2021 bajo la tutela de mi primo Marcos Espinosa, desarrollador Backend."
                 : "I'm Franco Espinosa, from Mar del Plata, Argentina. I started my programming journey in December 2021 under the tutelage of my cousin Marcos Espinosa, a Backend developer."}
             </motion.p>
             <motion.p
@@ -509,7 +510,7 @@ export default function Home() {
                 : "To this date, I have studied a wide range of languages, databases, query languages, frameworks, design patterns and other concepts related to the field."}
             </motion.p>
             <motion.a
-              href="#"
+              href="/techs"
               role="button"
               initial={{ opacity: 0, x: "16px" }}
               whileInView={{ opacity: 1, x: 0 }}

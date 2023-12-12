@@ -21,6 +21,7 @@ export default function Home() {
     // Function to execute before rendering
     function executeBeforeRender() {
       setTimeout(() => {
+        window.scrollTo({ top: 0 });
         setIsHydrated(false);
       }, 1000);
     }
