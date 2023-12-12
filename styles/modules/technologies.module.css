@@ -75,3 +75,29 @@
     width: 100%;
   }
 }
+
+@media screen and (min-width: 1440px) and (min-height: 900px) {
+  .techs_container {
+    max-width: 1280px;
+  }
+
+  .techs_title > span {
+    font-size: 18px;
+    line-height: calc(18px * 1.2);
+  }
+
+  .techs_title > h2 {
+    font-size: 32px;
+    line-height: calc(32px * 1.2);
+  }
+
+  .techs_grid_item_title > h3 {
+    font-size: 18px;
+    line-height: calc(18px * 1.2);
+  }
+
+  .techs_grid_item > p {
+    font-size: 18px;
+    line-height: calc(18px * 1.5);
+  }
+}

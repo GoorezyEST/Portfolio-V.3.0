@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import { useGlobal } from "./GlobalContext";
 import { AnimatePresence, motion } from "framer-motion";
 import LogoIcon from "@/app/components/icons/LogoIcon";
+import Lenis from "@studio-freight/lenis";
 
 function LoadingScreen({ children }) {
   const { isHydrated } = useGlobal();
@@ -18,6 +19,22 @@ function LoadingScreen({ children }) {
       }, 515);
     }
   }, [isHydrated]);
+
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.25,
+      easing: (t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t)),
+      smoothWheel: true,
+      smoothTouch: false,
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  }, []);
 
   return (
     <>

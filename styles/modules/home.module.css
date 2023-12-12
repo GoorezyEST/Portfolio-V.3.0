@@ -282,3 +282,45 @@
     height: auto;
   }
 }
+
+@media screen and (min-width: 1440px) and (min-height: 900px) {
+  .featured_work,
+  .freelancer_work,
+  .about_me {
+    max-width: 1280px;
+  }
+
+  .featured_work_content > a {
+    height: 250px;
+  }
+
+  .featured_work_title > span,
+  .freelancer_work_title > span,
+  .about_me_title > span {
+    font-size: 18px;
+    line-height: calc(18px * 1.2);
+  }
+
+  .featured_work_title > h2,
+  .freelancer_work_title > h3,
+  .about_me_title > h4 {
+    font-size: 32px;
+    line-height: calc(32px * 1.2);
+  }
+
+  .featured_work_card_back > p {
+    font-size: 18px;
+    line-height: calc(18px * 1.2);
+  }
+
+  .freelancer_work_content_item_text > span {
+    font-size: 18px;
+    line-height: calc(18px * 1.2);
+  }
+
+  .freelancer_work_content_item_text > p,
+  .about_me_content_text > p {
+    font-size: 18px;
+    line-height: calc(18px * 1.5);
+  }
+}

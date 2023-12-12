@@ -155,3 +155,26 @@
     display: flex;
   }
 }
+
+@media screen and (min-width: 1440px) and (min-height: 900px) {
+  .navigator {
+    max-width: 100%;
+  }
+
+  .navigator_logo {
+    height: 32px;
+  }
+
+  .navigator_links_desktop > a {
+    font-size: 18px;
+    line-height: calc(18px * 1.2);
+  }
+
+  .navigator_language_desktop_flag {
+    height: calc(18px * 1.2);
+  }
+
+  .navigator_links_desktop {
+    gap: 64px;
+  }
+}
