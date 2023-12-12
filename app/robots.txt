@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://franco-espinosa-test.vercel.app//sitemap.xml
