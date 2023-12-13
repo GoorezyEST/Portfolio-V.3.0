@@ -29,6 +29,16 @@ export function GlobalProvider({ children }) {
     setLang("es");
   };
 
+  //Effect to handle language set in first load
+  useEffect(() => {
+    let userLanguage = navigator.language || navigator.userLanguage;
+    if (userLanguage.includes("es")) {
+      setLang("es");
+    } else {
+      setLang("en");
+    }
+  }, []);
+
   return (
     <GlobalContext.Provider
       value={{
