@@ -3,6 +3,23 @@ export const AllWorkList = [
     year: 2023,
     projects: [
       {
+        title: "Code Hub",
+        first_text_en:
+          "A blog created to store my knowledge related to programming, as well as to share it with other developers.",
+        second_text_en:
+          "This project was developed using NextJS, to learn how to use certain libraries that allowed me to create the posts as .md (Markdown) extension files.",
+        first_text_es:
+          "Un blog creado para almacenar mis conocimientos relacionados con la programación, así como para compartirlos con otros desarrolladores.",
+        second_text_es:
+          "Este proyecto fue desarrollado usando NextJS, para aprender a usar ciertas librerías que me permitieron crear los posts como archivos de extensión .md (Markdown).",
+        image_url: "https://i.imgur.com/TI4iT1O.png",
+        proyect_url: "https://code-hub-goorezy.vercel.app/",
+        extra: true,
+        extra_url: "code-hub",
+        extra_img_en: "https://i.imgur.com/DJzI7Hu.png",
+        extra_img_es: "https://i.imgur.com/oWmieRc.png",
+      },
+      {
         title: "Get repos",
         first_text_en:
           "Using the GitHub API, Get Repos allows you to view all of a user's public repositories by simply typing their name.",

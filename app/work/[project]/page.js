@@ -214,8 +214,8 @@ function ProjectPage({ params }) {
 
           <motion.div
             className={styles.buttons}
-            initial={{ opacity: 0, x: "16px" }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             transition={{
               delay: 0.125,
               duration: 0.275,

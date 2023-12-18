@@ -88,6 +88,9 @@
   border-radius: 8px;
   position: relative;
   padding: 0 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .page_image > img {
@@ -97,7 +100,7 @@
 }
 
 .buttons {
-  width: 100%;
+  width: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;

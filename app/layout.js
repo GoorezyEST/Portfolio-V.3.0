@@ -2,7 +2,7 @@ import { Open_Sans } from "next/font/google";
 import "@/styles/globals.css";
 import ThemeProvider from "@/contexts/ThemeProvider";
 
-const openSans = Open_Sans({
+const open_Sans = Open_Sans({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700", "800"],
 });
@@ -36,7 +36,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={openSans.className}>
+      <body className={open_Sans.className}>
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
