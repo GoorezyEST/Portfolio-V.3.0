@@ -10,10 +10,12 @@ const open_Sans = Open_Sans({
 export const metadata = {
   metadataBase: new URL("https://franco-espinosa-test.vercel.app/"),
   title: "Franco Espinosa",
-  description: "Franco Espinosa - Portfolio V.3",
+  description:
+    "Mi nombre es Franco Espinosa, soy un desarrollador web de Argentina, Mar del Plata. Aprovecho cada día para expandir mis conocimientos y enfrentar desafíos que pongan a prueba mis habilidades.",
   openGraph: {
     title: "Franco Espinosa",
-    description: "Franco Espinosa - Portfolio V.3",
+    description:
+      "Mi nombre es Franco Espinosa, soy un desarrollador web de Argentina, Mar del Plata. Aprovecho cada día para expandir mis conocimientos y enfrentar desafíos que pongan a prueba mis habilidades.",
     url: "https://franco-espinosa-test.vercel.app/",
   },
   keywords: [
