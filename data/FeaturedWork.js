@@ -1,8 +1,8 @@
 export const FeaturedWorkList = [
   {
-    title: "Code Hub",
-    project_url: "https://code-hub-goorezy.vercel.app/",
-    image_url: "https://i.imgur.com/TI4iT1O.png",
+    title: "Snapdle",
+    project_url: "https://snapdle-game.vercel.app/",
+    image_url: "https://i.imgur.com/yoPmRTB.png",
   },
   {
     title: "Get repos",

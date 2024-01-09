@@ -467,8 +467,8 @@ export default function Home() {
               }}
             >
               {lang === "es"
-                ? "Soy Franco Espinosa, de Mar del Plata, Argentina. Comencé mi programación en diciembre de 2021 bajo la tutela de mi primo Marcos Espinosa, desarrollador Backend."
-                : "I'm Franco Espinosa, from Mar del Plata, Argentina. I started my programming journey in December 2021 under the tutelage of my cousin Marcos Espinosa, a Backend developer."}
+                ? "Soy Franco Espinosa, de Mar del Plata, Argentina. Comencé mi programación en 2021 bajo la tutela de mi primo Marcos Espinosa, desarrollador Backend."
+                : "I'm Franco Espinosa, from Mar del Plata, Argentina. I started my programming journey in 2021 under the tutelage of my cousin Marcos Espinosa, a Backend developer."}
             </motion.p>
             <motion.p
               initial={{ opacity: 0, x: "16px" }}

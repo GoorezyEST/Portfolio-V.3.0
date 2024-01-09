@@ -1,5 +1,27 @@
 export const AllWorkList = [
   {
+    year: 2024,
+    projects: [
+      {
+        title: "Snapdle",
+        first_text_en:
+          "A browser game designed for Marvel Snap enthusiasts. An experience where the user will be able to pick between three game modes: classic, pixel, and skill.",
+        second_text_en:
+          " Each mode presents a unique challenge where you'll guess cards using different clues. You'll have three lives to prove how much do you know about Marvel Snap.",
+        first_text_es:
+          "Un juego de navegador diseñado para los entusiastas de Marvel Snap. Una experiencia en la que el usuario podrá elegir entre tres modos de juego: clásico, píxel y habilidades.",
+        second_text_es:
+          "Cada modo presenta un desafío único en el que tendrás que adivinar cartas utilizando diferentes pistas. Tendrás tres vidas para demostrar cuánto sabes sobre Marvel Snap.",
+        image_url: "https://i.imgur.com/yoPmRTB.png",
+        proyect_url: "https://snapdle-game.vercel.app/",
+        extra: true,
+        extra_url: "snapdle",
+        extra_img_en: "https://i.imgur.com/EvTZ9nq.png",
+        extra_img_es: "https://i.imgur.com/biv9yT3.png",
+      },
+    ],
+  },
+  {
     year: 2023,
     projects: [
       {
