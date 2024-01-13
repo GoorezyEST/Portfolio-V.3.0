@@ -1,0 +1,202 @@
+.wrapper {
+  width: 100%;
+  background-color: var(--black-light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px;
+  border-radius: 8px;
+  position: relative;
+}
+
+/*=== WELCOME SECTION ===*/
+
+.outter_welcome {
+  width: 100%;
+  height: auto;
+}
+
+.inner_welcome {
+  position: relative;
+  width: 100%;
+  height: 500px;
+}
+
+.inner_welcome > img {
+  position: absolute;
+  object-fit: cover;
+  object-position: top center;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  z-index: 75;
+}
+
+/*=== WELCOME SECTION IMAGE LOADING ===*/
+
+.project_image_loading {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background-color: var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.project_image_loader {
+  width: 64px;
+  height: 64px;
+  position: relative;
+  background: var(--black-light);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.project_image_loader:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: 40px;
+  transform: rotate(45deg) translate(30%, 40%);
+  background: hsl(0, 0%, 95%);
+  box-shadow: 32px -34px 0 5px hsl(0, 0%, 85%);
+}
+
+.project_image_loader:after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: hsl(0, 0%, 85%);
+  transform: rotate(0deg);
+  transform-origin: 35px 145px;
+}
+
+/*=== WELCOME SECTION TITLE ===*/
+
+.welcome_title {
+  position: absolute;
+  z-index: 100;
+  bottom: 0;
+  left: 50%;
+  transform: translateY(50%) translateX(-50%);
+  background-color: var(--black-light);
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: var(--project-shadow);
+}
+
+.welcome_title > h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--white);
+}
+
+/*=== INFORMATION SECTION ===*/
+.project_information {
+  display: flex;
+  height: auto;
+  width: 100%;
+  gap: 32px;
+  margin-top: 64px;
+}
+
+.first_info {
+  margin-top: 96px;
+}
+
+.last_info {
+  margin-bottom: 32px;
+}
+
+.left {
+  flex-direction: row;
+}
+
+.right {
+  flex-direction: row-reverse;
+}
+
+.project_information_image {
+  position: relative;
+  height: 250px;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--black-light);
+  border-radius: 8px;
+}
+
+.project_information_image > img {
+  object-fit: cover;
+}
+
+.project_information_text {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project_information_text > h2 {
+  font-size: 24px;
+  color: var(--white);
+  font-weight: 700;
+  line-height: calc(24px * 1.2);
+  text-transform: uppercase;
+}
+
+.project_information_text > p {
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--white);
+  line-height: calc(16px * 1.5);
+  margin-top: 8px;
+}
+
+/*=== END SECTION ===*/
+.end {
+  margin-top: 64px;
+  display: flex;
+  gap: 32px;
+}
+
+.end > a {
+  text-decoration: none;
+  width: 150px;
+}
+
+.primary_cta,
+.secondary_cta {
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.primary_cta {
+  background-color: var(--white);
+  color: var(--black-light);
+  border: 2px solid var(--white);
+}
+
+.secondary_cta {
+  background-color: var(--black-light);
+  color: var(--white);
+  border: 2px solid var(--white);
+}
