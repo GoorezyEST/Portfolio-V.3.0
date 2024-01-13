@@ -267,44 +267,44 @@ export default function Home() {
         <div className={styles.featured_work_content}>
           {FeaturedWorkList.map((work, index) => {
             return (
-              <motion.a
-                href={work.project_url}
-                target="_blank"
-                className={styles.featured_work_card}
-                key={index}
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{
-                  delay: 0.125,
-                  duration: 0.275,
-                  ease: "easeInOut",
-                }}
-              >
-                <div
-                  className={styles.featured_work_card_inner}
-                  onMouseEnter={() => {
-                    randomTextRevealEnter(work.title);
-                  }}
-                  onMouseLeave={() => {
-                    handleMouseLeave();
+              <Link href={work.project_url} target="_self">
+                <motion.div
+                  className={styles.featured_work_card}
+                  key={index}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{
+                    delay: 0.125,
+                    duration: 0.275,
+                    ease: "easeInOut",
                   }}
                 >
-                  <div className={styles.featured_work_card_front}>
-                    {!imageStates && (
-                      <div className={styles.loading_front_card}>
-                        <span className="loader"></span>
-                      </div>
-                    )}
-                    <img
-                      src={work.image_url}
-                      alt={`${work.title} banner image`}
-                    />
+                  <div
+                    className={styles.featured_work_card_inner}
+                    onMouseEnter={() => {
+                      randomTextRevealEnter(work.title);
+                    }}
+                    onMouseLeave={() => {
+                      handleMouseLeave();
+                    }}
+                  >
+                    <div className={styles.featured_work_card_front}>
+                      {!imageStates && (
+                        <div className={styles.loading_front_card}>
+                          <span className="loader"></span>
+                        </div>
+                      )}
+                      <img
+                        src={work.image_url}
+                        alt={`${work.title} banner image`}
+                      />
+                    </div>
+                    <div className={styles.featured_work_card_back}>
+                      <p>{textReveal}</p>
+                    </div>
                   </div>
-                  <div className={styles.featured_work_card_back}>
-                    <p>{textReveal}</p>
-                  </div>
-                </div>
-              </motion.a>
+                </motion.div>
+              </Link>
             );
           })}
         </div>

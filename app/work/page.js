@@ -8,6 +8,7 @@ import Footer from "../components/units/footer";
 import { AllWorkList } from "@/data/AllWork";
 import { ResizeImgurImages } from "@/functions/Utilities";
 import { useGlobal } from "@/contexts/GlobalContext";
+import Link from "next/link";
 
 const variants = {
   visible: { y: 0 },
@@ -186,46 +187,49 @@ function WorkPage() {
             <div className={styles.featured_work_bento}>
               {item.projects.map((work, i) => {
                 return (
-                  <motion.a
-                    className={styles.fatured_work_bento_card}
-                    key={i}
+                  <Link
                     href={
                       work.extra ? `work/${work.extra_url}` : work.proyect_url
                     }
                     target={work.extra ? "_self" : "_blank"}
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{
-                      delay: 0.125,
-                      duration: 0.275,
-                      ease: "easeInOut",
-                    }}
                   >
-                    <div
-                      className={styles.featured_bento_card_inner}
-                      onMouseEnter={() => {
-                        randomTextRevealEnter(work.title);
-                      }}
-                      onMouseLeave={() => {
-                        handleMouseLeave();
+                    <motion.div
+                      className={styles.fatured_work_bento_card}
+                      key={i}
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      transition={{
+                        delay: 0.125,
+                        duration: 0.275,
+                        ease: "easeInOut",
                       }}
                     >
-                      <div className={styles.featured_bento_card_front}>
-                        {!imageStates[i] && (
-                          <div className={styles.front_card_loader}>
-                            <span className="loader"></span>
-                          </div>
-                        )}
-                        <img
-                          src={work.image_url}
-                          alt={`${work.title} banner image`}
-                        />
+                      <div
+                        className={styles.featured_bento_card_inner}
+                        onMouseEnter={() => {
+                          randomTextRevealEnter(work.title);
+                        }}
+                        onMouseLeave={() => {
+                          handleMouseLeave();
+                        }}
+                      >
+                        <div className={styles.featured_bento_card_front}>
+                          {!imageStates[i] && (
+                            <div className={styles.front_card_loader}>
+                              <span className="loader"></span>
+                            </div>
+                          )}
+                          <img
+                            src={work.image_url}
+                            alt={`${work.title} banner image`}
+                          />
+                        </div>
+                        <div className={styles.featured_bento_card_back}>
+                          <p>{textReveal}</p>
+                        </div>
                       </div>
-                      <div className={styles.featured_bento_card_back}>
-                        <p>{textReveal}</p>
-                      </div>
-                    </div>
-                  </motion.a>
+                    </motion.div>
+                  </Link>
                 );
               })}
             </div>

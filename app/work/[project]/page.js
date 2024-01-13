@@ -9,6 +9,7 @@ import Footer from "@/app/components/units/footer";
 import { motion } from "framer-motion";
 import styles from "@/styles/modules/project.module.css";
 import { ResizeImgurImages } from "@/functions/Utilities";
+import ProjectData from "@/app/components/units/ProjectData";
 
 const variants = {
   visible: { y: 0 },
@@ -86,50 +87,6 @@ function ProjectPage({ params }) {
     };
   }, [showNav]);
 
-  const [desktopImageLoaded, setDesktopImageLoaded] = useState(false);
-
-  useEffect(() => {
-    const image = new Image();
-
-    const loadImage = () => {
-      setDesktopImageLoaded(false);
-
-      image.onload = () => {
-        setDesktopImageLoaded(true);
-      };
-
-      if (lang === "es" && project !== null) {
-        image.src = project.extra_img_es;
-      }
-
-      if (lang === "en" && project !== null) {
-        image.src = project.extra_img_en;
-      }
-    };
-
-    loadImage();
-  }, [lang, project]);
-
-  const [mobileImageLoaded, setMobileImageLoaded] = useState(false);
-
-  useEffect(() => {
-    const image = new Image();
-
-    const loadImage = () => {
-      setMobileImageLoaded(false);
-
-      image.onload = () => {
-        setMobileImageLoaded(true);
-      };
-
-      if (project !== null) {
-        image.src = project.image_url;
-      }
-    };
-
-    loadImage();
-  }, [lang, project]);
-
   return (
     <main className="wrapper">
       <motion.div
@@ -161,78 +118,12 @@ function ProjectPage({ params }) {
             </span>
             <h1>{project.title.toUpperCase()}</h1>
           </motion.div>
-          {smallDevice ? (
-            <div className={styles.page_mobile}>
-              <div className={styles.page_mobile_image}>
-                {!mobileImageLoaded && (
-                  <div className={styles.mobile_loading_image}>
-                    <span class="loader"></span>
-                  </div>
-                )}
-                <img
-                  src={project.image_url}
-                  alt={`${project.title} banner image`}
-                />
-              </div>
-              <div className={styles.page_mobile_info}>
-                <h2>{project.title}</h2>
-                <p>
-                  {lang === "es"
-                    ? project.first_text_es
-                    : project.first_text_en}
-                </p>
-                <p>
-                  {lang === "es"
-                    ? project.second_text_es
-                    : project.second_text_en}
-                </p>
-              </div>
-            </div>
-          ) : (
-            <motion.div
-              className={styles.page_image}
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{
-                delay: 0.125,
-                duration: 0.275,
-                ease: "easeInOut",
-              }}
-            >
-              {!desktopImageLoaded && (
-                <div className={styles.loading_image}>
-                  <span class="loader"></span>
-                </div>
-              )}
-              <img
-                src={
-                  lang === "es" ? project.extra_img_es : project.extra_img_en
-                }
-              />
-            </motion.div>
-          )}
 
-          <motion.div
-            className={styles.buttons}
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{
-              delay: 0.125,
-              duration: 0.275,
-              ease: "easeInOut",
-            }}
-          >
-            <a href={project.proyect_url} target="_blank">
-              <button className={styles.primary_cta}>
-                {lang === "es" ? "Ver demo" : "See demo"}
-              </button>
-            </a>
-            <a href="/work">
-              <button className={styles.secondary_cta}>
-                {lang === "es" ? "Regresar" : "Go back"}
-              </button>
-            </a>
-          </motion.div>
+          {lang === "es" ? (
+            <ProjectData data={project.extra_data.es} />
+          ) : (
+            <ProjectData data={project.extra_data.en} />
+          )}
         </section>
       )}
       <Footer />
