@@ -16,8 +16,98 @@ export const AllWorkList = [
         proyect_url: "https://snapdle-game.vercel.app/",
         extra: true,
         extra_url: "snapdle",
-        extra_img_en: "https://i.imgur.com/EvTZ9nq.png",
-        extra_img_es: "https://i.imgur.com/biv9yT3.png",
+        extra_data: {
+          es: [
+            {
+              banner: "https://i.imgur.com/RqfiJ8O.png",
+              title: "SNAPDLE",
+            },
+            {
+              side: "left",
+              img: "https://i.imgur.com/WMxv2la.png",
+              title: "Concepto general",
+              text: "Un juego de navegador diseñado para los entusiastas de Marvel Snap.\nUna experiencia en la que el usuario podrá elegir entre tres modos de juego: clásico, píxel y habilidades.\nCada modo presenta un desafío único en el que tendrás que adivinar cartas utilizando diferentes pistas. Tendrás tres vidas para demostrar cuánto sabes sobre Marvel Snap.",
+            },
+            {
+              side: "right",
+              img: "https://i.imgur.com/WA0Pkj6.png",
+              title: "Menu del juego",
+              text: "En el menú de juego el usuario podrá seleccionar entre cualquiera de los 3 modos de juego existentes: clásico, píxel o habilidades.\nPor otro lado, el usuario también puede utilizar los dos botones de la parte inferior del menú para desactivar/activar tanto la música como los efectos de sonido del juego.",
+            },
+            {
+              side: "left",
+              img: "https://i.imgur.com/rvSGSXz.png",
+              title: "MODO DE JUEGO: CLÁSICO",
+              text: "En el modo de juego clásico, el jugador tendrá como pista para adivinar la carta una imagen completa de la misma, pero borrosa. Tendrá que adivinarla basándose en sus colores y en las pocas características que pueda distinguir.\nCon el botón de volver a tirar, el usuario podrá cambiar la carta una sola vez en la partida sin perder puntos de vida.",
+            },
+            {
+              side: "right",
+              img: "https://i.imgur.com/b8ElEhj.png",
+              title: "MODO DE JUEGO: PÍXEL",
+              text: "En el modo de juego píxel, el jugador tendrá como pista para adivinar la carta una imagen a escala, por lo que sólo verá una pequeña parte de la carta. Por eso el nombre del modo de juego es píxel.\nCon el botón de volver a tirar, el usuario podrá cambiar la carta una sola vez en la partida sin perder puntos de vida.",
+            },
+            {
+              side: "left",
+              img: "https://i.imgur.com/DslmpkX.png",
+              title: "MODO DE JUEGO: HABILIDADES",
+              text: "En el modo de juego de habilidades, el jugador tendrá como pista para adivinar la carta un texto que describe la habilidad de la carta en cuestión.\nEste es, con diferencia, el modo de juego más difícil de Snapdle, ya que para conseguir una buena racha el jugador debe conocer un número incontable de cartas, y lo que hace cada una de ellas.",
+            },
+            {
+              side: "right",
+              img: "https://i.imgur.com/kUVWBq8.png",
+              title: "PANTALLA DE FIN DEL JUEGO",
+              text: "En esta pantalla el jugador podrá ver la racha de cartas adivinadas que ha obtenido, así como con qué carta ha perdido la partida.\nEl jugador también podrá compartir su racha con sus amigos haciendo clic en el botón 'copiar' de la parte inferior.",
+            },
+            {
+              project: "https://snapdle-game.vercel.app/",
+            },
+          ],
+          en: [
+            {
+              banner: "https://i.imgur.com/RqfiJ8O.png",
+              title: "SNAPDLE",
+            },
+            {
+              side: "left",
+              img: "https://i.imgur.com/WMxv2la.png",
+              title: "GENERAL CONCEPT",
+              text: "A browser game designed for Marvel Snap enthusiasts. An experience where the user will be able to pick between three game modes: classic, pixel, and skill.\n Each mode presents a unique challenge where you'll guess cards using different clues. You'll have three lives to prove how much do you know about Marvel Snap.",
+            },
+            {
+              side: "right",
+              img: "https://i.imgur.com/WA0Pkj6.png",
+              title: "GAME MENU",
+              text: "In the game menu the user will be able to select between any of the 3 existing game modes: classic, pixel or skills.\nOn the other hand the user can also use the two buttons at the bottom of the menu to turn off/on both the music and the sound effects of the game.",
+            },
+            {
+              side: "left",
+              img: "https://i.imgur.com/rvSGSXz.png",
+              title: "CLASSIC GAME MODE",
+              text: "In the classic game mode the player will have as a clue to guess the card a full image of the card, but blurred. He will have to guess it based on its colors and the few characteristics he can make out.\nWith the re-roll button the user will be able to change the card only once in the game without losing any life points.",
+            },
+            {
+              side: "right",
+              img: "https://i.imgur.com/b8ElEhj.png",
+              title: "PIXEL GAME MODE",
+              text: "In the pixel game mode, the player will have as a clue to guess the card a scaled image, so he will only see a small portion of the card. Therefore the name of the game mode is pixel.\nWith the re-roll button the user will be able to change the card only once in the game without losing any life points.",
+            },
+            {
+              side: "left",
+              img: "https://i.imgur.com/DslmpkX.png",
+              title: "SKILLS GAME MODE",
+              text: "In the skills game mode, the player will have as a clue to guess the card a text describing the ability of the card in question.\nThis is by far the most difficult game mode of Snapdle, since to get a good run the player must know a countless number of cards, and what each of them does.",
+            },
+            {
+              side: "right",
+              img: "https://i.imgur.com/kUVWBq8.png",
+              title: "GAME OVER SCREEN",
+              text: "In this screen the player will be able to see the streak of guessed cards he/she has obtained, as well as which card he lost the game with.\nThe player will also be able to share his streak with his friends by clicking on the 'copy' button at the bottom.",
+            },
+            {
+              project: "https://snapdle-game.vercel.app/",
+            },
+          ],
+        },
       },
     ],
   },
@@ -38,8 +128,74 @@ export const AllWorkList = [
         proyect_url: "https://code-hub-goorezy.vercel.app/",
         extra: true,
         extra_url: "code-hub",
-        extra_img_en: "https://i.imgur.com/DJzI7Hu.png",
-        extra_img_es: "https://i.imgur.com/oWmieRc.png",
+        extra_data: {
+          es: [
+            {
+              banner: "https://i.imgur.com/T3X3Xb6.png",
+              title: "CODE HUB",
+            },
+            {
+              side: "left",
+              img: "https://i.imgur.com/T60sEWY.png",
+              title: "OBJETIVO DEL PROYECTO",
+              text: "El propósito de este blog es almacenar scripts, funciones, correcciones de errores, así como cualquier otra información relacionada con la programación, con el fin de tener un acceso más fácil a estos recursos. Además, esto me da la oportunidad de compartir mis conocimientos con otros desarrolladores.",
+            },
+            {
+              side: "right",
+              img: "https://i.imgur.com/mqCc6E4.png",
+              title: "LOS POSTS",
+              text: "El usuario puede ir a la pestaña posts para ver todos los posts. Desde ahí puede filtrarlos utilizando la barra de búsqueda de la parte superior, que mostrará los posts cuyos títulos coincidan con lo que ha escrito el usuario.",
+            },
+            {
+              side: "left",
+              img: "https://i.imgur.com/BbHgn50.png",
+              title: "CONTENIDO DE LOS POSTS",
+              text: "Cuando el usuario haga clic en un post, será redirigido a una página concreta generada dinámicamente.\n En esta página podrá ver tanto el contenido del post (texto, imágenes, código, etc). Además, en función de las etiquetas de la entrada, podrá ver otras entradas relacionadas con ella.",
+            },
+            {
+              side: "right",
+              img: "https://i.imgur.com/P41fxaH.png",
+              title: "METADATA DINÁMICA",
+              text: "Por último, cada entrada genera dinámicamente sus propios metadatos. Tanto el título como la descripción y la información del post abierto.\nDe esta forma, si alguien comparte un post con otra persona, podrá ver antes de entrar una pequeña vista previa de lo que trata el artículo que se le ha enviado.",
+            },
+            {
+              project: "https://code-hub-goorezy.vercel.app/",
+            },
+          ],
+          en: [
+            {
+              banner: "https://i.imgur.com/T3X3Xb6.png",
+              title: "CODE HUB",
+            },
+            {
+              side: "left",
+              img: "https://i.imgur.com/T60sEWY.png",
+              title: "PURPOSE OF THE PROJECT",
+              text: "The purpose of this blog is to store scripts, functions, bug fixes, as well as any other programming related information, in order to have an easier access to these resources. Also, this gives me the opportunity to share my knowledge with other developers.",
+            },
+            {
+              side: "right",
+              img: "https://i.imgur.com/mqCc6E4.png",
+              title: "THE POSTS",
+              text: "The user can go to the posts tab to see all posts. From there he can filter them using the search bar at the top, which will display the posts whose titles match what the user has written.",
+            },
+            {
+              side: "left",
+              img: "https://i.imgur.com/BbHgn50.png",
+              title: "POSTS CONTENT",
+              text: "When the user clicks on a post, he will be redirected to a specific dynamically generated page.\nOn this page he will be able to see both the content of the post (text, images, code, etc). In addition, depending on the tags of the post, you will be able to see other posts related to it.",
+            },
+            {
+              side: "right",
+              img: "https://i.imgur.com/P41fxaH.png",
+              title: "DYNAMIC METADATA",
+              text: "Finally, each post dynamically generates its own metadata. Both the title and the description and information of the open post.\nThis way, if someone shares a post with another person, they will be able to see before entering a small preview of what the article sent to them is about.",
+            },
+            {
+              project: "https://code-hub-goorezy.vercel.app/",
+            },
+          ],
+        },
       },
       {
         title: "Get repos",
@@ -55,8 +211,74 @@ export const AllWorkList = [
         proyect_url: "https://get-repos.vercel.app/",
         extra: true,
         extra_url: "get-repos",
-        extra_img_en: "https://i.imgur.com/9o6ZjyT.png",
-        extra_img_es: "https://i.imgur.com/otHPM6j.png",
+        extra_data: {
+          es: [
+            {
+              banner: "https://i.imgur.com/8yq1JMX.png",
+              title: "GET REPOS",
+            },
+            {
+              side: "left",
+              img: "https://i.imgur.com/1GD3YpV.png",
+              title: "FUNCIONALIDAD",
+              text: "Utilizando la API de GitHub, Get Repos te permite ver todos los repositorios públicos de un usuario simplemente escribiendo su nombre.\n También puedes ordenar estos repositorios por más antiguos, más recientes, más estrellas o menos estrellas. Y también podrás ver el total de sus seguidores, seguidos y repositorios.",
+            },
+            {
+              side: "right",
+              img: "https://i.imgur.com/NX0LXwU.png",
+              title: "CAMBIAR TEMA E IDIOMA",
+              text: "Esta aplicación web también permite al usuario elegir entre un tema claro u oscuro, así como cambiar el idioma entre inglés o español.",
+            },
+            {
+              side: "left",
+              img: "https://i.imgur.com/9oQcWW8.png",
+              title: "VER REPOSITORIOS",
+              text: "Al introducir el nombre de un usuario de GitHub en la entrada, el usuario podrá ver todos los repositorios públicos del buscador en un grid paginado.\nEl usuario podrá filtrar los repositorios por más nuevos, más antiguos, con más estrellas o con menos estrellas.",
+            },
+            {
+              side: "right",
+              img: "https://i.imgur.com/1wj4ern.png",
+              title: "INFORMACIÓN DEL USUARIO",
+              text: "Por otro lado, si el usuario hace clic en Ver perfil, en la esquina inferior izquierda de cada repositorio del grid. Se abrirá un overlay como la que se ve en la imagen de la derecha.\nAqui podrás ver ver información sobre el usuario, como cuántos seguidores tiene, a cuántos usuarios sigue e incluso cuándo se unió a GitHub.",
+            },
+            {
+              project: "https://get-repos.vercel.app/",
+            },
+          ],
+          en: [
+            {
+              banner: "https://i.imgur.com/a8sXIYz.png",
+              title: "GET REPOS",
+            },
+            {
+              side: "left",
+              img: "https://i.imgur.com/vRnn0PB.png",
+              title: "FUNCTIONALITY",
+              text: "Using the GitHub API, Get Repos allows you to view all of a user's public repositories by simply typing their name.\nYou can also sort these repositories by oldest, newest, most stars or least stars. And you can also see the total of their followers, followings and repositories.",
+            },
+            {
+              side: "right",
+              img: "https://i.imgur.com/aVA9wS7.png",
+              title: "CHANGE THEME AND LANGUAGE",
+              text: "This web application also allows the user to choose between a light or dark theme, as well as to change the language between English or Spanish.",
+            },
+            {
+              side: "left",
+              img: "https://i.imgur.com/zg6ocMz.png",
+              title: "SEE REPOSITORIES",
+              text: "By entering the name of a GitHub user in the input, the user will be able to see all public repositories in the search engine in a paginated grid.\nThe user will be able to filter the repositories by newest, oldest, most starred, or least starred.",
+            },
+            {
+              side: "right",
+              img: "https://i.imgur.com/NIVlxQ5.png",
+              title: "USER INFORMATION",
+              text: "On the other hand, if the user clicks on View profile, in the lower left corner of each repository in the grid. It will open an overlay like the one shown in the image on the right.\nHere you can see information about the user, such as how many followers they have, how many users they follow and even when they joined GitHub.",
+            },
+            {
+              project: "https://get-repos.vercel.app/",
+            },
+          ],
+        },
       },
       {
         title: "Simple crypto monitor",
@@ -71,9 +293,63 @@ export const AllWorkList = [
         image_url: "https://i.imgur.com/S8Hnd3U.png",
         proyect_url: "https://simple-crypto-monitor.vercel.app/",
         extra: true,
-        extra_url: "simple-cripto-monitor",
-        extra_img_en: "https://i.imgur.com/bBy3ar7.png",
-        extra_img_es: "https://i.imgur.com/9V44G5x.png",
+        extra_url: "simple-crypto-monitor",
+        extra_data: {
+          es: [
+            {
+              banner: "https://i.imgur.com/RqqTuny.png",
+              title: "SIMPLE CRYPTO MONITOR",
+            },
+            {
+              side: "left",
+              img: "https://i.imgur.com/t4AegZt.png",
+              title: "FUNCIONALIDAD",
+              text: "Una aplicación web de una sola página para ver las criptomonedas más populares, así como para previsualizar sus valores al convertirlas a otras criptomonedas.\n El usuario puede cambiar la moneda de la aplicación. También detecta el idioma del navegador para que la aplicación se muestre en inglés o español.",
+            },
+            {
+              side: "right",
+              img: "https://i.imgur.com/rh8aAm3.png",
+              title: "CRIPTOS EN TENDENCIA",
+              text: "Como se muestra en la imagen de la izquierda, el usuario podrá ver una tabla con información sobre las criptomonedas en tendencia.\nEl usuario podrá ver el último precio, y el cambio porcentual en las últimas 24 horas, en la última semana y en el último mes.",
+            },
+            {
+              side: "left",
+              img: "https://i.imgur.com/RUP1Lnz.png",
+              title: "PREVISUALIZAR CONVERSIÓN",
+              text: "El usuario también podrá previsualizar las conversiones entre dos criptomonedas. Podrá elegir entre todas las criptomonedas de la tabla de tendencias.\nAdemás, con el botón del centro, el usuario puede intercambiar los valores para invertir la conversión.",
+            },
+            {
+              project: "https://simple-crypto-monitor.vercel.app/",
+            },
+          ],
+          en: [
+            {
+              banner: "https://i.imgur.com/Fnsud5I.png",
+              title: "SIMPLE CRYPTO MONITOR",
+            },
+            {
+              side: "left",
+              img: "https://i.imgur.com/O2QPZ9e.png",
+              title: "FUNCTIONALITY",
+              text: "A single page web application to see the most popular cryptocurrencies, as well as to preview their values ​​when converting them to other cryptocurrencies.\nThe user is able to change the currency of the application. It also detects the browser language so the application is displayed in english or spanish.",
+            },
+            {
+              side: "right",
+              img: "https://i.imgur.com/zaSVU9G.png",
+              title: "TRENDING CRYPTOS",
+              text: "As shown in the image on the left, the user will be able to see a table with information about the trending cryptocurrencies.\nThe user will be able to see the last price, and the percentage change in the last 24 hours, in the last week and in the last month.",
+            },
+            {
+              side: "left",
+              img: "https://i.imgur.com/gSe0aJK.png",
+              title: "PREVISUALIZE CONVERSIONS",
+              text: "The user will also be able to preview conversions between two cryptocurrencies. He will be able to choose from all the ones in the trending cryptocurrency table.\nAlso with the button in the middle the user can swap the values to reverse the conversion.",
+            },
+            {
+              project: "https://simple-crypto-monitor.vercel.app/",
+            },
+          ],
+        },
       },
       {
         title: "E-Booking",
@@ -89,8 +365,74 @@ export const AllWorkList = [
         proyect_url: "https://electronic-booking.vercel.app/",
         extra: true,
         extra_url: "e-booking",
-        extra_img_en: "https://i.imgur.com/1cP1U31.png",
-        extra_img_es: "https://i.imgur.com/QzRTOwk.png",
+        extra_data: {
+          es: [
+            {
+              banner: "https://i.imgur.com/RkSKDNP.png",
+              title: "E-BOOKING",
+            },
+            {
+              side: "left",
+              img: "https://i.imgur.com/1MakBrd.png",
+              title: "FUNCIONALIDAD",
+              text: "Un sitio web de reservas electrónicas en el que puede ver una gama de productos, añadir los que desee al carrito y, tras rellenar un formulario, recibir un correo electrónico de verificación.\nTambién dispone de un sistema de gestión de contenidos, diseñado para que el administrador pueda utilizarlo de forma sencilla y hacer un CRUD en la base de datos.",
+            },
+            {
+              side: "right",
+              img: "https://i.imgur.com/R1EhXwW.png",
+              title: "FILTRAR PRODUCTOS",
+              text: "El usuario tendrá la posibilidad de filtrar los productos paginados en el grid en función de las categorías existentes en la pestaña desplegable de filtros.\nEn la imagen de la derecha, por ejemplo, podemos ver el grid de productos cuando se filtra por 'mouses'.",
+            },
+            {
+              side: "left",
+              img: "https://i.imgur.com/XznWFpA.png",
+              title: "PÁGINA INDIVIDUAL DEL PRODUCTO",
+              text: "Cada producto tiene su propia ruta dinámica a la que el usuario puede acceder haciendo clic en la imagen del producto.\nAquí el usuario podrá ver información más detallada sobre el producto, así como otros productos relacionados con la categoría a la que pertenece el producto principal.",
+            },
+            {
+              side: "right",
+              img: "https://i.imgur.com/uqk90ty.png",
+              title: "EL CARRITO",
+              text: "El usuario verá todos los productos añadidos, y podrá eliminarlos o aumentar la cantidad de los mismos. El usuario también verá el precio total de los productos. Y hay un formulario, que si lo rellena y envía, recibirá un correo electrónico de 'verificación' con los detalles de su compra.",
+            },
+            {
+              project: "https://electronic-booking.vercel.app/",
+            },
+          ],
+          en: [
+            {
+              banner: "https://i.imgur.com/RkSKDNP.png",
+              title: "E-BOOKING",
+            },
+            {
+              side: "left",
+              img: "https://i.imgur.com/1MakBrd.png",
+              title: "FUNCTIONALITY",
+              text: "An electronic booking website where you can see a range of products, add the ones you want to the cart and after completing a form receive a verification email.\nIt also has a content management system, designed to be simple for the administrator to use so that he can do a CRUD on the database.",
+            },
+            {
+              side: "right",
+              img: "https://i.imgur.com/R1EhXwW.png",
+              title: "FILTER PRODUCTS",
+              text: "The user will have the ability to filter the products paged in the grid based on the existing categories in the filter drop down tab.\nIn the image on the right, for example, we can see the grid of products when filtered by 'mouses'.",
+            },
+            {
+              side: "left",
+              img: "https://i.imgur.com/XznWFpA.png",
+              title: "INDIVIDUAL PRODUCT PAGE",
+              text: "Each product has its own dynamic path which the user can access by clicking on the product image.\nHere the user will be able to see more detailed information about the product, as well as other products related to the category to which the main product belongs.",
+            },
+            {
+              side: "right",
+              img: "https://i.imgur.com/uqk90ty.png",
+              title: "THE CART",
+              text: "The user will see all the products added, and will be able to delete them or increase the quantity of them. The user will also see the total price of the products. And there is a form, that if you fill it out and submit, you will receive a 'verification' email with the details of your purchase.",
+            },
+            {
+              project: "https://electronic-booking.vercel.app/",
+            },
+          ],
+        },
       },
       {
         title: "Portfolio - V.2",
@@ -106,8 +448,62 @@ export const AllWorkList = [
         proyect_url: "https://franco-espinosa-portafolio.vercel.app/",
         extra: true,
         extra_url: "portfolio-v-2",
-        extra_img_en: "https://i.imgur.com/gkkyO8Y.png",
-        extra_img_es: "https://i.imgur.com/22s8Y0y.png",
+        extra_data: {
+          es: [
+            {
+              banner: "https://i.imgur.com/RoM2g84.png",
+              title: "PORTFOLIO - V.2",
+            },
+            {
+              side: "left",
+              img: "https://i.imgur.com/jgi4RS4.png",
+              title: "MI SEGUNDO PORTFOLIO",
+              text: "Me centré en conseguir una estética sencilla pero elegante en toda la página, añadiendo también una opción en la parte superior para cambiar entre colores claros y oscuros. También busque crear dinamismo a través de GSAP y Framer Motion para aumentar la retención y experiencia del usuario.",
+            },
+            {
+              side: "right",
+              img: "https://i.imgur.com/qEGdNuF.png",
+              title: "TEMA CLARO Y OSCURO",
+              text: "Desde la esquina superior derecha, el usuario puede cambiar entre un tema oscuro o claro, según prefiera.\nLos SVG dentro del botón tienen una pequeña animación hecha con GSAP en la que la luna se convierte en sol, y el sol en luna.",
+            },
+            {
+              side: "left",
+              img: "https://i.imgur.com/IcQ34oh.png",
+              title: "SCROLL HORIZONTAL",
+              text: "Al llegar a la sección donde están mis proyectos el usuario cambiará de un scroll vertical a un scroll horizontal.\nCada proyecto aparece con una transición suave de 0 a 1 de opacidad en un orden determinado.\nEn cada proyecto el usuario podrá ver el nombre del proyecto, con una mini descripción y un botón para ir a la demo del proyecto.",
+            },
+            {
+              project: "https://franco-espinosa-portafolio.vercel.app/",
+            },
+          ],
+          en: [
+            {
+              banner: "https://i.imgur.com/RoM2g84.png",
+              title: "PORTFOLIO - V.2",
+            },
+            {
+              side: "left",
+              img: "https://i.imgur.com/jgi4RS4.png",
+              title: "MY SECOND PORTFOLIO",
+              text: "I focused on achieving a simple but elegant aesthetic throughout the page, also adding an option at the top to change between light and dark colors. Also look to create dynamism through GSAP and Framer Motion to increase user retention and experience.",
+            },
+            {
+              side: "right",
+              img: "https://i.imgur.com/qEGdNuF.png",
+              title: "DARK AND LIGHT THEME",
+              text: "From the upper right corner the user can switch between a dark or light theme as preferred.\nThe SVGs inside the button have a small animation made with GSAP in which the moon becomes the sun, and the sun becomes the moon.",
+            },
+            {
+              side: "left",
+              img: "https://i.imgur.com/IcQ34oh.png",
+              title: "HORIZONTAL SCROLL",
+              text: "When arriving to the section where my projects are the user will change from vertical scrolling to horizontal scrolling.\nEach project appears with a smooth transition from 0 to 1 opacity in a certain order.\nIn each project the user will be able to see the project name, with a mini description and a button to go to the project demo.",
+            },
+            {
+              project: "https://franco-espinosa-portafolio.vercel.app/",
+            },
+          ],
+        },
       },
       {
         title: "Mate y código",
@@ -123,25 +519,62 @@ export const AllWorkList = [
         proyect_url: "https://mate-y-codigo.vercel.app/inicio",
         extra: true,
         extra_url: "mate-y-codigo",
-        extra_img_en: "https://i.imgur.com/i53Bixm.png",
-        extra_img_es: "https://i.imgur.com/58BKyY3.png",
-      },
-      {
-        title: "PC F2P",
-        first_text_en:
-          "PC F2P is a website made using the FreeToGame API, it's functionality is to show to the user all the free games available in the API.",
-        second_text_en:
-          "With more than 300 paginated games that can be filtered by different categories.",
-        first_text_es:
-          "PC F2P es un sitio web realizado utilizando la API FreeToGame, su funcionalidad es mostrar al usuario todos los juegos gratuitos disponibles en la API.",
-        second_text_es:
-          "Con más de 300 juegos paginados que pueden filtrarse por diferentes categorías.",
-        image_url: "https://i.imgur.com/5YJLrK1.png",
-        proyect_url: "https://pc-f2p.netlify.app/",
-        extra: true,
-        extra_url: "pc-f2p",
-        extra_img_en: "https://i.imgur.com/1bu9Acy.png",
-        extra_img_es: "https://i.imgur.com/jBEOK7H.png",
+        extra_data: {
+          es: [
+            {
+              banner: "https://i.imgur.com/yGh0M7G.png",
+              title: "MATE Y CÓDIGO",
+            },
+            {
+              side: "left",
+              img: "https://i.imgur.com/BSEHQw9.png",
+              title: "FINALIDAD DEL SITIO WEB",
+              text: "Decidí recrear mi anterior blog para darle un aspecto más profesional y mejorar la interactividad con el usuario.\nEl blog está desarrollado en NextJS con animaciones creadas con Framer Motion y desplegadas en Vercel. Estas tecnologías me permitieron mejorar notablemente la interfaz y la experiencia de usuario.",
+            },
+            {
+              side: "right",
+              img: "https://i.imgur.com/tBybETS.png",
+              title: "LOS ARTÍCULOS",
+              text: "Los artículos están paginados y se muestran en un grid. En ellos puede ver una imagen de presentación, el título, la descripción y la fecha de carga.\nAdemás, el usuario podrá filtrar los artículos por nombre desde el buscador de la barra superior.",
+            },
+            {
+              side: "left",
+              img: "https://i.imgur.com/BrDNITI.png",
+              title: "LEYENDO UN ARTÍCULO",
+              text: "Al entrar a leer un artículo, el usuario podrá ver rápidamente el contenido a la izquierda, y a la derecha recomendaciones de otros artículos recientes.\nCada artículo de mi blog incluye información meta dinámica, lo que significa que la og:image, los títulos, la descripción y otros elementos varían según el contenido específico de cada artículo.",
+            },
+            {
+              project: "https://mate-y-codigo.vercel.app/inicio",
+            },
+          ],
+          en: [
+            {
+              banner: "https://i.imgur.com/yGh0M7G.png",
+              title: "MATE Y CÓDIGO",
+            },
+            {
+              side: "left",
+              img: "https://i.imgur.com/BSEHQw9.png",
+              title: "PURPOSE OF THE WEBSITE",
+              text: "I decided to recreate my previous blog to give it a more professional look and improve user interactivity.\nThe blog is developed in NextJS with animations created with Framer Motion and deployed in Vercel. These technologies allowed me to significantly improve the interface and user experience.",
+            },
+            {
+              side: "right",
+              img: "https://i.imgur.com/tBybETS.png",
+              title: "THE ARTICLES",
+              text: "The articles are paginated, and are displayed in a grid. In them you can see a presentation image, title, description and upload date.\nIn addition the user will be able to filter the articles by name from the search engine in the upper bar.",
+            },
+            {
+              side: "left",
+              img: "https://i.imgur.com/BrDNITI.png",
+              title: "READING AN ARTICLE",
+              text: "When entering to read an article the user will be able to quickly see the content on the left, and on the right recommendations of other recent articles.\nEach article in my blog includes meta dynamic information, which means that the og:image, titles, description, and other elements vary according to the specific content of each article.",
+            },
+            {
+              project: "https://mate-y-codigo.vercel.app/inicio",
+            },
+          ],
+        },
       },
       {
         title: "Geek Genius",
@@ -185,25 +618,50 @@ export const AllWorkList = [
         proyect_url: "https://skyring.netlify.app/",
         extra: true,
         extra_url: "skyring",
-        extra_img_en: "https://i.imgur.com/7t9468b.png",
-        extra_img_es: "https://i.imgur.com/4mShL9p.png",
-      },
-      {
-        title: "CodeCraft",
-        first_text_en:
-          "Developed in React.js, this was my first blog where I stored some articles about design patterns and other code related stuff.",
-        second_text_en:
-          "It was also the first time I implemented search, filtering and sorting functionalities for website content. Allowing the user to filter by name, category and chronological order.",
-        first_text_es:
-          "Desarrollado en React.js, este fue mi primer blog donde almacené algunos artículos sobre patrones de diseño y otras cosas relacionadas con el código.",
-        second_text_es:
-          "También fue la primera vez que implementé funciones de búsqueda, filtrado y ordenación de los contenidos del sitio web. Permitía al usuario filtrar por nombre, categoría y orden cronológico.",
-        image_url: "https://i.imgur.com/0gIKeQZ.png",
-        proyect_url: "https://codecraft-blog.netlify.app/",
-        extra: true,
-        extra_url: "codecraft",
-        extra_img_en: "https://i.imgur.com/D87YBDQ.png",
-        extra_img_es: "https://i.imgur.com/wspm134.png",
+        extra_data: {
+          es: [
+            {
+              banner: "https://i.imgur.com/NXp976M.png",
+              title: "SKYRING",
+            },
+            {
+              side: "left",
+              img: "https://i.imgur.com/TM9Hmzr.png",
+              title: "FUNCIONALIDAD",
+              text: "Skyring fue un proyecto desarrollado para imitar la funcionalidad de chat de Hattyng, cuya base de datos estuvo desactivada durante un tiempo.\nAl entrar, puedes escribir tu nombre y serás redirigido a una sala donde podrás ver a todos los demás usuarios conectados y chatear con ellos en tiempo real.",
+            },
+            {
+              side: "right",
+              img: "https://i.imgur.com/maoPUZ1.png",
+              title: "USUARIOS ONLINE",
+              text: "En la sala de chat hay una pequeña pestaña que permite ver los usuarios conectados actualmente.\nAdemás, cuando un nuevo usuario entra en el chat, o un usuario existente lo abandona, aparecerá un mensaje indicando la acción realizada. Por ejemplo: Goorezy join the chat.",
+            },
+            {
+              project: "https://skyring.netlify.app/",
+            },
+          ],
+          en: [
+            {
+              banner: "https://i.imgur.com/NXp976M.png",
+              title: "SKYRING",
+            },
+            {
+              side: "left",
+              img: "https://i.imgur.com/TM9Hmzr.png",
+              title: "FUNCTIONALITY",
+              text: "Skyring was a project developed to imitate the chat functionality of Hattyng, whose database was deactivated for a while.\nWhen you enter, you can write your name and you will be redirected to a room where you can see all the other connected users and chat with them in real time.",
+            },
+            {
+              side: "right",
+              img: "https://i.imgur.com/maoPUZ1.png",
+              title: "ONLINE USERS",
+              text: "In the chat room there is a small tab that allows you to see the current online users.\nAs well as when a new user enters the chat, or an existing user leaves, a message will appear indicating the action taken. For example: Goorezy join the chat.",
+            },
+            {
+              project: "https://skyring.netlify.app/",
+            },
+          ],
+        },
       },
       {
         title: "WareStore",
@@ -233,8 +691,50 @@ export const AllWorkList = [
         proyect_url: "https://hawk-clothes.netlify.app/",
         extra: true,
         extra_url: "hawk-clothes",
-        extra_img_en: "https://i.imgur.com/AVe9o82.png",
-        extra_img_es: "https://i.imgur.com/fmMyTyX.png",
+        extra_data: {
+          es: [
+            {
+              banner: "",
+              title: "",
+            },
+            {
+              side: "left",
+              img: "",
+              title: "",
+              text: "",
+            },
+            {
+              side: "right",
+              img: "",
+              title: "",
+              text: "",
+            },
+            {
+              project: "",
+            },
+          ],
+          en: [
+            {
+              banner: "",
+              title: "",
+            },
+            {
+              side: "left",
+              img: "",
+              title: "",
+              text: "",
+            },
+            {
+              side: "right",
+              img: "",
+              title: "",
+              text: "",
+            },
+            {
+              project: "",
+            },
+          ],
+        },
       },
       {
         title: "Portfolio - V.1",
@@ -250,26 +750,56 @@ export const AllWorkList = [
         proyect_url: "https://franco-espinosa-portafolio-antiguo.netlify.app/",
         extra: true,
         extra_url: "portfolio-v-1",
-        extra_img_en: "https://i.imgur.com/cYbrfFD.png",
-        extra_img_es: "https://i.imgur.com/wE0JL3T.png",
+        extra_data: {
+          es: [
+            {
+              banner: "",
+              title: "",
+            },
+            {
+              side: "left",
+              img: "",
+              title: "",
+              text: "",
+            },
+            {
+              side: "right",
+              img: "",
+              title: "",
+              text: "",
+            },
+            {
+              project: "",
+            },
+          ],
+          en: [
+            {
+              banner: "",
+              title: "",
+            },
+            {
+              side: "left",
+              img: "",
+              title: "",
+              text: "",
+            },
+            {
+              side: "right",
+              img: "",
+              title: "",
+              text: "",
+            },
+            {
+              project: "",
+            },
+          ],
+        },
       },
-      {
-        title: "QTME",
-        first_text_en:
-          "This is a website which will show you the current price of the dollar and the euro in Argentina, but before that it will show you some joke messages.",
-        second_text_en:
-          "Developed using Angular and an API that returns the current value of the differents dollars that the Argentina has. This was a project completly made for fun.",
-        first_text_es:
-          "Este es un sitio web que te mostrará el precio actual del dólar y del euro en Argentina, pero antes te mostrará algunos mensajes de broma.",
-        second_text_es:
-          "Desarrollado usando Angular y una API que devuelve el valor actual de los distintos dólares que tiene la Argentina. Este fue un proyecto hecho completamente por diversión.",
-        image_url: "https://i.imgur.com/ztpNkGN.png",
-        proyect_url: "https://que-tan-mal-estamos.netlify.app/",
-        extra: true,
-        extra_url: "qtme",
-        extra_img_en: "https://i.imgur.com/QJ3yFzM.png",
-        extra_img_es: "https://i.imgur.com/etGd08V.png",
-      },
+    ],
+  },
+  {
+    year: 2022,
+    projects: [
       {
         title: "CSS Gallery",
         first_text_en:
@@ -284,14 +814,51 @@ export const AllWorkList = [
         proyect_url: "https://goorezy-css-gallery.netlify.app/",
         extra: true,
         extra_url: "css-gallery",
-        extra_img_en: "https://i.imgur.com/62hcWBq.png",
-        extra_img_es: "https://i.imgur.com/YqJBFGE.png",
+        extra_data: {
+          es: [
+            {
+              banner: "",
+              title: "",
+            },
+            {
+              side: "left",
+              img: "",
+              title: "",
+              text: "",
+            },
+            {
+              side: "right",
+              img: "",
+              title: "",
+              text: "",
+            },
+            {
+              project: "",
+            },
+          ],
+          en: [
+            {
+              banner: "",
+              title: "",
+            },
+            {
+              side: "left",
+              img: "",
+              title: "",
+              text: "",
+            },
+            {
+              side: "right",
+              img: "",
+              title: "",
+              text: "",
+            },
+            {
+              project: "",
+            },
+          ],
+        },
       },
-    ],
-  },
-  {
-    year: 2022,
-    projects: [
       {
         title: "Hattyng",
         first_text_en:
@@ -306,8 +873,50 @@ export const AllWorkList = [
         proyect_url: "https://hattyng.netlify.app/",
         extra: true,
         extra_url: "hattyng",
-        extra_img_en: "https://i.imgur.com/WSU0XGr.png",
-        extra_img_es: "https://i.imgur.com/ggm9eb9.png",
+        extra_data: {
+          es: [
+            {
+              banner: "",
+              title: "",
+            },
+            {
+              side: "left",
+              img: "",
+              title: "",
+              text: "",
+            },
+            {
+              side: "right",
+              img: "",
+              title: "",
+              text: "",
+            },
+            {
+              project: "",
+            },
+          ],
+          en: [
+            {
+              banner: "",
+              title: "",
+            },
+            {
+              side: "left",
+              img: "",
+              title: "",
+              text: "",
+            },
+            {
+              side: "right",
+              img: "",
+              title: "",
+              text: "",
+            },
+            {
+              project: "",
+            },
+          ],
+        },
       },
       {
         title: "Virtual gallery",
@@ -323,76 +932,50 @@ export const AllWorkList = [
         proyect_url: "https://arg-virtual-gallery.netlify.app/",
         extra: true,
         extra_url: "virtual-gallery",
-        extra_img_en: "https://i.imgur.com/zF0lMNE.png",
-        extra_img_es: "https://i.imgur.com/7qUZb6V.png",
-      },
-      {
-        title: "Data of the day",
-        first_text_en:
-          "In this web application I used the OpenWeather Rest API.",
-        second_text_en:
-          "I focused on understanding more deeply the Rest APIs ways of use.",
-        first_text_es:
-          "En esta aplicación web he utilizado la Rest API de OpenWeather.",
-        second_text_es:
-          "Me centré en comprender más profundamente las formas de uso de las Rest API.",
-        image_url: "https://i.imgur.com/wBpHR6I.png",
-        proyect_url: "https://dod-data-of-day.netlify.app/",
-        extra: true,
-        extra_url: "data-of-the-day",
-        extra_img_en: "https://i.imgur.com/CfD8Dyb.png",
-        extra_img_es: "https://i.imgur.com/gThxws0.png",
-      },
-      {
-        title: "MuviSearch",
-        first_text_en:
-          "In this web application I had my first encounter with a Rest API.",
-        second_text_en:
-          "I focused on understanding how the Rest APIs are used to show data to the user based on an input.",
-        first_text_es:
-          "En esta aplicación web tuve mi primer encuentro con una Rest API.",
-        second_text_es:
-          "Me centré en comprender cómo se utilizan las Rest API para mostrar datos al usuario en función de un input.",
-        image_url: "https://i.imgur.com/JgF6zUq.png",
-        proyect_url: "https://themuvisearch.netlify.app/",
-        extra: true,
-        extra_url: "muvisearch",
-        extra_img_en: "https://i.imgur.com/9wNWOTU.png",
-        extra_img_es: "https://i.imgur.com/2diKLal.png",
-      },
-      {
-        title: "Your Anime Zone",
-        first_text_en:
-          "YAZ was a website designed exclusively to improve my skills in design and CSS code.",
-        second_text_en:
-          "On this website you can see a top of animes as well as a recommendation of my favorite animes. Here I also managed to learn how to make modal windows to display information.",
-        first_text_es:
-          "YAZ era un sitio web diseñado exclusivamente para mejorar mis habilidades en diseño y código CSS.",
-        second_text_es:
-          "En esta web puedes ver un top de animes así como una recomendación de mis animes favoritos. Aquí también logré aprender a hacer ventanas modales para mostrar información.",
-        image_url: "https://i.imgur.com/vrX7Y2G.png",
-        proyect_url: "https://yaz-your-anime-zone.netlify.app/",
-        extra: true,
-        extra_url: "your-anime-zone",
-        extra_img_en: "https://i.imgur.com/KVwngoN.png",
-        extra_img_es: "https://i.imgur.com/6aA9pEk.png",
-      },
-      {
-        title: "Healthy Weight",
-        first_text_en:
-          "The functionality of this web application is to know if your weight is healthy or not. ",
-        second_text_en:
-          "After entering your weight and height in two inputs, a text will be returned indicating the result. ",
-        first_text_es:
-          "La funcionalidad de esta aplicación web es saber si tu peso es saludable o no.",
-        second_text_es:
-          "Tras introducir su peso y estatura en dos inputs, se te devolverá un texto indicando el resultado.",
-        image_url: "https://i.imgur.com/TwH4cxO.png",
-        proyect_url: "https://hw-healthy-weight.netlify.app/",
-        extra: true,
-        extra_url: "healthy-weight",
-        extra_img_en: "https://i.imgur.com/lwVqX5m.png",
-        extra_img_es: "https://i.imgur.com/pmH2kjE.png",
+        extra_data: {
+          es: [
+            {
+              banner: "",
+              title: "",
+            },
+            {
+              side: "left",
+              img: "",
+              title: "",
+              text: "",
+            },
+            {
+              side: "right",
+              img: "",
+              title: "",
+              text: "",
+            },
+            {
+              project: "",
+            },
+          ],
+          en: [
+            {
+              banner: "",
+              title: "",
+            },
+            {
+              side: "left",
+              img: "",
+              title: "",
+              text: "",
+            },
+            {
+              side: "right",
+              img: "",
+              title: "",
+              text: "",
+            },
+            {
+              project: "",
+            },
+          ],
+        },
       },
     ],
   },
