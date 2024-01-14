@@ -26,12 +26,19 @@ function ProjectPage({ params }) {
   useEffect(() => {
     // Function to execute before rendering
     function executeBeforeRender() {
-      if (isA2022Project.length > 0 || isA2023Project.length > 0) {
+      if (
+        isA2022Project.length > 0 ||
+        isA2023Project.length > 0 ||
+        isA2024Project.length > 0
+      ) {
         if (isA2022Project.length > 0) {
           setProject(isA2022Project[0]);
         }
         if (isA2023Project.length > 0) {
           setProject(isA2023Project[0]);
+        }
+        if (isA2024Project.length > 0) {
+          setProject(isA2024Project[0]);
         }
         setTimeout(() => {
           window.scrollTo({ top: 0 });
@@ -42,10 +49,13 @@ function ProjectPage({ params }) {
       }
     }
 
-    const isA2023Project = AllWorkList[0].projects.filter(
+    const isA2024Project = AllWorkList[0].projects.filter(
       (el) => el.extra_url === params.project
     );
-    const isA2022Project = AllWorkList[1].projects.filter(
+    const isA2023Project = AllWorkList[1].projects.filter(
+      (el) => el.extra_url === params.project
+    );
+    const isA2022Project = AllWorkList[2].projects.filter(
       (el) => el.extra_url === params.project
     );
 
