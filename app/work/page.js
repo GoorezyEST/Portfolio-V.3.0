@@ -192,10 +192,10 @@ function WorkPage() {
                       work.extra ? `work/${work.extra_url}` : work.proyect_url
                     }
                     target={work.extra ? "_self" : "_blank"}
+                    key={i}
                   >
                     <motion.div
                       className={styles.fatured_work_bento_card}
-                      key={i}
                       initial={{ opacity: 0 }}
                       whileInView={{ opacity: 1 }}
                       transition={{
