@@ -98,7 +98,9 @@ function ProjectData({ data }) {
               </div>
             </div>
             <div className={styles.project_information_text}>
-              <h2>{info.title}</h2>
+              <h2>
+                <span>{info.title}</span>
+              </h2>
               {formattedText.map((text, i) => (
                 <p key={i}>{text}</p>
               ))}

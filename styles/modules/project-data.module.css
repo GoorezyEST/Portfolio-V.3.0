@@ -26,10 +26,12 @@
   position: absolute;
   object-fit: cover;
   object-position: top center;
-  width: 100%;
+  width: auto;
   height: 100%;
   border-radius: 8px;
   z-index: 75;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /*=== WELCOME SECTION IMAGE LOADING ===*/
@@ -102,16 +104,17 @@
 }
 
 /*=== INFORMATION SECTION ===*/
+
 .project_information {
   display: flex;
   height: auto;
   width: 100%;
   gap: 32px;
-  margin-top: 64px;
+  margin-top: 80px;
 }
 
 .first_info {
-  margin-top: 96px;
+  margin-top: 128px;
 }
 
 .last_info {
@@ -128,29 +131,30 @@
 
 .project_information_image {
   position: relative;
-  height: 250px;
-  width: 100%;
+  flex: 0 0 50%; /* Set a fixed width of 500px */
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: var(--black-light);
   border-radius: 8px;
+  box-shadow: var(--project-shadow);
 }
 
 .project_information_image > img {
   object-fit: cover;
+  width: 100%; /* Ensure the image takes the full width of its container */
+  height: auto; /* Ensure the image takes the full height of its container */
 }
 
 .project_information_text {
-  width: 100%;
-  height: 250px;
+  flex: 1; /* Fill the remaining space */
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.project_information_text > h2 {
+.project_information_text > h2 > span {
   font-size: 24px;
   color: var(--white);
   font-weight: 700;
