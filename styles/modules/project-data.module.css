@@ -26,7 +26,7 @@
   position: absolute;
   object-fit: cover;
   object-position: top center;
-  width: auto;
+  width: 100%;
   height: 100%;
   border-radius: 8px;
   z-index: 75;
@@ -92,15 +92,19 @@
   left: 50%;
   transform: translateY(50%) translateX(-50%);
   background-color: var(--black-light);
-  padding: 16px;
+  padding: 16px 32px;
   border-radius: 8px;
+  width: auto;
   box-shadow: var(--project-shadow);
 }
 
 .welcome_title > h1 {
-  font-size: 32px;
+  font-size: 48px;
   font-weight: 700;
   color: var(--white);
+  cursor: default;
+  user-select: none;
+  white-space: nowrap;
 }
 
 /*=== INFORMATION SECTION ===*/
@@ -160,6 +164,8 @@
   font-weight: 700;
   line-height: calc(24px * 1.2);
   text-transform: uppercase;
+  cursor: default;
+  user-select: none;
 }
 
 .project_information_text > p {
@@ -168,6 +174,8 @@
   color: var(--white);
   line-height: calc(16px * 1.5);
   margin-top: 8px;
+  cursor: default;
+  user-select: none;
 }
 
 /*=== END SECTION ===*/
@@ -180,6 +188,8 @@
 .end > a {
   text-decoration: none;
   width: 150px;
+  cursor: pointer;
+  user-select: none;
 }
 
 .primary_cta,
@@ -203,4 +213,77 @@
   background-color: var(--black-light);
   color: var(--white);
   border: 2px solid var(--white);
+}
+
+@media screen and (max-width: 1024px) {
+  .wrapper {
+    border-radius: 0px;
+    padding: 16px 16px 32px 16px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .wrapper {
+    border-radius: 0px;
+    padding: 16px 16px 48px 16px;
+  }
+
+  .project_information {
+    flex-direction: column-reverse;
+    gap: 16px;
+  }
+
+  .project_information_image {
+    width: 100%;
+  }
+
+  .project_information_text {
+    width: 100%;
+  }
+
+  .first_info {
+    margin-top: 128px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .inner_welcome {
+    height: 400px;
+  }
+
+  .first_info {
+    margin-top: 48px;
+  }
+
+  .welcome_title {
+    display: none;
+  }
+
+  .project_information,
+  .end {
+    margin-top: 48px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .inner_welcome {
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 365px) {
+  .end {
+    width: 100%;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .wrapper {
+    border-radius: 0px;
+    padding: 16px 16px 24px 16px;
+  }
+
+  .end > a {
+    width: 100%;
+  }
 }
