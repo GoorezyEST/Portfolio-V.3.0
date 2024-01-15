@@ -41,6 +41,8 @@
   font-weight: bold;
   color: var(--white);
   line-height: calc(24px * 1.2);
+  cursor: default;
+  user-select: none;
 }
 
 .featured_work_title > span,
@@ -51,6 +53,8 @@
   color: var(--white);
   line-height: calc(16px * 1.2);
   opacity: 0.75;
+  cursor: default;
+  user-select: none;
 }
 
 .featured_work_text > a {
@@ -142,6 +146,8 @@
 }
 
 .featured_work_card_back > p {
+  cursor: pointer;
+  user-select: none;
   font-size: 16px;
   font-weight: bold;
   color: var(--white);
@@ -180,6 +186,8 @@
 }
 
 .freelancer_work_content_item_text > span {
+  cursor: default;
+  user-select: none;
   font-size: 16px;
   font-weight: bold;
   color: var(--white);
@@ -188,6 +196,8 @@
 
 .freelancer_work_content_item_text > p,
 .about_me_content_text > p {
+  cursor: default;
+  user-select: none;
   font-size: 16px;
   font-weight: 300;
   color: var(--white);
@@ -199,6 +209,8 @@
 }
 
 .about_me_content_text > a {
+  cursor: default;
+  user-select: none;
   border: 1px solid var(--white);
   outline: none;
   width: max-content;
@@ -212,6 +224,7 @@
   text-decoration: none;
   transition: background-color 200ms ease-in-out, color 200ms ease-in-out,
     transform 100ms ease-in-out;
+  border-radius: 4px;
 }
 
 .about_me_content_text > a:hover {

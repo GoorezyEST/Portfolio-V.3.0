@@ -18,6 +18,8 @@
   font-weight: bold;
   color: var(--white);
   line-height: calc(24px * 1.2);
+  cursor: default;
+  user-select: none;
 }
 
 .featured_work_title > span {
@@ -26,6 +28,8 @@
   color: var(--white);
   line-height: calc(16px * 1.2);
   opacity: 0.75;
+  cursor: default;
+  user-select: none;
 }
 
 .featured_work_bento {
@@ -108,6 +112,8 @@
   font-weight: bold;
   color: var(--white);
   line-height: calc(16px * 1.2);
+  cursor: pointer;
+  user-select: none;
 }
 
 @media screen and (min-width: 540px) {

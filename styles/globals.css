@@ -88,6 +88,8 @@ body::-webkit-scrollbar {
   color: var(--white);
   line-height: calc(36px * 1.2);
   text-align: center;
+  cursor: default;
+  user-select: none;
 }
 
 .page_title > span {
@@ -96,6 +98,8 @@ body::-webkit-scrollbar {
   color: var(--white);
   line-height: calc(16px * 1.2);
   opacity: 0.75;
+  cursor: default;
+  user-select: none;
 }
 
 @media screen and (min-width: 400px) {

@@ -19,6 +19,8 @@
   font-weight: bold;
   color: var(--white);
   line-height: calc(24px * 1.2);
+  cursor: default;
+  user-select: none;
 }
 
 .contact_title > span {
@@ -27,6 +29,8 @@
   color: var(--white);
   line-height: calc(16px * 1.2);
   opacity: 0.75;
+  cursor: default;
+  user-select: none;
 }
 
 .contact_list {
@@ -43,6 +47,7 @@
   line-height: calc(16px * 1.2);
   text-decoration: none;
   word-wrap: break-word;
+  cursor: pointer;
 }
 
 .contact_list_item > span {
@@ -50,6 +55,8 @@
   font-size: 16px;
   color: var(--white);
   line-height: calc(16px * 1.2);
+  cursor: default;
+  user-select: none;
 }
 
 .contact_mention {
@@ -58,6 +65,8 @@
   color: var(--white);
   line-height: calc(16px * 1.2);
   opacity: 0.5;
+  cursor: default;
+  user-select: none;
 }
 
 @media screen and (min-width: 700px) {
