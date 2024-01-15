@@ -75,20 +75,22 @@ function ProjectData({ data }) {
         const formattedText = info.text.split("\n");
 
         return (
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{
-              delay: 0.125,
-              duration: 0.275,
-              ease: "easeInOut",
-            }}
+          <div
             key={index}
             className={`${styles.project_information} ${
               info.side === "left" ? styles.left : styles.right
             } ${index === 0 ? styles.first_info : ""}`}
           >
-            <div className={styles.project_information_image}>
+            <motion.div
+              className={styles.project_information_image}
+              initial={{ opacity: 0, x: info.side === "left" ? "-8px" : "8px" }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{
+                delay: 0.125,
+                duration: 0.275,
+                ease: "easeInOut",
+              }}
+            >
               <img src={info.img} alt={`${data[0].title} informative image`} />
               <div
                 className={styles.project_image_loading}
@@ -96,16 +98,25 @@ function ProjectData({ data }) {
               >
                 <span className={styles.project_image_loader}></span>
               </div>
-            </div>
-            <div className={styles.project_information_text}>
+            </motion.div>
+            <motion.div
+              className={styles.project_information_text}
+              initial={{ opacity: 0, x: info.side === "left" ? "8px" : "-8px" }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{
+                delay: 0.125,
+                duration: 0.275,
+                ease: "easeInOut",
+              }}
+            >
               <h2>
                 <span>{info.title}</span>
               </h2>
               {formattedText.map((text, i) => (
                 <p key={i}>{text}</p>
               ))}
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
         );
       })}
       <motion.div
