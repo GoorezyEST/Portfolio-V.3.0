@@ -1,8 +1,8 @@
-import { Open_Sans } from "next/font/google";
+import { Nunito_Sans } from "next/font/google";
 import "@/styles/globals.css";
 import ThemeProvider from "@/contexts/ThemeProvider";
 
-const open_Sans = Open_Sans({
+const open_Sans = Nunito_Sans({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700", "800"],
 });
