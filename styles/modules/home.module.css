@@ -57,7 +57,7 @@
   user-select: none;
 }
 
-.featured_work_text > a {
+.featured_work_link {
   display: none;
 }
 
@@ -270,6 +270,28 @@
   .featured_work_card:hover .featured_work_card_inner,
   .freelance_work_card:hover .freelance_work_card_inner {
     transform: rotateX(-180deg);
+  }
+
+  .featured_work_text {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .featured_work_link {
+    display: block;
+  }
+
+  .featured_work_link > a {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--white);
+    line-height: calc(16px * 1.2);
+    opacity: 1;
+    cursor: pointer;
+    user-select: none;
+    text-decoration: none;
   }
 }
 

@@ -239,17 +239,17 @@ export default function Home() {
       </motion.div>
 
       <section className={styles.featured_work}>
-        <motion.div
-          className={styles.featured_work_text}
-          initial={{ opacity: 0, x: "16px" }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{
-            delay: 0.125,
-            duration: 0.275,
-            ease: "easeInOut",
-          }}
-        >
-          <div className={styles.featured_work_title}>
+        <div className={styles.featured_work_text}>
+          <motion.div
+            className={styles.featured_work_title}
+            initial={{ opacity: 0, x: "16px" }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{
+              delay: 0.125,
+              duration: 0.275,
+              ease: "easeInOut",
+            }}
+          >
             {lang === "es" ? (
               <>
                 <span>DESCUBRA MI</span>
@@ -261,9 +261,22 @@ export default function Home() {
                 <h2>FEATURED WORK</h2>
               </>
             )}
-          </div>
-          <Link href="#">LOOK ALL MY WORK</Link>
-        </motion.div>
+          </motion.div>
+          <motion.div
+            className={styles.featured_work_link}
+            initial={{ opacity: 0, x: "-16px" }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{
+              delay: 0.125,
+              duration: 0.275,
+              ease: "easeInOut",
+            }}
+          >
+            <Link href="/work">
+              {lang === "es" ? "TODO MI TRABAJO" : "ALL MY WORK"}
+            </Link>
+          </motion.div>
+        </div>
         <div className={styles.featured_work_content}>
           {FeaturedWorkList.map((work, index) => {
             return (
@@ -466,7 +479,7 @@ export default function Home() {
               }}
             >
               {lang === "es"
-                ? "Soy Franco Espinosa, de Mar del Plata, Argentina. Comencé mi programación en 2021 bajo la tutela de mi primo Marcos Espinosa, desarrollador Backend."
+                ? "Soy Franco Espinosa, de Mar del Plata, Argentina. Comencé a programar en 2021 bajo la tutela de mi primo Marcos Espinosa, desarrollador Backend."
                 : "I'm Franco Espinosa, from Mar del Plata, Argentina. I started my programming journey in 2021 under the tutelage of my cousin Marcos Espinosa, a Backend developer."}
             </motion.p>
             <motion.p
@@ -479,7 +492,7 @@ export default function Home() {
               }}
             >
               {lang === "es"
-                ? "A lo largo de estos años he desarrollado varios proyectos, así como así como algunos trabajos como Freelance."
+                ? "A lo largo de estos años he desarrollado varios proyectos, así como también algunos trabajos como Freelance."
                 : "Throughout these years I have developed various projects, as well as doing some work as a Freelancer."}
             </motion.p>
             <motion.p
