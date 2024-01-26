@@ -8,7 +8,6 @@ import Navbar from "@/app/components/units/navbar";
 import Footer from "@/app/components/units/footer";
 import { motion } from "framer-motion";
 import styles from "@/styles/modules/project.module.css";
-import { ResizeImgurImages } from "@/functions/Utilities";
 import ProjectData from "@/app/components/units/ProjectData";
 
 const variants = {
@@ -17,7 +16,7 @@ const variants = {
 };
 
 function ProjectPage({ params }) {
-  const { setIsHydrated, smallDevice, lang, setMobileMenuOpen } = useGlobal();
+  const { setIsHydrated, lang, setMobileMenuOpen } = useGlobal();
 
   const [project, setProject] = useState(null);
 

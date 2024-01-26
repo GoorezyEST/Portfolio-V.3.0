@@ -164,8 +164,8 @@ function WorkPage() {
           ease: "easeInOut",
         }}
       >
-        <span>{lang === "es" ? "EXPLORA TODO" : "EXPLORE ALL"}</span>
-        <h1>{lang === "es" ? "MI TRABAJO" : "MY WORK"}</h1>
+        <span>{lang === "es" ? "EXPLORA TODOS" : "EXPLORE ALL"}</span>
+        <h1>{lang === "es" ? "MIS PROYECTOS" : "MY PROJECTS"}</h1>
       </motion.div>
 
       {AllWorkList.map((item, index) => {
@@ -189,7 +189,9 @@ function WorkPage() {
                 return (
                   <Link
                     href={
-                      work.extra ? `work/${work.extra_url}` : work.proyect_url
+                      work.extra
+                        ? `proyects/${work.extra_url}`
+                        : work.proyect_url
                     }
                     target={work.extra ? "_self" : "_blank"}
                     key={i}
