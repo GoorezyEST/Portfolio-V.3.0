@@ -252,13 +252,13 @@ export default function Home() {
           >
             {lang === "es" ? (
               <>
-                <span>DESCUBRA MI</span>
-                <h2>TRABAJO DESTACADO</h2>
+                <span>DESCUBRA MIS</span>
+                <h2>PROYECTOS DESTACADO</h2>
               </>
             ) : (
               <>
                 <span>CHECK OUT MY</span>
-                <h2>FEATURED WORK</h2>
+                <h2>FEATURED PROJECTS</h2>
               </>
             )}
           </motion.div>
@@ -272,8 +272,8 @@ export default function Home() {
               ease: "easeInOut",
             }}
           >
-            <Link href="/work">
-              {lang === "es" ? "TODO MI TRABAJO" : "ALL MY WORK"}
+            <Link href="/proyects">
+              {lang === "es" ? "TODOS MIS PROYECTOS" : "ALL MY PROJECTS"}
             </Link>
           </motion.div>
         </div>
@@ -365,78 +365,52 @@ export default function Home() {
                     >
                       {work.title}
                     </motion.span>
-                    <motion.p
-                      initial={{ opacity: 0, x: "16px" }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{
-                        delay: 0.125,
-                        duration: 0.275,
-                        ease: "easeInOut",
-                      }}
+                    {work.text.map((text, j) => (
+                      <motion.p
+                        key={j}
+                        initial={{ opacity: 0, x: "16px" }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{
+                          delay: 0.125,
+                          duration: 0.275,
+                          ease: "easeInOut",
+                        }}
+                      >
+                        {text}
+                      </motion.p>
+                    ))}
+                    <Link
+                      href={`/freelance/${work.extra_url}`}
+                      className={styles.freelancer_work_content_item_button}
                     >
-                      {work.first_text}
-                    </motion.p>
-                    <motion.p
-                      initial={{ opacity: 0, x: "16px" }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{
-                        delay: 0.125,
-                        duration: 0.275,
-                        ease: "easeInOut",
-                      }}
-                    >
-                      {work.second_text}
-                    </motion.p>
-                    <motion.p
-                      initial={{ opacity: 0, x: "16px" }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{
-                        delay: 0.125,
-                        duration: 0.275,
-                        ease: "easeInOut",
-                      }}
-                    >
-                      {work.third_text}
-                    </motion.p>
+                      <motion.button
+                        initial={{ opacity: 0, x: "16px" }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{
+                          delay: 0.125,
+                          duration: 0.275,
+                          ease: "easeInOut",
+                        }}
+                      >
+                        {lang === "es" ? "Ver más" : "See more"}
+                      </motion.button>
+                    </Link>
                   </div>
-                  <motion.a
-                    href={work.website_url}
-                    target="_blank"
-                    className={styles.freelance_work_card}
-                    key={index}
-                    initial={{ opacity: 0, x: "-16px" }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{
-                      delay: 0.125,
-                      duration: 0.275,
-                      ease: "easeInOut",
-                    }}
-                  >
-                    <div
-                      className={styles.freelance_work_card_inner}
-                      onMouseEnter={() => {
-                        randomTextRevealEnter(work.title);
-                      }}
-                      onMouseLeave={() => {
-                        handleMouseLeave();
-                      }}
-                    >
-                      <div className={styles.featured_work_card_front}>
-                        {!freelancerImagesState && (
-                          <div className={styles.loading_front_card}>
-                            <span className="loader"></span>
-                          </div>
-                        )}
-                        <img
-                          src={work.image_url}
-                          alt={`${work.title} banner image`}
-                        />
+                  <div className={styles.freelancer_work_content_item_image}>
+                    {!freelancerImagesState[index] && (
+                      <div>
+                        <span className="loader"></span>
                       </div>
-                      <div className={styles.featured_work_card_back}>
-                        <p>{textReveal}</p>
-                      </div>
-                    </div>
-                  </motion.a>
+                    )}
+                    <img
+                      src={work.image_url}
+                      alt={
+                        lang === "es"
+                          ? "Una imagen del trabajo"
+                          : "A image of the work"
+                      }
+                    />
+                  </div>
                 </div>
               );
             }
@@ -492,8 +466,8 @@ export default function Home() {
               }}
             >
               {lang === "es"
-                ? "A lo largo de estos años he desarrollado varios proyectos, así como también algunos trabajos como Freelance."
-                : "Throughout these years I have developed various projects, as well as doing some work as a Freelancer."}
+                ? "Empecé bajo su guía estudiando C con el editor de texto conocido como como VIM. Luego completé varios cursos de FreeCodeCamp, Udemy, Platzi y otros."
+                : "I began under his guidance studying C with the text editor known as VIM. Then I completed various courses from FreeCodeCamp, Udemy, Platzi and others."}
             </motion.p>
             <motion.p
               initial={{ opacity: 0, x: "16px" }}
@@ -505,8 +479,8 @@ export default function Home() {
               }}
             >
               {lang === "es"
-                ? "Empecé bajo su guía estudiando C con el editor de texto conocido como como VIM. Luego completé varios cursos de FreeCodeCamp, Udemy, Platzi y otros."
-                : "I began under his guidance studying C with the text editor known as VIM. Then I completed various courses from FreeCodeCamp, Udemy, Platzi and others."}
+                ? "A lo largo de estos años he desarrollado varios proyectos, así como también algunos trabajos como Freelance."
+                : "Throughout these years I have developed various projects, as well as doing some work as a Freelancer."}
             </motion.p>
             <motion.p
               initial={{ opacity: 0, x: "16px" }}
@@ -521,19 +495,19 @@ export default function Home() {
                 ? "Hasta la fecha, he estudiado una amplia gama de lenguajes, bases de datos, lenguajes de consulta, frameworks, patrones de diseño y otros conceptos relacionados con el campo."
                 : "To this date, I have studied a wide range of languages, databases, query languages, frameworks, design patterns and other concepts related to the field."}
             </motion.p>
-            <motion.a
-              href="/techs"
-              role="button"
-              initial={{ opacity: 0, x: "16px" }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{
-                delay: 0.125,
-                duration: 0.275,
-                ease: "easeInOut",
-              }}
-            >
-              {lang === "es" ? "TECNOLOGÍAS" : "MY TECH STACK"}
-            </motion.a>
+            <Link href="/techs">
+              <motion.button
+                initial={{ opacity: 0, x: "16px" }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{
+                  delay: 0.125,
+                  duration: 0.275,
+                  ease: "easeInOut",
+                }}
+              >
+                {lang === "es" ? "TECNOLOGÍAS" : "MY TECH STACK"}
+              </motion.button>
+            </Link>
           </div>
           <motion.div
             className={styles.about_me_content_image}

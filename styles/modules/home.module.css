@@ -69,7 +69,6 @@
 }
 
 .featured_work_content > a,
-.freelancer_work_content_item_image,
 .about_me_content_image {
   position: relative;
   height: 200px;
@@ -85,7 +84,6 @@
   overflow: hidden;
 }
 
-.freelance_work_card,
 .featured_work_card {
   background-color: transparent;
   width: 100%;
@@ -94,8 +92,7 @@
   border-radius: 4px;
 }
 
-.featured_work_card_inner,
-.freelance_work_card_inner {
+.featured_work_card_inner {
   position: relative;
   width: 100%;
   height: 100%;
@@ -155,7 +152,6 @@
 }
 
 .featured_work_content > a > img,
-.freelancer_work_content_item_image > img,
 .about_me_content_image > img {
   position: absolute;
   width: 100%;
@@ -176,8 +172,48 @@
   transform: scale(1);
 }
 
-.freelancer_work_content,
-.freelancer_work_content_item,
+.freelancer_work_content_item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 16px;
+}
+
+.freelancer_work_content_item_image {
+  width: 100%;
+  height: 250px;
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.freelancer_work_content_item_image > div {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: var(--black-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 200ms ease-in-out;
+  z-index: 50;
+}
+
+.freelancer_work_content_item_image > img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 25;
+}
+
+.freelancer_work_content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 32px;
+}
+
 .freelancer_work_content_item_text {
   display: flex;
   flex-direction: column;
@@ -188,10 +224,11 @@
 .freelancer_work_content_item_text > span {
   cursor: default;
   user-select: none;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   color: var(--white);
-  line-height: calc(16px * 1.2);
+  line-height: calc(18px * 1.2);
+  text-transform: uppercase;
 }
 
 .freelancer_work_content_item_text > p,
@@ -208,8 +245,9 @@
   margin-bottom: 8px;
 }
 
-.about_me_content_text > a {
-  cursor: default;
+.about_me_content_text > a > button,
+.freelancer_work_content_item_button > button {
+  cursor: pointer;
   user-select: none;
   border: 1px solid var(--white);
   outline: none;
@@ -219,20 +257,25 @@
   line-height: calc(16px * 1.2);
   background-color: var(--white);
   padding: 8px 24px;
-  margin-top: 8px;
   color: var(--black);
   text-decoration: none;
   transition: background-color 200ms ease-in-out, color 200ms ease-in-out,
     transform 100ms ease-in-out;
   border-radius: 4px;
+  text-transform: uppercase;
 }
 
-.about_me_content_text > a:hover {
+.about_me_content_text
+  > a
+  > button:hover
+  .freelancer_work_content_item_button
+  > button:hover {
   color: var(--white);
   background-color: var(--black);
 }
 
-.about_me_content_text > a:active {
+.about_me_content_text > a > button:active,
+.freelancer_work_content_item_button > button:active {
   transform: scale(0.975);
 }
 
@@ -267,8 +310,7 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .featured_work_card:hover .featured_work_card_inner,
-  .freelance_work_card:hover .freelance_work_card_inner {
+  .featured_work_card:hover .featured_work_card_inner {
     transform: rotateX(-180deg);
   }
 
@@ -297,10 +339,14 @@
 
 @media screen and (min-width: 768px) {
   .freelancer_work_content {
-    gap: 16px;
+    gap: 32px;
   }
 
-  .freelancer_work_content_item,
+  .freelancer_work_content_item {
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+  }
   .about_me_content {
     flex-direction: row;
     gap: 16px;
@@ -308,12 +354,16 @@
 
   .freelancer_work_content_item_text,
   .about_me_content_text {
-    width: 67%;
+    width: 60%;
   }
 
-  .freelance_work_card,
+  .freelancer_work_content_item_image {
+    width: 40%;
+    height: 200px;
+  }
+
   .about_me_content_image {
-    width: 33%;
+    width: 40%;
     height: auto;
   }
 }
