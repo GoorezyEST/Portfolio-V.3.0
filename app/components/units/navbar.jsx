@@ -53,15 +53,34 @@ function Navbar() {
         >
           <ul>
             <li>
-              <Link href="/">{lang === "es" ? "INICIO" : "HOME"}</Link>
+              <Link
+                href="/"
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                }}
+              >
+                {lang === "es" ? "INICIO" : "HOME"}
+              </Link>
             </li>
             <li>
-              {" "}
-              <Link href="/work">{lang === "es" ? "TRABAJO" : "WORK"}</Link>
+              <Link
+                href="/proyects"
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                }}
+              >
+                {lang === "es" ? "PROYECTOS" : "PROJECTS"}
+              </Link>
             </li>
             <li>
-              {" "}
-              <Link href="/techs">{lang === "es" ? "TECNOS" : "TECHS"}</Link>
+              <Link
+                href="/techs"
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                }}
+              >
+                {lang === "es" ? "TECNOS" : "TECHS"}
+              </Link>
             </li>
             <li>
               <div
@@ -81,7 +100,7 @@ function Navbar() {
       </div>
       <div className={styles.navigator_links_desktop}>
         <Link href="/">{lang === "es" ? "INICIO" : "HOME"}</Link>
-        <Link href="/work">{lang === "es" ? "TRABAJO" : "WORK"}</Link>
+        <Link href="/proyects">{lang === "es" ? "PROYECTOS" : "PROJECTS"}</Link>
         <Link href="/techs">{lang === "es" ? "TECNOS" : "TECHS"}</Link>
         <div
           className={styles.navigator_language_desktop}
