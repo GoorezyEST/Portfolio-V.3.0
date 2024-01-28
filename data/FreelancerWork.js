@@ -51,26 +51,26 @@ export const AllFreelanceWorkExtra = [
     extra_data: {
       es: [
         {
-          banner: "https://i.imgur.com/1VOsm5E.png",
+          banner: "https://i.imgur.com/AZJts59.png",
           title: "MATIAS PIER",
         },
         {
           side: "left",
-          img: "https://i.imgur.com/KWwa8Cy.png",
+          img: "https://i.imgur.com/0kJmLcb.png",
           title: "Página de inicio",
           text: "Matias Pier, un talentoso filmmaker, buscaba un portfolio que no solo fuera intuitivo en su diseño, sino que también destacara estéticamente para cautivar a sus clientes.\nTras varios bocetos en Figma, Matías aprobó una estética urbana y moderna para su cartera. Y un diseño sencillo pero intuitivo para sus clientes.",
         },
         {
           side: "right",
-          img: "https://i.imgur.com/mfAlguv.png",
+          img: "https://i.imgur.com/xgQH3Fr.png",
           title: "Trabajo destacado",
           text: "En la página de inicio los clientes podrán ver una sección de las obras destacadas de Matías. Permitiendo un vistazo rápido a sus mejores trabajos.\nEn la parte inferior derecha el usuario podrá hacer clic para ser redirigido a ver toda la obra de Matías.",
         },
         {
           side: "left",
-          img: "https://i.imgur.com/zXCpuQZ.png",
-          title: "El contenido",
-          text: "En la página de trabajo el usuario podrá ver todas las obras producidas por Matias. El contenido tiene un posee paginación la cual sólo muestra 8 obras por página.\nAdemás el usuario también podrá filtrar los trabajos por: todos, shorts o videos.",
+          img: "https://i.imgur.com/IYrGxPt.png",
+          title: "Los videos",
+          text: "En la página de trabajo el usuario podrá ver todas las obras producidas por Matias. Los videos poseen una paginación la cual sólo muestra 8 videos por página.\nAdemás el usuario también podrá filtrar los videos por: todos, shorts o videos.",
         },
         {
           project: "https://pieris-portfolio.vercel.app/",
@@ -78,26 +78,26 @@ export const AllFreelanceWorkExtra = [
       ],
       en: [
         {
-          banner: "https://i.imgur.com/1VOsm5E.png",
+          banner: "https://i.imgur.com/AZJts59.png",
           title: "MATIAS PIER",
         },
         {
           side: "left",
-          img: "https://i.imgur.com/KWwa8Cy.png",
+          img: "https://i.imgur.com/cGAezWm.png",
           title: "Home Page",
           text: "Matias Pier, a talented filmmaker, was looking for a portfolio that was not only intuitive in its design, but also stood out aesthetically to captivate his clients.\nAfter several sketches in Figma, Matias approved an urban and modern aesthetic for his portfolio. And a simple yet intuitive design for his clients.",
         },
         {
           side: "right",
-          img: "https://i.imgur.com/mfAlguv.png",
+          img: "https://i.imgur.com/DRecal4.png",
           title: "Featured work",
-          text: "On the home page clients will be able to see a section of Matias' featured works. Allowing a quick look at his best works.\nAt the bottom right the user will be able to click to be redirected to see all of Matias' work.",
+          text: "On the home page clients will be able to see a section of Matias featured works. Allowing a quick look at his best works.\nAt the bottom right the user will be able to click to be redirected to see all of Matias' work.",
         },
         {
           side: "left",
-          img: "https://i.imgur.com/zXCpuQZ.png",
-          title: "The content",
-          text: "In the work page the user will be able to see all the works produced by Matias. The content has a pagination which only shows 8 works per page.\nThe user will also be able to filter the works by: all, shorts or videos.",
+          img: "https://i.imgur.com/zy6QpzF.png",
+          title: "The videos",
+          text: "In the videos page the user will be able to see all the videos produced by Matias. The content has a pagination which only shows 8 videos per page.\nThe user will also be able to filter the videos by: all, shorts or videos.",
         },
         {
           project: "https://pieris-portfolio.vercel.app/",
@@ -111,44 +111,68 @@ export const AllFreelanceWorkExtra = [
     extra_data: {
       es: [
         {
-          banner: "https://i.imgur.com/RqfiJ8O.png",
+          banner: "https://i.imgur.com/NeHSQMB.png",
           title: "CARDO AUDIOVISUAL",
         },
         {
           side: "left",
-          img: "https://i.imgur.com/JpHS09V.png",
+          img: "https://i.imgur.com/hutGXlF.png",
+          title: "Inicio de la página",
+          text: "Cardo Audiovisual es una productora musical que buscaba una web con estética gótica/urbana donde poder presentar su trabajo a potenciales clientes.\nConseguí obtener la estética que buscaban y ofrecer una solución eficiente para mostrar sus contenidos a potenciales clientes.",
+        },
+        {
+          side: "right",
+          img: "https://i.imgur.com/OVlmW06.png",
+          title: "EL CONTENIDO",
+          text: "El objetivo de Cardo Audiovisual era poder mostrar sus obras audiovisuales a los clientes de una forma intuitiva y estética.\nEn la imagen se puede ver cómo se consiguió este resultado, con un vídeo en bucle que ocupa todo el espacio de la pantalla, con dos botones, uno para mostrar la información de la obra y otro permite al usuario visualizar la obra en cuestión.",
+        },
+        {
+          side: "left",
+          img: "https://i.imgur.com/x1pEyge.png",
+          title: "VER VIDEOS",
+          text: "Con el botón situado en la esquina inferior izquierda de la pantalla, el usuario puede abrir un overlay en la que se le permitirá reproducir la obra en cuestión. Para ello se utiliza un reproductor de youtube.\nEste overlay ocupa todo el tamaño de la pantalla y difumina el fondo para que el usuario pueda centrar su atención en la obra.",
+        },
+        {
+          side: "right",
+          img: "https://i.imgur.com/0sNnwXX.png",
+          title: "FORMULARIO DE CONTACTO",
+          text: "Este sitio web también cuenta con un formulario de contacto, que permite al usuario enviar un correo electrónico a la productora directamente desde su sitio web.\nEsto facilita al usuario ponerse en contacto con la productora en caso de que quiera hacer una consulta o realizar un trabajo.",
+        },
+        {
+          project: "https://cardoaudiovisual.com/",
+        },
+      ],
+      en: [
+        {
+          banner: "https://i.imgur.com/NeHSQMB.png",
+          title: "CARDO AUDIOVISUAL",
+        },
+        {
+          side: "left",
+          img: "https://i.imgur.com/hutGXlF.png",
           title: "Concepto general",
           text: "Un juego de navegador diseñado para los entusiastas de Marvel Snap.\nUna experiencia en la que el usuario podrá elegir entre tres modos de juego: clásico, píxel y habilidades.\nCada modo presenta un desafío único en el que tendrás que adivinar cartas utilizando diferentes pistas. Tendrás tres vidas para demostrar cuánto sabes sobre Marvel Snap.",
         },
         {
           side: "right",
-          img: "https://i.imgur.com/NzXVeve.png",
+          img: "https://i.imgur.com/OVlmW06.png",
           title: "Menu del juego",
           text: "En el menú de juego el usuario podrá seleccionar entre cualquiera de los 3 modos de juego existentes: clásico, píxel o habilidades.\nPor otro lado, el usuario también puede utilizar los dos botones de la parte inferior del menú para desactivar/activar tanto la música como los efectos de sonido del juego.",
         },
         {
-          project: "https://snapdle-game.vercel.app/",
-        },
-      ],
-      en: [
-        {
-          banner: "https://i.imgur.com/RqfiJ8O.png",
-          title: "CARDO AUDIOVISUAL",
-        },
-        {
           side: "left",
-          img: "https://i.imgur.com/JpHS09V.png",
-          title: "GENERAL CONCEPT",
-          text: "A browser game designed for Marvel Snap enthusiasts. An experience where the user will be able to pick between three game modes: classic, pixel, and skill.\n Each mode presents a unique challenge where you'll guess cards using different clues. You'll have three lives to prove how much do you know about Marvel Snap.",
+          img: "https://i.imgur.com/x1pEyge.png",
+          title: "Concepto general",
+          text: "Un juego de navegador diseñado para los entusiastas de Marvel Snap.\nUna experiencia en la que el usuario podrá elegir entre tres modos de juego: clásico, píxel y habilidades.\nCada modo presenta un desafío único en el que tendrás que adivinar cartas utilizando diferentes pistas. Tendrás tres vidas para demostrar cuánto sabes sobre Marvel Snap.",
         },
         {
           side: "right",
-          img: "https://i.imgur.com/NzXVeve.png",
-          title: "GAME MENU",
-          text: "In the game menu the user will be able to select between any of the 3 existing game modes: classic, pixel or skills.\nOn the other hand the user can also use the two buttons at the bottom of the menu to turn off/on both the music and the sound effects of the game.",
+          img: "https://i.imgur.com/0sNnwXX.png",
+          title: "Menu del juego",
+          text: "En el menú de juego el usuario podrá seleccionar entre cualquiera de los 3 modos de juego existentes: clásico, píxel o habilidades.\nPor otro lado, el usuario también puede utilizar los dos botones de la parte inferior del menú para desactivar/activar tanto la música como los efectos de sonido del juego.",
         },
         {
-          project: "https://snapdle-game.vercel.app/",
+          project: "https://cardoaudiovisual.com/",
         },
       ],
     },
