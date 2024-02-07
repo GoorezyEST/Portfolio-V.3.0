@@ -190,7 +190,7 @@ function WorkPage() {
                   <Link
                     href={
                       work.extra
-                        ? `proyects/${work.extra_url}`
+                        ? `projects/${work.extra_url}`
                         : work.proyect_url
                     }
                     target={work.extra ? "_self" : "_blank"}

@@ -272,7 +272,7 @@ export default function Home() {
               ease: "easeInOut",
             }}
           >
-            <Link href="/proyects">
+            <Link href="/projects">
               {lang === "es" ? "TODOS MIS PROYECTOS" : "ALL MY PROJECTS"}
             </Link>
           </motion.div>

@@ -64,7 +64,7 @@ function Navbar() {
             </li>
             <li>
               <Link
-                href="/proyects"
+                href="/projects"
                 onClick={() => {
                   setMobileMenuOpen(false);
                 }}
@@ -100,7 +100,7 @@ function Navbar() {
       </div>
       <div className={styles.navigator_links_desktop}>
         <Link href="/">{lang === "es" ? "INICIO" : "HOME"}</Link>
-        <Link href="/proyects">{lang === "es" ? "PROYECTOS" : "PROJECTS"}</Link>
+        <Link href="/projects">{lang === "es" ? "PROYECTOS" : "PROJECTS"}</Link>
         <Link href="/techs">{lang === "es" ? "TECNOS" : "TECHS"}</Link>
         <div
           className={styles.navigator_language_desktop}

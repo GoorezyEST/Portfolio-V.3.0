@@ -134,7 +134,7 @@ function ProjectData({ data }) {
             {lang === "es" ? "Pruebalo" : "Try it out"}
           </button>
         </Link>
-        <Link href="/work">
+        <Link href="/projects">
           <button className={styles.secondary_cta}>
             {lang === "es" ? "Regresar" : "Go back"}
           </button>
