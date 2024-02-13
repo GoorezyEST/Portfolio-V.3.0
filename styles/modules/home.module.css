@@ -245,6 +245,10 @@
   margin-bottom: 8px;
 }
 
+.about_me_content_text > a {
+  margin-top: 4px;
+}
+
 .about_me_content_text > a > button,
 .freelancer_work_content_item_button > button {
   cursor: pointer;

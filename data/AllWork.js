@@ -3,6 +3,81 @@ export const AllWorkList = [
     year: 2024,
     projects: [
       {
+        title: "CLIMA YA",
+        image_url: "https://i.imgur.com/l0g7f8x.png",
+        proyect_url: "https://climaya.vercel.app/",
+        extra: true,
+        extra_url: "clima-ya",
+        extra_data: {
+          es: [
+            {
+              banner: "https://i.imgur.com/1uJ2KB5.png",
+              title: "CLIMA YA",
+            },
+            {
+              side: "left",
+              img: "https://i.imgur.com/RlCN2sr.png",
+              title: "OBJETIVO",
+              text: "Uno de mis primeros proyectos fue una aplicación web donde el usuario podía ingresar una ciudad y veía el clima de la misma. Pero debido a mi inexperiencia tanto en el desarrollo como en el diseño, aquella aplicación no era intuitiva, carecía de manejo de errores, y no era estéticamente atractiva.\nPor lo que decidí recrearla con mis conocimientos actuales. Diseñando en Figma y aplicando prácticas que mejoren la eficiencia y reusabilidad del código.",
+            },
+            {
+              side: "right",
+              img: "https://i.imgur.com/OThF7Nz.png",
+              title: "PRONÓSTICO",
+              text: "El usuario podrá ver un pronóstico el cual muestra la temperatura que se espera en cada horario, una breve descripción del estado del clima, el porcentaje de humedad y la velocidad del viento.\nEl pronóstico está organizado en una cuadrícula de 2 columnas y 3 filas, donde cada elemento muestra el clima para un periodo de tres horas en adelante.",
+            },
+            {
+              side: "left",
+              img: "https://i.imgur.com/7nKkxMz.png",
+              title: "MAPA TÉRMICO",
+              text: "Utilizando Leaflet, una librería open-source para mapas interactivos, agregue este mapa térmico.\nEste mapa permite a los usuarios explorar la temperatura alrededor del mundo, y al acercarse, pueden ver la temperatura de países o ciudades individuales, representada en un espectro de colores.",
+            },
+            {
+              side: "right",
+              img: "https://i.imgur.com/HmKHAsO.png",
+              title: "DETALLES ESTÉTICOS",
+              text: "La imagen de fondo y el icono del clima cambia basado tanto en el estado del clima, ya sea que esté lloviendo, nevando o un cielo despejado, como también en si es de día o de noche.\nPor otro lado si la temperatura es menor a 5 grados celsius la letra toma un color blanco azulado, y si la temperatura es mayor a 30 grados celsius la letra toma un color blanco rojizo.",
+            },
+            {
+              project: "https://climaya.vercel.app/",
+            },
+          ],
+          en: [
+            {
+              banner: "https://i.imgur.com/1uJ2KB5.png",
+              title: "CLIMA YA",
+            },
+            {
+              side: "left",
+              img: "https://i.imgur.com/RlCN2sr.png",
+              title: "OBJECTIVE",
+              text: "One of my first projects was a web application where the user could enter a city and see the weather of the city. But due to my inexperience in both development and design, that application was not intuitive, lacked error handling, and was not aesthetically appealing.\nSo I decided to recreate it with my current knowledge. Designing in Figma and applying practices that improve the efficiency and reusability of the code.",
+            },
+            {
+              side: "right",
+              img: "https://i.imgur.com/OThF7Nz.png",
+              title: "FORECAST",
+              text: "The user will be able to see a forecast which shows the expected temperature at each time, a brief description of the weather, the percentage of humidity and the wind speed.\nThe forecast is organized in a grid of 2 columns and 3 rows, where each element shows the weather for a period of three hours onwards.",
+            },
+            {
+              side: "left",
+              img: "https://i.imgur.com/7nKkxMz.png",
+              title: "THERMAL MAP",
+              text: "Using Leaflet, an open-source library for interactive maps, I added this thermal map.\nThis map allows users to explore the temperature around the world, and by zooming in, they can see the temperature of individual countries or cities, represented in a spectrum of colors.",
+            },
+            {
+              side: "right",
+              img: "https://i.imgur.com/HmKHAsO.png",
+              title: "AESTHETIC DETAILS",
+              text: "The background image and the weather icon changes based on the state of the weather, whether it is raining, snowing or a clear sky, as well as whether it is day or night.\nOn the other hand, if the temperature is below 5 degrees Celsius the font takes on a bluish-white color, and if the temperature is above 30 degrees Celsius the font takes on a reddish-white color.",
+            },
+            {
+              project: "https://climaya.vercel.app/",
+            },
+          ],
+        },
+      },
+      {
         title: "Snapdle",
         first_text_en:
           "A browser game designed for Marvel Snap enthusiasts. An experience where the user will be able to pick between three game modes: classic, pixel, and skill.",

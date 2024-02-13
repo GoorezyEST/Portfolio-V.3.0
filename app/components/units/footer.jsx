@@ -85,8 +85,8 @@ function Footer() {
         }}
       >
         {lang === "es"
-          ? "Diseñado y desarrollado por Franco Espinosa, 2023."
-          : "Designed and developed by Franco Espinosa, 2023."}
+          ? "Diseñado y desarrollado por Franco Espinosa, 2024."
+          : "Designed and developed by Franco Espinosa, 2024."}
       </motion.p>
     </section>
   );
