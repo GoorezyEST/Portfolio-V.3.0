@@ -322,7 +322,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* <section className={styles.freelancer_work}>
+      <section className={styles.freelancer_work}>
         <motion.div
           className={styles.freelancer_work_title}
           initial={{ opacity: 0, x: "16px" }}
@@ -416,7 +416,7 @@ export default function Home() {
             }
           )}
         </div>
-      </section> */}
+      </section>
 
       <section className={styles.about_me}>
         <motion.div
