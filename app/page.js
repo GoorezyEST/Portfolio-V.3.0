@@ -397,35 +397,48 @@ export default function Home() {
                       </motion.button>
                     </Link>
                   </div>
-                  <Link
-                    href={`/freelance/${work.extra_url}`}
-                    className={styles.freelancer_work_content_item_image}
+                  <motion.div
+                    className={
+                      styles.freelancer_work_content_item_image_container
+                    }
+                    initial={{ opacity: 0, x: "-16px" }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{
+                      delay: 0.125,
+                      duration: 0.275,
+                      ease: "easeInOut",
+                    }}
                   >
-                    {!freelancerImagesState[index] && (
+                    <Link
+                      href={`/freelance/${work.extra_url}`}
+                      className={styles.freelancer_work_content_item_image}
+                    >
+                      {!freelancerImagesState[index] && (
+                        <div
+                          className={
+                            styles.freelancer_work_content_item_image_loading
+                          }
+                        >
+                          <span className="loader"></span>
+                        </div>
+                      )}
+                      <img
+                        src={work.image_url}
+                        alt={
+                          lang === "es"
+                            ? "Una imagen del trabajo"
+                            : "A image of the work"
+                        }
+                      />
                       <div
                         className={
-                          styles.freelancer_work_content_item_image_loading
+                          styles.freelancer_work_content_item_image_hover
                         }
                       >
-                        <span className="loader"></span>
+                        <EyeIcon />
                       </div>
-                    )}
-                    <img
-                      src={work.image_url}
-                      alt={
-                        lang === "es"
-                          ? "Una imagen del trabajo"
-                          : "A image of the work"
-                      }
-                    />
-                    <div
-                      className={
-                        styles.freelancer_work_content_item_image_hover
-                      }
-                    >
-                      <EyeIcon />
-                    </div>
-                  </Link>
+                    </Link>
+                  </motion.div>
                 </div>
               );
             }
