@@ -195,12 +195,13 @@
 .primary_cta,
 .secondary_cta {
   width: 100%;
-  padding: 10px 0;
+  padding: 0.6rem 0;
   border-radius: 4px;
   outline: none;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 .primary_cta {
