@@ -13,6 +13,7 @@ import { ResizeImgurImages } from "@/functions/Utilities";
 import { motion } from "framer-motion";
 import Footer from "./components/units/footer";
 import { useGlobal } from "@/contexts/GlobalContext";
+import EyeIcon from "./components/icons/EyeIcon";
 
 const variants = {
   visible: { y: 0 },
@@ -396,9 +397,16 @@ export default function Home() {
                       </motion.button>
                     </Link>
                   </div>
-                  <div className={styles.freelancer_work_content_item_image}>
+                  <Link
+                    href={`/freelance/${work.extra_url}`}
+                    className={styles.freelancer_work_content_item_image}
+                  >
                     {!freelancerImagesState[index] && (
-                      <div>
+                      <div
+                        className={
+                          styles.freelancer_work_content_item_image_loading
+                        }
+                      >
                         <span className="loader"></span>
                       </div>
                     )}
@@ -410,7 +418,14 @@ export default function Home() {
                           : "A image of the work"
                       }
                     />
-                  </div>
+                    <div
+                      className={
+                        styles.freelancer_work_content_item_image_hover
+                      }
+                    >
+                      <EyeIcon />
+                    </div>
+                  </Link>
                 </div>
               );
             }
