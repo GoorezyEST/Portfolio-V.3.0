@@ -117,7 +117,7 @@ export const AllFreelanceWorkExtra = [
         {
           side: "left",
           img: "https://i.imgur.com/hutGXlF.png",
-          title: "Inicio de la página",
+          title: "CONCEPTO GENERAL",
           text: "Cardo Audiovisual es una productora musical que buscaba una web con estética gótica/urbana donde poder presentar su trabajo a potenciales clientes.\nConseguí obtener la estética que buscaban y ofrecer una solución eficiente para mostrar sus contenidos a potenciales clientes.",
         },
         {
@@ -150,26 +150,26 @@ export const AllFreelanceWorkExtra = [
         {
           side: "left",
           img: "https://i.imgur.com/hutGXlF.png",
-          title: "Concepto general",
-          text: "Un juego de navegador diseñado para los entusiastas de Marvel Snap.\nUna experiencia en la que el usuario podrá elegir entre tres modos de juego: clásico, píxel y habilidades.\nCada modo presenta un desafío único en el que tendrás que adivinar cartas utilizando diferentes pistas. Tendrás tres vidas para demostrar cuánto sabes sobre Marvel Snap.",
+          title: "General concept",
+          text: "Cardo Audiovisual is a music production company that was looking for a website with gothic/urban aesthetics where they could present their work to potential clients.\nI was able to obtain the aesthetics they were looking for and offer an efficient solution to show their content to potential clients.",
         },
         {
           side: "right",
           img: "https://i.imgur.com/OVlmW06.png",
-          title: "Menu del juego",
-          text: "En el menú de juego el usuario podrá seleccionar entre cualquiera de los 3 modos de juego existentes: clásico, píxel o habilidades.\nPor otro lado, el usuario también puede utilizar los dos botones de la parte inferior del menú para desactivar/activar tanto la música como los efectos de sonido del juego.",
+          title: "The Content",
+          text: "Cardo Audiovisual's goal was to be able to show its audiovisual works to customers in an intuitive and aesthetic way.\nThe image shows how this result was achieved, with a looping video that occupies the entire screen space, with two buttons, one to show the information of the work and the other allows the user to view the work in question.",
         },
         {
           side: "left",
           img: "https://i.imgur.com/x1pEyge.png",
-          title: "Concepto general",
-          text: "Un juego de navegador diseñado para los entusiastas de Marvel Snap.\nUna experiencia en la que el usuario podrá elegir entre tres modos de juego: clásico, píxel y habilidades.\nCada modo presenta un desafío único en el que tendrás que adivinar cartas utilizando diferentes pistas. Tendrás tres vidas para demostrar cuánto sabes sobre Marvel Snap.",
+          title: "See Videos",
+          text: "With the button located in the lower left corner of the screen, the user can open an overlay in which he will be allowed to play the work in question.\nThis overlay occupies the entire size of the screen and blurs the background so that the user can focus his attention on the work.",
         },
         {
           side: "right",
           img: "https://i.imgur.com/0sNnwXX.png",
-          title: "Menu del juego",
-          text: "En el menú de juego el usuario podrá seleccionar entre cualquiera de los 3 modos de juego existentes: clásico, píxel o habilidades.\nPor otro lado, el usuario también puede utilizar los dos botones de la parte inferior del menú para desactivar/activar tanto la música como los efectos de sonido del juego.",
+          title: "CONTACT FORM",
+          text: "This website also has a contact form, which allows the user to send an email to the production company directly from its website.\nThis makes it easy for the user to contact the production company in case he/she wants to make an inquiry or perform a job.",
         },
         {
           project: "https://cardoaudiovisual.com/",
