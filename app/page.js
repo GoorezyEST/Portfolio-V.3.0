@@ -281,7 +281,7 @@ export default function Home() {
         <div className={styles.featured_work_content}>
           {FeaturedWorkList.map((work, index) => {
             return (
-              <Link href={work.project_url} target="_self" key={index}>
+              <Link href={work.project_url} target={work.target} key={index}>
                 <motion.div
                   className={styles.featured_work_card}
                   initial={{ opacity: 0 }}
