@@ -2,8 +2,6 @@
 
 # Franco Espinosa - Portfolio III
 
-My name is Franco Espinosa, I'm a web developer who takes advantage of each day to expand my knowledge and face challenges that test my skills.
-
 ## Dependencies:
 
 - "@studio-freight/lenis": "^1.0.29"
