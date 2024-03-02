@@ -194,26 +194,48 @@
 
 .primary_cta,
 .secondary_cta {
-  width: 100%;
-  padding: 0.6rem 0;
-  border-radius: 4px;
-  outline: none;
   cursor: pointer;
-  font-size: 15px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.primary_cta {
-  background-color: var(--white);
-  color: var(--black-light);
-  border: 2px solid var(--white);
-}
-
-.secondary_cta {
+  user-select: none;
+  border: 1px solid var(--white);
+  outline: none;
+  width: max-content;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 14px;
+  padding: 0.6rem 1.25rem;
   background-color: var(--black-light);
   color: var(--white);
-  border: 2px solid var(--white);
+  text-decoration: none;
+  border-radius: 4px;
+  text-transform: uppercase;
+  border: 1px solid;
+  overflow: hidden;
+  position: relative;
+}
+
+.primary_cta > span,
+.secondary_cta > span {
+  z-index: 20;
+}
+
+.primary_cta::after,
+.secondary_cta::after {
+  background: #fff;
+  content: "";
+  height: 155px;
+  left: -75px;
+  opacity: 0.2;
+  position: absolute;
+  top: -50px;
+  transform: rotate(35deg);
+  transition: all 750ms cubic-bezier(0.19, 1, 0.22, 1);
+  width: 50px;
+  z-index: 10;
+}
+
+.primary_cta:hover::after,
+.secondary_cta:hover::after {
+  left: 120%;
 }
 
 @media screen and (max-width: 1024px) {
