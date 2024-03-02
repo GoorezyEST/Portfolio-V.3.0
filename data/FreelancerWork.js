@@ -5,8 +5,7 @@ export const FreelancerWorkListEN = [
       "Matias Pier, a talented filmmaker, was looking for a portfolio that was not only intuitive in its design, but also stood out aesthetically to captivate his clients.",
       "Developed in Next.js and enriched with animations, I obtained a result that met their expectations. A portfolio that presents a distinctive style that allows him to showcase his work in a striking way to his audience.",
     ],
-    image_url: "https://i.imgur.com/J5d95AH.png",
-    website_url: "https://cardoaudiovisual.com/",
+    image_url: "https://i.ibb.co/yQNzfTC/J5d95AH.webp",
     extra_url: "matias-pier-portfolio",
   },
   {
@@ -15,8 +14,7 @@ export const FreelancerWorkListEN = [
       "Cardo Audiovisual is a music production company that was looking for a website with gothic/urban aesthetics where they could present their work to potential clients.",
       "Together with a partner we developed the website using Next.js. Successfully delivering the work in a timely manner, and providing Cardo Audiovisual with a more efficient way to update and display their content.",
     ],
-    image_url: "https://i.imgur.com/b1LV2xZ.png",
-    website_url: "https://cardoaudiovisual.com/",
+    image_url: "https://i.ibb.co/MZ3Ys9R/b1LV2xZ.webp",
     extra_url: "cardo-audiovisual",
   },
 ];
@@ -28,8 +26,7 @@ export const FreelancerWorkListES = [
       "Matias Pier, un talentoso filmmaker, buscaba un portfolio que no solo fuera intuitivo en su diseño, sino que también destacara estéticamente para cautivar a sus clientes.",
       "Desarrollado en Next.js y enriquecido con animaciones, obtuve un resultado que cumplió con sus expectativas. Un portfolio que presenta un estilo distintivo que le permite exhibir de manera impactante sus obras ante su audiencia.",
     ],
-    image_url: "https://i.imgur.com/J5d95AH.png",
-    website_url: "https://cardoaudiovisual.com/",
+    image_url: "https://i.ibb.co/yQNzfTC/J5d95AH.webp",
     extra_url: "matias-pier-portfolio",
   },
   {
@@ -38,8 +35,7 @@ export const FreelancerWorkListES = [
       "Cardo Audiovisual es una productora de obras musicales que buscaba tener un sitio web con estética gótica/urbana en donde presentar sus trabajos a potenciales clientes.",
       "Junto a un socio desarrollamos el sitio web utilizando Next.js. Entregando satisfactoriamente el trabajo en tiempo y forma, y brindando a Cardo Audiovisual una forma más eficiente para actualizar y mostrar su contenido.",
     ],
-    image_url: "https://i.imgur.com/b1LV2xZ.png",
-    website_url: "https://cardoaudiovisual.com/",
+    image_url: "https://i.ibb.co/MZ3Ys9R/b1LV2xZ.webp",
     extra_url: "cardo-audiovisual",
   },
 ];

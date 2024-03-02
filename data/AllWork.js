@@ -4,13 +4,13 @@ export const AllWorkList = [
     projects: [
       {
         title: "Next.js Script",
-        image_url: "https://i.imgur.com/V2FBhxj.png",
+        image_url: "https://i.ibb.co/LS0KZ3x/V2FBhxj.webp",
         proyect_url:
           "https://www.linkedin.com/feed/update/urn:li:activity:7166461677729783809/",
       },
       {
         title: "CLIMA YA",
-        image_url: "https://i.imgur.com/l0g7f8x.png",
+        image_url: "https://i.ibb.co/4R1v3zj/l0g7f8x.webp",
         proyect_url: "https://climaya.vercel.app/",
         extra: true,
         extra_url: "clima-ya",
@@ -85,7 +85,7 @@ export const AllWorkList = [
       },
       {
         title: "Snapdle",
-        image_url: "https://i.imgur.com/yoPmRTB.png",
+        image_url: "https://i.ibb.co/7yN4pJY/yoPmRTB.webp",
         proyect_url: "https://snapdle-game.vercel.app/",
         extra: true,
         extra_url: "snapdle",
@@ -189,7 +189,7 @@ export const AllWorkList = [
     projects: [
       {
         title: "Code Hub",
-        image_url: "https://i.imgur.com/TI4iT1O.png",
+        image_url: "https://i.ibb.co/XjLcs4C/TI4iT1O.webp",
         proyect_url: "https://code-hub-goorezy.vercel.app/",
         extra: true,
         extra_url: "code-hub",
@@ -264,7 +264,7 @@ export const AllWorkList = [
       },
       {
         title: "Get repos",
-        image_url: "https://i.imgur.com/jODuvKN.png",
+        image_url: "https://i.ibb.co/qBsHnp1/jODuvKN.webp",
         proyect_url: "https://get-repos.vercel.app/",
         extra: true,
         extra_url: "get-repos",
@@ -339,7 +339,7 @@ export const AllWorkList = [
       },
       {
         title: "E-Booking",
-        image_url: "https://i.imgur.com/atfgg35.png",
+        image_url: "https://i.ibb.co/10BCFnj/atfgg35.webp",
         proyect_url: "https://electronic-booking.vercel.app/",
         extra: true,
         extra_url: "e-booking",
@@ -414,7 +414,7 @@ export const AllWorkList = [
       },
       {
         title: "Portfolio - V.2",
-        image_url: "https://i.imgur.com/93KFitz.png",
+        image_url: "https://i.ibb.co/RNpF4MW/93KFitz.webp",
         proyect_url: "https://franco-espinosa-portafolio.vercel.app/",
         extra: true,
         extra_url: "portfolio-v-2",
@@ -477,7 +477,7 @@ export const AllWorkList = [
       },
       {
         title: "Mate y código",
-        image_url: "https://i.imgur.com/e0k90BX.png",
+        image_url: "https://i.ibb.co/hmpFcM3/e0k90BX.webp",
         proyect_url: "https://mate-y-codigo.vercel.app/inicio",
         extra: true,
         extra_url: "mate-y-codigo",
@@ -540,19 +540,19 @@ export const AllWorkList = [
       },
       {
         title: "Geek Genius",
-        image_url: "https://i.imgur.com/QkyNNTP.png",
+        image_url: "https://i.ibb.co/ZNmYJkn/QkyNNTP.webp",
         proyect_url:
           "https://www.linkedin.com/posts/franco-espinosa_netdeveloper-developer-desarrollodesoftware-activity-7051901781492019200-wGz0?utm_source=share&utm_medium=member_desktop",
       },
       {
         title: "EncryptoNET",
-        image_url: "https://i.imgur.com/oRq7Rp7.png",
+        image_url: "https://i.ibb.co/p3XXPd4/oRq7Rp7.webp",
         proyect_url:
           "https://www.linkedin.com/posts/franco-espinosa_netdeveloper-desarrollodesoftware-aplicaciaejn-activity-7048647840025186304-SeWJ?utm_source=share&utm_medium=member_desktop",
       },
       {
         title: "Skyring",
-        image_url: "https://i.imgur.com/SKRv8Ei.png",
+        image_url: "https://i.ibb.co/J71K0g0/SKRv8Ei.webp",
         proyect_url: "https://skyring.netlify.app/",
         extra: true,
         extra_url: "skyring",
@@ -603,13 +603,13 @@ export const AllWorkList = [
       },
       {
         title: "WareStore",
-        image_url: "https://i.imgur.com/osLPn1l.png",
+        image_url: "https://i.ibb.co/NYJqfNV/osLPn1l.webp",
         proyect_url:
           "https://www.linkedin.com/posts/franco-espinosa_project-csharp-dotnet-activity-7035956711890821120-ATVt?utm_source=share&utm_medium=member_desktop",
       },
       {
         title: "Hawk Clothes",
-        image_url: "https://i.imgur.com/p49wr6b.png",
+        image_url: "https://i.ibb.co/bd6wdRL/p49wr6b.webp",
         proyect_url: "https://hawk-clothes.netlify.app/",
         extra: true,
         extra_url: "hawk-clothes",
@@ -684,7 +684,7 @@ export const AllWorkList = [
       },
       {
         title: "Portfolio - V.1",
-        image_url: "https://i.imgur.com/4KwZ4ye.png",
+        image_url: "https://i.ibb.co/9chgDpt/4KwZ4ye.webp",
         proyect_url: "https://franco-espinosa-portafolio-antiguo.netlify.app/",
         extra: true,
         extra_url: "portfolio-v-1",
@@ -766,7 +766,7 @@ export const AllWorkList = [
     projects: [
       {
         title: "CSS Gallery",
-        image_url: "https://i.imgur.com/zdrz6OR.png",
+        image_url: "https://i.ibb.co/QfwrhJP/zdrz6OR.webp",
         proyect_url: "https://goorezy-css-gallery.netlify.app/",
         extra: true,
         extra_url: "css-gallery",
@@ -829,7 +829,7 @@ export const AllWorkList = [
       },
       {
         title: "Hattyng",
-        image_url: "https://i.imgur.com/Y658jC5.png",
+        image_url: "https://i.ibb.co/HH8STbV/Y658jC5.webp",
         proyect_url: "https://hattyng.netlify.app/",
         extra: true,
         extra_url: "hattyng",
@@ -928,7 +928,7 @@ export const AllWorkList = [
       },
       {
         title: "Virtual gallery",
-        image_url: "https://i.imgur.com/XTlbAQI.png",
+        image_url: "https://i.ibb.co/CnTtJLh/XTlbAQI.webp",
         proyect_url: "https://arg-virtual-gallery.netlify.app/",
         extra: true,
         extra_url: "virtual-gallery",
