@@ -131,12 +131,12 @@ function FreelanceData({ data }) {
       >
         <Link href={data[data.length - 1].project} target="_blank">
           <button className={styles.primary_cta}>
-            {lang === "es" ? "Pruebalo" : "Try it out"}
+            <span>{lang === "es" ? "Pruebalo" : "Try it out"}</span>
           </button>
         </Link>
         <Link href="/">
           <button className={styles.secondary_cta}>
-            {lang === "es" ? "Regresar" : "Go back"}
+            <span>{lang === "es" ? "Regresar" : "Go back"}</span>
           </button>
         </Link>
       </motion.div>

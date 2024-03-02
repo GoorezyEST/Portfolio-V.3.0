@@ -393,7 +393,7 @@ export default function Home() {
                           ease: "easeInOut",
                         }}
                       >
-                        {lang === "es" ? "Ver más" : "See more"}
+                        <span>{lang === "es" ? "Ver más" : "See more"}</span>
                       </motion.button>
                     </Link>
                   </div>
@@ -533,7 +533,7 @@ export default function Home() {
                   ease: "easeInOut",
                 }}
               >
-                {lang === "es" ? "TECNOLOGÍAS" : "MY TECH STACK"}
+                <span>{lang === "es" ? "TECNOLOGÍAS" : "MY TECH STACK"}</span>
               </motion.button>
             </Link>
           </div>
@@ -553,7 +553,7 @@ export default function Home() {
               </div>
             )}
             <img
-              src="https://i.imgur.com/UueGXXr.png"
+              src="https://i.ibb.co/6sNs337/Uue-GXXr-1.webp"
               alt="Mar del Plata image"
             />
           </motion.div>
