@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  cursor: none;
 }
 
 :root {
@@ -88,7 +89,7 @@ body::-webkit-scrollbar {
   color: var(--white);
   line-height: calc(36px * 1.2);
   text-align: center;
-  cursor: default;
+  cursor: none;
   user-select: none;
 }
 
@@ -98,8 +99,26 @@ body::-webkit-scrollbar {
   color: var(--white);
   line-height: calc(16px * 1.2);
   opacity: 0.75;
-  cursor: default;
+  cursor: none;
   user-select: none;
+}
+
+.custom_cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  background-color: var(--white);
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.75);
+}
+
+.custom_cursor > svg {
+  width: auto;
+  height: 100%;
 }
 
 @media screen and (min-width: 400px) {

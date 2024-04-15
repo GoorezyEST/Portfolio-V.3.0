@@ -28,7 +28,7 @@
   color: var(--white);
   line-height: calc(16px * 1.2);
   opacity: 0.75;
-  cursor: default;
+  cursor: none;
   user-select: none;
 }
 
@@ -38,7 +38,7 @@
   color: var(--white);
   line-height: calc(24px * 1.2);
   text-align: start;
-  cursor: default;
+  cursor: none;
   user-select: none;
 }
 
@@ -47,7 +47,7 @@
   font-weight: 400;
   color: var(--white);
   line-height: calc(16px * 1.2);
-  cursor: pointer;
+  cursor: none;
   user-select: none;
   position: relative;
   text-decoration: none;

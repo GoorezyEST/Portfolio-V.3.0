@@ -19,7 +19,7 @@
   color: var(--white);
   line-height: calc(16px * 1.2);
   opacity: 0.75;
-  cursor: default;
+  cursor: none;
   user-select: none;
 }
 
@@ -28,7 +28,7 @@
   font-weight: bold;
   color: var(--white);
   line-height: calc(24px * 1.2);
-  cursor: default;
+  cursor: none;
   user-select: none;
 }
 
@@ -61,7 +61,7 @@
   font-weight: bold;
   color: var(--white);
   line-height: calc(16px * 1.2);
-  cursor: default;
+  cursor: none;
   user-select: none;
 }
 
@@ -71,7 +71,7 @@
   color: var(--white);
   line-height: calc(16px * 1.5);
   opacity: 0.75;
-  cursor: default;
+  cursor: none;
   user-select: none;
 }
 

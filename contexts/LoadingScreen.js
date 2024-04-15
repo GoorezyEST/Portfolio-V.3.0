@@ -5,6 +5,7 @@ import { useGlobal } from "./GlobalContext";
 import { AnimatePresence, motion } from "framer-motion";
 import LogoIcon from "@/app/components/icons/LogoIcon";
 import Lenis from "@studio-freight/lenis";
+import Cursor from "@/app/components/units/Cursor";
 
 function LoadingScreen({ children }) {
   const { isHydrated } = useGlobal();
@@ -38,6 +39,7 @@ function LoadingScreen({ children }) {
 
   return (
     <>
+      <Cursor />
       <AnimatePresence mode="wait">
         {isHydrated && (
           <motion.div

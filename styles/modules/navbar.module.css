@@ -31,7 +31,7 @@
   font-size: 16px;
   line-height: calc(16px * 1.2);
   position: relative;
-  cursor: pointer;
+  cursor: none;
   user-select: none;
 }
 
@@ -62,7 +62,7 @@
 .navigator_language_desktop_flag {
   height: calc(16px * 1.2);
   width: auto;
-  cursor: pointer;
+  cursor: none;
   user-select: none;
 }
 
@@ -126,7 +126,7 @@
 
 .mobile_menu > ul > li > a,
 .navigator_language_mobile > span {
-  cursor: pointer;
+  cursor: none;
   user-select: none;
   text-decoration: none;
   color: var(--white);

@@ -41,7 +41,7 @@
   font-weight: bold;
   color: var(--white);
   line-height: calc(24px * 1.2);
-  cursor: default;
+  cursor: none;
   user-select: none;
 }
 
@@ -53,7 +53,7 @@
   color: var(--white);
   line-height: calc(16px * 1.2);
   opacity: 0.75;
-  cursor: default;
+  cursor: none;
   user-select: none;
 }
 
@@ -143,7 +143,7 @@
 }
 
 .featured_work_card_back > p {
-  cursor: pointer;
+  cursor: none;
   user-select: none;
   font-size: 16px;
   font-weight: bold;
@@ -253,7 +253,7 @@
 }
 
 .freelancer_work_content_item_text > span {
-  cursor: default;
+  cursor: none;
   user-select: none;
   font-size: 18px;
   font-weight: bold;
@@ -264,7 +264,7 @@
 
 .freelancer_work_content_item_text > p,
 .about_me_content_text > p {
-  cursor: default;
+  cursor: none;
   user-select: none;
   font-size: 16px;
   font-weight: 300;
@@ -286,7 +286,7 @@
 
 .about_me_content_text > a > button,
 .freelancer_work_content_item_button > button {
-  cursor: pointer;
+  cursor: none;
   user-select: none;
   border: 1px solid var(--white);
   outline: none;
@@ -382,7 +382,7 @@
     color: var(--white);
     line-height: calc(16px * 1.2);
     opacity: 1;
-    cursor: pointer;
+    cursor: none;
     user-select: none;
     text-decoration: none;
     position: relative;

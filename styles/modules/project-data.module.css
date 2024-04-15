@@ -102,7 +102,7 @@
   font-size: 48px;
   font-weight: 700;
   color: var(--white);
-  cursor: default;
+  cursor: none;
   user-select: none;
   white-space: nowrap;
 }
@@ -164,7 +164,7 @@
   font-weight: 700;
   line-height: calc(24px * 1.2);
   text-transform: uppercase;
-  cursor: default;
+  cursor: none;
   user-select: none;
 }
 
@@ -174,7 +174,7 @@
   color: var(--white);
   line-height: calc(16px * 1.5);
   margin-top: 8px;
-  cursor: default;
+  cursor: none;
   user-select: none;
 }
 
@@ -188,13 +188,13 @@
 .end > a {
   text-decoration: none;
   width: 150px;
-  cursor: pointer;
+  cursor: none;
   user-select: none;
 }
 
 .primary_cta,
 .secondary_cta {
-  cursor: pointer;
+  cursor: none;
   user-select: none;
   border: 1px solid var(--white);
   outline: none;
