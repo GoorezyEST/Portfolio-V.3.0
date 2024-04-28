@@ -3,6 +3,12 @@ export const AllWorkList = [
     year: 2024,
     projects: [
       {
+        title: "Harmony",
+        image_url: "https://i.ibb.co/7gWzbN2/811shots-so-1.webp",
+        proyect_url:
+          "https://www.linkedin.com/feed/update/urn:li:activity:7178427998105157632/",
+      },
+      {
         title: "Next.js Script",
         image_url: "https://i.ibb.co/LS0KZ3x/V2FBhxj.webp",
         proyect_url:
