@@ -254,7 +254,7 @@ export default function Home() {
             {lang === "es" ? (
               <>
                 <span>DESCUBRA MIS</span>
-                <h2>PROYECTOS DESTACADO</h2>
+                <h2>PROYECTOS DESTACADOS</h2>
               </>
             ) : (
               <>
@@ -481,8 +481,8 @@ export default function Home() {
               }}
             >
               {lang === "es"
-                ? "Soy Franco Espinosa, de Mar del Plata, Argentina. Comencé a programar en 2021 bajo la tutela de mi primo Marcos Espinosa, desarrollador Backend."
-                : "I'm Franco Espinosa, from Mar del Plata, Argentina. I started my programming journey in 2021 under the tutelage of my cousin Marcos Espinosa, a Backend developer."}
+                ? "Soy Franco Espinosa, de Mar del Plata, Argentina. Comencé a formarme en programación en 2021 de manera autodidacta, iniciándome en backend bajo la guía de un desarrollador experimentado. Estudié C, trabajé con herramientas de bajo nivel y completé cursos en plataformas como FreeCodeCamp, Udemy y Platzi."
+                : "I'm Franco Espinosa, from Mar del Plata, Argentina. I began learning to program in 2021 on my own, starting with backend development under the guidance of an experienced developer. I studied C, worked with low-level tools, and completed courses on platforms like FreeCodeCamp, Udemy, and Platzi."}
             </motion.p>
             <motion.p
               initial={{ opacity: 0, x: "16px" }}
@@ -494,8 +494,8 @@ export default function Home() {
               }}
             >
               {lang === "es"
-                ? "Empecé bajo su guía estudiando C con el editor de texto conocido como como VIM. Luego completé varios cursos de FreeCodeCamp, Udemy, Platzi y otros."
-                : "I began under his guidance studying C with the text editor known as VIM. Then I completed various courses from FreeCodeCamp, Udemy, Platzi and others."}
+                ? "A lo largo de este proceso desarrollé proyectos propios y realicé trabajos freelance, explorando distintos lenguajes, bases de datos, frameworks y conceptos fundamentales del desarrollo de software. Posteriormente trabajé durante un año como Frontend Developer bajo modalidad contractual y tercerizada, lo que me permitió adquirir experiencia profesional y trabajo en entornos reales."
+                : "Throughout this process, I developed my own projects and completed freelance work, exploring different languages, databases, frameworks, and fundamental software development concepts. Subsequently, I worked for a year as a Frontend Developer under a contract and outsourced arrangement, which allowed me to gain professional experience and work in real-world environments."}
             </motion.p>
             <motion.p
               initial={{ opacity: 0, x: "16px" }}
@@ -507,8 +507,8 @@ export default function Home() {
               }}
             >
               {lang === "es"
-                ? "A lo largo de estos años he desarrollado varios proyectos, así como también algunos trabajos como Freelance."
-                : "Throughout these years I have developed various projects, as well as doing some work as a Freelancer."}
+                ? "Esa etapa me despertó un fuerte interés por el diseño gráfico y el diseño UX/UI, por lo que actualmente me encuentro estudiando Diseño Gráfico, habiendo finalizado y promocionado todas las materias de mi primer año."
+                : "That period sparked a strong interest in graphic design and UX/UI design, so I'm currently studying Graphic Design, having completed and passed all the subjects of my first year."}
             </motion.p>
             <motion.p
               initial={{ opacity: 0, x: "16px" }}
@@ -520,10 +520,10 @@ export default function Home() {
               }}
             >
               {lang === "es"
-                ? "Hasta la fecha, he estudiado una amplia gama de lenguajes, bases de datos, lenguajes de consulta, frameworks, patrones de diseño y otros conceptos relacionados con el campo."
-                : "To this date, I have studied a wide range of languages, databases, query languages, frameworks, design patterns and other concepts related to the field."}
+                ? "Hoy estoy en búsqueda laboral, con un perfil que combina desarrollo frontend, diseño y una mirada integral sobre producto y experiencia de usuario."
+                : "Today I am looking for a job, with a profile that combines frontend development, design and a comprehensive view of product and user experience."}
             </motion.p>
-            <Link href="/techs">
+            <Link href="/projects">
               <motion.button
                 initial={{ opacity: 0, x: "16px" }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -533,7 +533,7 @@ export default function Home() {
                   ease: "easeInOut",
                 }}
               >
-                <span>{lang === "es" ? "TECNOLOGÍAS" : "MY TECH STACK"}</span>
+                <span>{lang === "es" ? "Proyectos" : "Projects"}</span>
               </motion.button>
             </Link>
           </div>
@@ -553,13 +553,12 @@ export default function Home() {
               </div>
             )}
             <img
-              src="https://i.ibb.co/6sNs337/Uue-GXXr-1.webp"
+              src="https://i.ibb.co/Z9WJq13/maximiliano-deliso-ejhu-BT66-U-A-unsplash-1.webp"
               alt="Mar del Plata image"
             />
           </motion.div>
         </div>
       </section>
-
       <Footer />
     </main>
   );
