@@ -129,11 +129,13 @@ function FreelanceData({ data }) {
           ease: "easeInOut",
         }}
       >
-        <Link href={data[data.length - 1].project} target="_blank">
-          <button className={styles.primary_cta}>
-            <span>{lang === "es" ? "Pruebalo" : "Try it out"}</span>
-          </button>
-        </Link>
+        {data[data.length - 1].project !== "OFF_SERVICE" && (
+          <Link href={data[data.length - 1].project} target="_blank">
+            <button className={styles.primary_cta}>
+              <span>{lang === "es" ? "Pruebalo" : "Try it out"}</span>
+            </button>
+          </Link>
+        )}
         <Link href="/">
           <button className={styles.secondary_cta}>
             <span>{lang === "es" ? "Regresar" : "Go back"}</span>

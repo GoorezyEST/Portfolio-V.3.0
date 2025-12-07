@@ -1,46 +1,118 @@
 export const FreelancerWorkListEN = [
   {
+    title: "Website - Miguel Ángel Francisco",
+    text: [
+      "In this project, I designed and developed a website for a filmmaker and writer from the city of La Plata. The design was created in Figma, and the website was developed using Next.js.",
+    ],
+    image_url: "https://i.ibb.co/6R5QCrcX/1267aa3b.webp",
+    extra_url: "miguel-angel-francisco",
+  },
+  {
     title: "Portfolio - Matias Pier",
     text: [
-      "Matias Pier, a talented filmmaker, was looking for a portfolio that was not only intuitive in its design, but also stood out aesthetically to captivate his clients.",
-      "Developed in Next.js and enriched with animations, I obtained a result that met their expectations. A portfolio that presents a distinctive style that allows him to showcase his work in a striking way to his audience.",
+      "In this project, I designed and developed a website for a filmmaker in the city of La Plata. The design was done in Figma, the website was developed in Next.js, and GSAP and Framer Motion were used for the animations.",
     ],
-    image_url: "https://i.ibb.co/yQNzfTC/J5d95AH.webp",
+    image_url: "https://i.ibb.co/39Z8w9qX/28731a20.webp",
     extra_url: "matias-pier-portfolio",
   },
   {
     title: "Website - Cardo Audiovisual",
     text: [
-      "Cardo Audiovisual is a music production company that was looking for a website with gothic/urban aesthetics where they could present their work to potential clients.",
-      "Together with a partner we developed the website using Next.js. Successfully delivering the work in a timely manner, and providing Cardo Audiovisual with a more efficient way to update and display their content.",
+      "In this project, I designed and developed a website for an audiovisual production company in La Plata. The design was created in Figma, the website was developed in Next.js, 3D elements were integrated using React Three Fiber and Three.js, and GSAP was used for both 3D and 2D animations.",
     ],
-    image_url: "https://i.ibb.co/MZ3Ys9R/b1LV2xZ.webp",
+    image_url: "https://i.ibb.co/DHbVjdWp/8c7814a4.webp",
     extra_url: "cardo-audiovisual",
   },
 ];
 
 export const FreelancerWorkListES = [
   {
+    title: "Sitio web - Miguel Ángel Francisco",
+    text: [
+      "En este trabajo diseñé y desarrollé un sitio web para un cineasta y escritor de la ciudad de La Plata. El diseño fue hecho en Figma, el sitio web fue desarrollado utilizando Next.js.",
+    ],
+    image_url: "https://i.ibb.co/6R5QCrcX/1267aa3b.webp",
+    extra_url: "miguel-angel-francisco",
+  },
+  {
     title: "Portfolio - Matias Pier",
     text: [
-      "Matias Pier, un talentoso filmmaker, buscaba un portfolio que no solo fuera intuitivo en su diseño, sino que también destacara estéticamente para cautivar a sus clientes.",
-      "Desarrollado en Next.js y enriquecido con animaciones, obtuve un resultado que cumplió con sus expectativas. Un portfolio que presenta un estilo distintivo que le permite exhibir de manera impactante sus obras ante su audiencia.",
+      "En este trabajo diseñé y desarrollé un sitio web para un filmmaker de la ciudad de La Plata. El diseño fue hecho en Figma, el sitio web se desarrollo en Next.js y se utilizo GSAP y Framer Motion para las animaciones.",
     ],
-    image_url: "https://i.ibb.co/yQNzfTC/J5d95AH.webp",
+    image_url: "https://i.ibb.co/39Z8w9qX/28731a20.webp",
     extra_url: "matias-pier-portfolio",
   },
   {
     title: "Sitio web - Cardo Audiovisual",
     text: [
-      "Cardo Audiovisual es una productora de obras musicales que buscaba tener un sitio web con estética gótica/urbana en donde presentar sus trabajos a potenciales clientes.",
-      "Junto a un socio desarrollamos el sitio web utilizando Next.js. Entregando satisfactoriamente el trabajo en tiempo y forma, y brindando a Cardo Audiovisual una forma más eficiente para actualizar y mostrar su contenido.",
+      "En este trabajo diseñé y desarrollé un sitio web para una productora de obras audiovisuales de La Plata. El diseño fue hecho en Figma, el sitio web se desarrollo en Next.js, se integraron elementos 3D con React Three Fiber y Three.js, asi como también se utilizo GSAP para las animaciones, tanto 3D como 2D.",
     ],
-    image_url: "https://i.ibb.co/MZ3Ys9R/b1LV2xZ.webp",
+    image_url: "https://i.ibb.co/DHbVjdWp/8c7814a4.webp",
     extra_url: "cardo-audiovisual",
   },
 ];
 
 export const AllFreelanceWorkExtra = [
+  {
+    title: "Miguel Ángel Francisco",
+    extra_url: "miguel-angel-francisco",
+    extra_data: {
+      es: [
+        {
+          banner: "https://i.imgur.com/MvzJcJQ.jpeg",
+          title: "MIGUEL ÁNGEL FRANCISCO",
+        },
+        {
+          side: "left",
+          img: "https://i.imgur.com/HnSJjXo.jpeg",
+          title: "ORIGEN DEL PROYECTO",
+          text: "Miguel Ángel Francisco, cineasta y escritor de la ciudad de La Plata, necesitaba un sitio web que funcionara como portfolio digital para presentar sus trabajos. \nSe buscó ofrecer una experiencia de usuario basada en la sencillez y la eficacia, junto con una estética minimalista y monocromática.",
+        },
+        {
+          side: "right",
+          img: "https://i.imgur.com/F053DWu.jpeg",
+          title: "LAS OBRAS",
+          text: "Dado que el objetivo principal del sitio web es funcionar como expositor de obras, este aspecto fue el eje central del diseño. \nSe optó por una propuesta sencilla que permite visualizar la portada de cada obra, su título, una breve sinopsis y datos adicionales, organizando el contenido entre obras audiovisuales y literarias.",
+        },
+        {
+          side: "left",
+          img: "https://i.imgur.com/TiKlOY0.jpeg",
+          title: "CIERRE",
+          text: "Para concluir el sitio, el cliente solicitó una sección donde pudiera mostrar en qué está trabajando actualmente. Esta fue desarrollada manteniendo la coherencia estética y visual del resto de la web.",
+        },
+        {
+          project: "https://xn--miguelngelfrancisco-vub.com.ar/",
+        },
+      ],
+      en: [
+       {
+          banner: "https://i.imgur.com/MvzJcJQ.jpeg",
+          title: "MIGUEL ÁNGEL FRANCISCO",
+        },
+        {
+          side: "left",
+          img: "https://i.imgur.com/HnSJjXo.jpeg",
+          title: "PROJECT CONCEPTION",
+          text: "Miguel Ángel Francisco, a filmmaker and writer from the city of La Plata, needed a website that would function as a digital portfolio to showcase his work. \nThe goal was to offer a user experience based on simplicity and efficiency, along with a minimalist and monochromatic aesthetic.",
+        },
+        {
+          side: "right",
+          img: "https://i.imgur.com/F053DWu.jpeg",
+          title: "HIS WORK",
+          text: "Since the website's main objective is to serve as a showcase for works, this aspect was central to the design. \nA simple design was chosen that allows users to view the cover of each work, its title, a brief synopsis, and additional information, organizing the content between audiovisual and literary works.",
+        },
+        {
+          side: "left",
+          img: "https://i.imgur.com/TiKlOY0.jpeg",
+          title: "CLOSE",
+          text: "To complete the site, the client requested a section to showcase their current projects. This was developed while maintaining the aesthetic and visual consistency of the rest of the website.",
+        },
+        {
+          project: "https://xn--miguelngelfrancisco-vub.com.ar/",
+        }
+      ],
+    },
+  },
   {
     title: "MATIAS PIER",
     extra_url: "matias-pier-portfolio",
@@ -135,7 +207,7 @@ export const AllFreelanceWorkExtra = [
           text: "Este sitio web también cuenta con un formulario de contacto, que permite al usuario enviar un correo electrónico a la productora directamente desde su sitio web.\nEsto facilita al usuario ponerse en contacto con la productora en caso de que quiera hacer una consulta o realizar un trabajo.",
         },
         {
-          project: "https://cardoaudiovisual.com/",
+          project: "OFF_SERVICE",
         },
       ],
       en: [
@@ -168,7 +240,7 @@ export const AllFreelanceWorkExtra = [
           text: "This website also has a contact form, which allows the user to send an email to the production company directly from its website.\nThis makes it easy for the user to contact the production company in case he/she wants to make an inquiry or perform a job.",
         },
         {
-          project: "https://cardoaudiovisual.com/",
+          project: "OFF_SERVICE",
         },
       ],
     },
