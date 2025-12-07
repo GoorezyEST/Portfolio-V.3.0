@@ -20,6 +20,8 @@ import PostgreSQLIcon from "./PostgreSQLIcon";
 import ReactJSIcon from "./ReactJSIcon";
 import SassIcon from "./SassIcon";
 import TypeScriptIcon from "./TypeScriptIcon";
+import IndesignIcon from "./IndesignIcon"
+import IllustratorIcon from "./IllustratorIcon"
 
 export {
   AngularIcon,
@@ -44,4 +46,6 @@ export {
   ReactJSIcon,
   SassIcon,
   TypeScriptIcon,
+  IndesignIcon,
+  IllustratorIcon
 };

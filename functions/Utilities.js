@@ -27,6 +27,8 @@ import {
   ReactJSIcon,
   SassIcon,
   TypeScriptIcon,
+  IndesignIcon,
+  IllustratorIcon
 } from "@/app/components/icons/AllTechIcons";
 
 const iconsMap = {
@@ -52,6 +54,8 @@ const iconsMap = {
   ReactJSIcon,
   SassIcon,
   TypeScriptIcon,
+  IndesignIcon,
+  IllustratorIcon
 };
 
 export const getTechIcon = (tech) => iconsMap[tech];

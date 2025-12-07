@@ -184,12 +184,28 @@ export const TechnologiesList = [
         icon: "FigmaIcon",
       },
       {
-        title: "Photoshop CS6",
+        title: "Photoshop",
         text_en:
           "Industry-leading image editing software, Photoshop offers advanced tools for digital graphics manipulation, design, and enhancement.",
         text_es:
           "Software de edición de imágenes líder en la industria, Photoshop ofrece herramientas avanzadas para manipulación, diseño y mejora de gráficos digitales.",
         icon: "PhotoshopIcon",
+      },
+      {
+        title: "InDesign",
+        text_en:
+          "InDesign, a leading software for layout and editorial design, allows you to create and organize printed and digital publications with professional precision, integrating text, images, and styles.",
+        text_es:
+          "Software líder en maquetación y diseño editorial, permite crear y organizar publicaciones impresas y digitales con precisión profesional, integrando texto, imágenes y estilos.",
+        icon: "IndesignIcon",
+      },
+      {
+        title: "Illustrator",
+        text_en:
+          "Adobe Illustrator is a professional vector design software that allows you to create illustrations, logos, typography, and scalable graphics with precision and high quality.",
+        text_es:
+          "Adobe Illustrator es un software profesional de diseño vectorial que permite crear ilustraciones, logotipos, tipografías y gráficos escalables con precisión y alta calidad.",
+        icon: "IllustratorIcon",
       },
     ],
   },
