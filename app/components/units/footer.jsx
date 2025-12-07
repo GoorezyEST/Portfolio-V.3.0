@@ -35,24 +35,6 @@ function Footer() {
             ease: "easeInOut",
           }}
         >
-          <span>LinkedIn:&nbsp;</span>
-          <Link
-            href="https://www.linkedin.com/in/franco-espinosa/"
-            target="_blank"
-          >
-            www.linkedin.com/in/franco-espinosa/
-          </Link>
-        </motion.div>
-        <motion.div
-          className={styles.contact_list_item}
-          initial={{ opacity: 0, x: "16px" }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{
-            delay: 0.125,
-            duration: 0.275,
-            ease: "easeInOut",
-          }}
-        >
           <span>GitHub:&nbsp;</span>
           <Link href="https://github.com/GoorezyEST" target="_blank">
             github.com/GoorezyEST
