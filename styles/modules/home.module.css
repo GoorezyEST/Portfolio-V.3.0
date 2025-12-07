@@ -282,6 +282,7 @@
 
 .freelancer_work_content_item_button {
   width: max-content;
+  margin-top: 12px;
 }
 
 .about_me_content_text > a > button,
@@ -414,7 +415,7 @@
   .freelancer_work_content_item {
     flex-direction: row;
     gap: 16px;
-    align-items: center;
+    align-items: flex-start;
   }
   .about_me_content {
     flex-direction: row;
